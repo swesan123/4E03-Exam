@@ -1,0 +1,247 @@
+Arrival rate (lambda) “How many jobs come in”
+Service rate(Mu) “How many jobs server can complete per unit of time”
+E[T] mean response time “Avg time job spends in system”, “how long job is in system”
+E[S] - avg time to process/serve/complete one job
+E[S^2] = expected value of the square of service time
+Integrate 0 to infinity of s^2 * fS(s)ds
+= Var(s) + (E[S])^2
+E[W] - waiting time “Avg time a job spends waiting in line before service starts”
+Cs^2 - squared coefficient of variation of service time S “Measure of how variable the service items are relative to their mean
+
+
+Utilization (P) - How busy the system is 
+Poisson Process - “Job arrives randomly over time”
+Service time = processing time
+Q1a_exam: You have two choices distribution x or distribution y, given rate and service rate of both and waiting time is of interest E[T] what would you choose 
+Least waiting time
+E[T] = (arrival rate *  expected value of square of service time over 2 * (1 minus utilization) ) + 1/service rate
+Mean response time = Waiting time + Service time
+Squared coefficient of variation of servtime S = Variation of S / expected service time squared
+Cs^2 = 0every job takes exactly the same amount of time
+No variability
+Cs^2 = 1 
+Expoential case, Nominal variability
+Still around same mean service time
+Moderate spread with a tail
+Cs^2 > 1 
+High variability, Hype exponential 
+Cs^2 < 1 
+Less variable than exponential 
+For exp, Cs^2 = 1 therefore Var(s) = E[S]^2
+Compare with uniform distribution var(s) =  (b-a)^2 /12 (write other distributiions down in cheatsheet) 
+Remember convert time units! 
+Compare, which ever smallest is the choice
+Q1b_exam: 
+MVA is centered around mean response time, throughput and mean number jobs at nodes using mean value recurison.
+Blocking probability/rejection probability, its harder to obtain because it only tracks mean, and not whole probability distribution over sta, you need state probabilities 
+Q10_exam:
+h(x) - Hazard rate = f(x) / 1 - F(x) 
+IFR “as the item gets older, failure becomes more likely”
+DFR “as the item gets older, failure becomes less likely”
+“Given that the component is still alive at age x, how likely is it to fail right around now?”
+f(x) - how the probability is distributed locally
+F(x) - cdf (Cululative Distribution Function) of X = F(x) = P(X <= x), total probability accumulated upto x
+1- F(x) = P(X > x)
+When provided random variable X and a density function f(x) and range a and b
+To calculate c, use the identity integral from a to b f(x) = 1 i.e x >= 0 , a = 0 , b = inf
+To calculate X has an IFR (increasing failure rate)  or DFR (decreasing failure rate) distribution you need to calculate hazard rate
+If f(x) is given to calculate F(x) evaluate integral from 
+-inf to x if all real numbers
+0 to x if x>=0
+A to x if a<=x<=b
+Test2_q87:
+Common queue + exponential service + multiple servers → M/M/k
+If asking “probability an arriving job waits before service starts” → this is probability of queueing P_Q,
+Given mean processing/service time E[S], first convert to service rate: μ = 1 / E[S]
+Let C = λ / μ
+Per-server utilization with k servers: ρ = λ / (kμ) = C / k
+Use when solving part (a):
+p0 = ( Σ from j=0 to k-1 of (C^j / j!) + C^k / (k!(1-ρ)) )^(-1)
+P_Q = p0 * C^k / (k!(1-ρ))
+Method for part (a): try k = 1, 2, 3, ... until P_Q is below target; choose the smallest such k
+
+
+If only one server is allowed and finite capacity is added → M/M/1/U
+U = maximum number of jobs allowed in system = 1 in service + jobs waiting
+Buffer size = U - 1
+State probabilities: π_n = (λ/μ)^n * π_0
+π_0 = (1 - λ/μ) / (1 - (λ/μ)^(U+1))
+Blocking probability = π_U
+Throughput = λ(1 - π_U)
+Probability a job waits = Σ from n=1 to U-1 of π_n = 1 - π_0 - π_U
+Method for part (b): choose the largest feasible U that keeps P(wait) below target, since larger U gives less blocking and higher throughput
+Test2_q70:
+4 single-server FCFS nodes + external arrivals + exponential service + routing between nodes → open Jackson network / network of M/M/1 nodes
+Step 1: convert mean service times to rates for each node: μi = 1 / E[Si]
+Step 2: write traffic equations for internal arrival rates:
+λi = ri + Σj Pji λj
+Step 3: solve traffic equations to get λ1, λ2, λ3, λ4
+Step 4: check stability at each node: ρi = λi / μi < 1
+Part (a): use product-form joint distribution
+P(N1=n1, N2=n2, N3=n3, N4=n4) = Πi (1-ρi)ρi^(ni)
+For this question, plug in n1=3, n2=2, n3=4, n4=1
+Part (b): for each M/M/1 node use E[Ni] = ρi / (1-ρi)
+Then total jobs in network: E[N] = Σi E[Ni]
+Mean time in system: E[T] = E[N] / X
+For open network, system throughput X = external arrival rate into system
+Part (c): bottleneck device = node with largest demand Di
+Visit ratio: Vi = λi / X
+Demand: Di = Vi E[Si]
+If service rate doubles at bottleneck, its mean service time halves, so recompute only that node’s Di
+Compare all Di again; largest one is the new bottleneck
+test2_sample_questions_q86:
+1 server + no buffer / no waiting room + arrivals lost if server busy
+States:
+π0 = server idle / not busy
+π1 = server busy
+Arrival transition rate: λ
+Service completion transition rate: μeff = 1 / E[S]
+If job type mix is given, first compute mean service time:
+E[S] = Σ P(type i)E[Si]
+For this one:
+E[S] = 0.75(8) + 0.25(3) = 6.75
+μeff = 1 / 6.75
+Use global balance:
+λπ0 = μeffπ1
+Since π0 = 1 - π1, rewrite as:
+λ(1 - π1) = μeffπ1
+Solve for busy probability directly:
+π1 = λ / (λ + μeff)
+This π1 is the answer because π1 = server busy
+
+test1_sample_questions_q20:
+
+Closed interactive system with think time Z = 40
+Use bottleneck law:
+X <= min(1 / Dmax, F / (D + Z))
+CPU total demand given:
+DCPU = 4.2
+After each CPU visit:
+go to I/O with prob 0.9, otherwise exit with prob 0.1
+So expected CPU visits:
+VCPU = 1 / 0.1 = 10
+Expected I/O visits:
+VIO = 10 - 1 = 9
+I/O demand:
+DIO = VIO * 0.6 = 9(0.6) = 5.4
+Total demand:
+D = DCPU + DIO = 4.2 + 5.4 = 9.6
+(a) Bottleneck = largest demand = I/O
+Dmax = 5.4
+Xmax = 1 / Dmax = 1 / 5.4 = 0.185 req/s
+(b) Number of users supported at saturation:
+F* = (D + Z) / Dmax = (9.6 + 40) / 5.4 = 9.19
+≈ 10 users
+(c) Let x dollars go to CPU, so 20-x to I/O
+New CPU demand:
+DCPU(x) = 4.2 - 0.1x
+New I/O time per visit:
+0.6 - 0.04(20 - x)
+New I/O demand:
+DIO(x) = 9[0.6 - 0.04(20 - x)]
+To maximize users, equalize demands:
+4.2 - 0.1x = 9[0.6 - 0.04(20 - x)]
+x = 13.04
+Spend:
+CPU = 13.04 dollars
+I/O = 6.96 dollars
+test1_sample_questions_q40:
+Observed each hour + next state depends only on current state → DTMC
+States: 0, 1, 2 = number of people in waiting room
+Build transition matrix P from wording:
+Row i = probabilities of going from state i to states 0,1,2
+Missing probability = 1 - (other given probabilities)
+Let steady-state probabilities be:
+π0, π1, π2
+Solve steady state:
+π = πP
+with normalization:
+π0 + π1 + π2 = 1
+Expanded form:
+π0 = p00π0 + p10π1 + p20π2
+π1 = p01π0 + p11π1 + p21π2
+π2 = p02π0 + p12π1 + p22π2
+Part (a) average number waiting:
+E[X] = 0π0 + 1π1 + 2π2 = Σ iπi
+Part (b) variance:
+E[X^2] = 0^2π0 + 1^2π1 + 2^2π2 = Σ i^2πi
+Var(X) = E[X^2] - (E[X])^2
+test1_Q82: 
+States = discount levels only
+0 = no discount
+1 = 25% discount
+2 = 50% discount
+
+
+Rows = current state, columns = next state
+Claims are not separate states, they only determine transition probabilities
+
+
+No claim probability = 3/4
+At least one claim probability = 1/4
+
+
+Rules:
+no claim -> move up one discount level
+claim -> move down one discount level
+At boundaries, stay at boundary if trying to go past it
+
+
+Transition matrix:
+P = [1/4  3/4  0
+     1/4  0    3/4
+     0    1/4  3/4]
+
+
+Part (a):
+new policy holder starts in state 0
+initial vector α0 = [1 0 0]
+after 3 years: α3 = α0 P^3
+probability of no discount after 3 years = first entry of α3 = (1,1) entry of P^3
+
+
+Part (b):
+steady state: π = [π0 π1 π2]
+solve π = πP with π0 + π1 + π2 = 1
+π0 = probability of no discount in steady state
+exam_sample_questions_q21:
+
+(a) False
+Desktop OS scheduling is not generally FCFS; interactive systems need preemption / time-sharing
+
+
+(b) False
+Operational Analysis with mean think time + device demands gives bounds / bottleneck reasoning, not exact throughput in general
+
+
+(c) False
+JSQ gives lower mean response time than round-robin; JSQ is closer to the optimal M/M/N behavior
+
+
+(d) False
+WebSphere study was based on interacting availability/recovery sub-models, not simply “fault tree + CTMC”
+
+
+(e) True
+In an M/G/1, PS and LCFS-PR have the same mean response time result
+
+
+(f) False
+Need M/M/k waiting-probability / Erlang-C formulas; cannot use a simple rule like 2λ/μ
+
+
+(g) False
+Little’s Law is general, not only for M/M/1 queues
+
+
+(h) False
+Bottleneck = node with largest demand Di = ViE[Si], not the node visited most often
+
+
+(i) False
+MVA gives mean quantities like throughput / mean response time / mean jobs, not idle probabilities directly
+
+
+(j) True
+Var(X) = E[X^2] - (E[X])^2, so E[X^2] >= Var(X)
+

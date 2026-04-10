@@ -1,0 +1,1850 @@
+[
+  {
+    "id": "exam_sample_questions_q1",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 1,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Parts (a) and (b) are unrelated.\n    (a) A single server system has arrivals occurring according to a Poisson process with rate\n    one per minute. You have two design choices. The first has processing times that are\n    exponentially distributed with mean two per minute, the second has processing times that\n    are uniformly distributed between 20 seconds and 40 seconds. If the mean waiting time\n    is the performance measure of interest, which would you choose?\n    (b) Give an example of a performance measure that is difficult to calculate using the basic\n    MVA algorithm."
+  },
+  {
+    "id": "exam_sample_questions_q2",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 2,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "Answer True or False to each part.\n    (a) Increasing variability in processing times tends to improve performance.\n    (b) Resource utilization can be calculated using the MVA algorithm."
+  },
+  {
+    "id": "exam_sample_questions_q3",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 3,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n    (a) A single server has arrivals that follow a Poisson process. Processing times for Design\n        Option A are exponentially distributed with mean one minute. Design Option B\n        has processing times that are 30 seconds with probability 1/2 and 90 seconds with\n        probability 1/2. With mean response time as the performance measure of interest,\n        Design Option A is preferred.\n    (b) A bottleneck node in a network has the longest mean processing time."
+  },
+  {
+    "id": "exam_sample_questions_q4",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 4,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Requests arrive to a processor according to a Poisson process with rate 1 per minute.\n    The processing time at this processor is either exactly 40 seconds with probability 1/3, or\n    exactly 20 seconds with probability 2/3. If the processing time is 20 seconds, a request is\n    generated (at the beginning of the 20 seconds) for a second processor, where the processing\n    time is exponentially distributed with mean 10 seconds. No synchronization between\n    processors is required and each processor uses the FCFS discipline.\n\n    (i) Give code for a simulation analysis of this system.\n    (ii) To validate the simulation, one can explicitly calculate the expected waiting time at\n         the first processor using a model from the course. Identify the model and calculate\n         the expected waiting time."
+  },
+  {
+    "id": "exam_sample_questions_q5",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 5,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A system is modelled as an open queueing network with 3 nodes: CP U , IO1 , IO2 . Both\n    IO nodes have processing rate 1.2 per second, the processing rate at the CP U is 2 per\n    second. External arrivals occur to the CPU at rate 1 job every 7 seconds. After processing\n    at the CPU, jobs exit the network with probability 0.1, go to IO1 with probability 0.3\n    and to IO2 with probability 0.6. Jobs exiting IO1 or IO2 always return to the CPU. All\n    underlying distributions are exponential.\n\n    (a) What is the bottleneck device?\n\n\n\n     (b) Calculate the mean number of jobs at the CP U .\n     (c) Calculate the mean time in the network (from entry to exit) for an arriving job.\n     (d) Give simulation code for this network."
+  },
+  {
+    "id": "exam_sample_questions_q6",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 6,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n     (a) In an M/M/k system, the expected waiting time for jobs that must wait depends\n         only on ρ, the load on the system.\n     (b) Systems with Round-Robin routing can be modelled as product-form networks."
+  },
+  {
+    "id": "exam_sample_questions_q7",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 7,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A single server system has arrivals occurring according to a Poisson process with rate\n    one per minute. You have two design choices. The first has processing times that are\n    exponentially distributed with mean two per minute, the second has processing times that\n    are uniformly distributed between 20 seconds and 40 seconds. If the mean waiting time\n    is the performance measure of interest, which would you choose?"
+  },
+  {
+    "id": "exam_sample_questions_q8",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 8,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "(a) For a single server queue you are given the option of three different processing time\n    distributions: (i) exponential with rate 5 per minute, (ii) uniformly distributed between\n    10 and 14 seconds, (iii) equal to 11 or 13 seconds with equal probability. If mean response\n    time is the performance measure of interest, which would you choose?\n    (b) True or False. Randomly routing arrivals to one of two identical servers leads to better\n    mean response time than alternately routing arrivals to each queue."
+  },
+  {
+    "id": "exam_sample_questions_q9",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 9,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Write simulation code for the following system. There is a single server. Arrivals to\n    the server occur according to a Poisson process with rate 1 per minute. The server uses\n    processor sharing, but can serve at most five jobs at a time. There is also a buffer for five\n    extra jobs (if the processor is fully occupied). If that buffer is full, arrivals are rejected."
+  },
+  {
+    "id": "exam_sample_questions_q10",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 10,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Suppose that a random variable X has density function f (x) = c/(x + 1)2.5 for x ≥ 0 and\n    0 otherwise.\n    (a) What is c?\n    (b) Does X have an IFR or DFR distribution (or neither)?"
+  },
+  {
+    "id": "exam_sample_questions_q11",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 11,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Write simulation code for a two-node closed queueing network with two jobs circulat-\n    ing. The two nodes are connected in a cyclic manner, i.e. the nodes are visited in the\n    order 1, 2, 1, 2, 1, 2, . . .. Each node has a single FCFS server, and the processing times at\n    each node have the processing time distribution given by the distribution in the previous\n    problem."
+  },
+  {
+    "id": "exam_sample_questions_q12",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 12,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n    (a) A key component of the PageRank algorithm is the analysis of a DTMC.\n    (b) FCFS is optimal for single-server processors with DHR processing time distributions.\n    (c) The traffic equations for a closed network have a unique solution.\n    (d) MVA can be used to determine the utilization of a node.\n\n\n\n    (e) Suppose that a server has arrivals that follow a Poisson process. You can choose job\n    processing times to be exactly one second, or exponentially distributed with mean one\n    second. You would prefer them to be exactly one second.\n    (f) A system has throughput of 3 jobs per minute, and the average number in system is\n    23. The average response time is 69 minutes.\n    (g) PS scheduling is insensitive to variance of job processing times.\n    (h) Priorities can be modelled using product-form results.\n    (i) The exponential and uniform distributions both have the memoryless property."
+  },
+  {
+    "id": "exam_sample_questions_q13",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 13,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "The performance of a system with fault detection is evaluated as follows. When operating,\n    faults occur at a rate of λ = 1 per hour, with fault times being exponentially distributed.\n    With probability 0.99, a fault is detected and recovery takes an exponentially distributed\n    period of time with mean 1 second. If the fault is not detected, recovery takes an expo-\n    nentially distributed period of time with mean 5 minutes. Calculate the expected time\n    until the system fails due to an undetected fault."
+  },
+  {
+    "id": "exam_sample_questions_q14",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 14,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A system has room for at most two in system (i.e. arrivals finding two in the system are\n    lost). Arrivals follow a Poisson process with rate 1 per minute. The processing times are\n    exponentially distributed with mean 40 seconds if there is one job in the system and 20\n    seconds if there are two jobs in the system. Starting with an empty system, calculate the\n    mean time until there are two jobs in the system."
+  },
+  {
+    "id": "exam_sample_questions_q15",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 15,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n     (a) JSQ routing generally performs better than Random routing, but worse than Round-\n         Robin routing.\n     (b) MVA is a fast algorithm to determine the limiting distribution of a queueing network.\n     (c) Generally speaking, for a component with a DFR lifetime distribution, it makes sense\n         to replace it before it fails.\n     (d) The performance of Random routing deteriorates as the age of the state information\n         increases.\n     (e) A network with JSQ routing internally can be analyzed using MVA.\n     (f) In an M/G/1 queue, LCFS and PS have identical mean response times.\n     (g) The exponential distribution is IFR but not DFR.\n     (h) In an M/M/N system, if the arrival rate is N λ and each processor has processing\n         rate µ, if we fix λ/µ < 1, then as N → ∞, the probability that a job has to wait\n         before it begins processing goes to zero.\n     (i) The minimum of two uniformly distributed random variables is uniformly dis-\n         tributed.\n     (j) If two components with reliability R are placed in parallel, the resulting reliability\n         is R2 ."
+  },
+  {
+    "id": "exam_sample_questions_q16",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 16,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A computer system operates as follows. Failures occur following an exponential distribu-\n    tion with mean 10 hours. With probability 0.99, the failure is minor and can be repaired\n    in a time that is exponentially distributed with mean six minutes. With probability 0.01,\n    the system permanently fails. Calculate the expected lifetime of the system (the time\n    until it permanently fails)."
+  },
+  {
+    "id": "exam_sample_questions_q17",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 17,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have ten computer systems that each operate as the system in the\n    previous question. The one change is that only one minor failure can be repaired at a\n    time (the mean repair time remains six minutes). Write simulation that simulates the time\n    to failure of the overall system (i.e. yields the time until all ten systems have permanently\n    failed)."
+  },
+  {
+    "id": "exam_sample_questions_q18",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 18,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Provide simulation code for the following system:\n\n       • arrivals occur according to a Poisson process with rate 1;\n       • there are two servers and arrivals are assigned to servers in a round-robin manner;\n       • processing times at each server are uniformly distributed between 0.5 and 1.5\n\n    The goal of the simulation is to estimate the probability that an arriving job has to wait\n    before entering service."
+  },
+  {
+    "id": "exam_sample_questions_q19",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 19,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A given M/M/1 queue has arrival rate λ = 9 and processing rate µ = 10. Through redesign\n    of the system, the processing times can be changed to be X1 + X2 , where X1 and X2 are\n    independent exponentially distributed random variables with parameters µ1 = µ2 = 20.\n    Would you make the change? Justify your answer."
+  },
+  {
+    "id": "exam_sample_questions_q20",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 20,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Consider a machine repair problem with 10 machines and a single repair facility. Machines\n    fail independently at rate 1 and are repaired at rate 100. The system is considered failed\n    if less than nine machines are working. Calculate the MTTF of the system."
+  },
+  {
+    "id": "exam_sample_questions_q21",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 21,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False,\n    (a) Desktop operating systems generally use FCFS for CPU scheduling.\n    (b) Using Operational Analysis, given the mean think time and demands for devices in a\n    client/server system, an exact value for throughput can be calculated.\n    (c) Round-robin routing yields lower mean response times than JSQ.\n    (d) The Websphere availability study used a mixture of fault tree and CTMC models.\n    (e) PS and LCFS have the same mean response time in an M/G/1 queue.\n    (f) In a multiserver system, one needs approximately 2 ∗ λ/µ servers to ensure that less\n    than 20 percent of arrivals have to wait.\n    (g) Little’s Law only applies for M/M/1 queues.\n    (h) The bottleneck in a network is the node that is visited most frequently.\n    (i) Using MVA, one can compute the likelihood that a node is idle.\n    (j) For a random variable X, E[X 2 ] is always greater than or equal to V ar(X)."
+  },
+  {
+    "id": "exam_sample_questions_q22",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 22,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have the following components with corresponding reliabilities (measured\n    at 1000 hours): Component 1 has reliability 0.905, Component 2 has reliability 0.918,\n    Component 3 has reliability R3 and Component 4 has reliability 0.861.\n    (a) Component 3 has constant failure rate of 0.001 per hour. What is R3 ?\n    (b) Suppose that Components 3 and 4 are in parallel. This subsystem is placed in series\n    with Component 1 and Component 2. Calculate the overall reliability."
+  },
+  {
+    "id": "exam_sample_questions_q23",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 23,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Job processing times, X, have the following density:\n\n                                    fX (x) = e−2x + 0.5e−x\n\n    for x > 0 and 0 otherwise.\n\n     (a) Is X IFR?\n    (b) In an M/G/1 system, would you prefer the processing times to be X, or Y ∼\n        Exp(4/3)?"
+  },
+  {
+    "id": "exam_sample_questions_q24",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 24,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n     (a) For a given component reliability R, Triple Modular Redundancy is always more\n         reliable than using a single component.\n    (b) As k increases, an M/M/k system can tolerate higher loads before performance\n        begins to degrade.\n     (c) MVA is easy to modify to include priority scheduling.\n    (d) Operational analysis can be applied for any kind of processing time distribution.\n     (e) Request replication generally gives better performance than JSQ.\n     (f) A simulation analysis uses independent replications. To reduce the width of the\n         resulting confidence interval by a factor of two, one should double the number of\n         replications.\n     (g) For any processing time distribution, JSQ is the routing policy that minimizes mean\n         response time.\n    (h) For a single server system, SRPT always has a lower mean response time than PS.\n     (i) The minimum of two uniformly distributed random variables is uniformly dis-\n         tributed.\n     (j) A system has 5 jobs waiting and a mean response time of 10 seconds. The throughput\n         is 2 jobs per second."
+  },
+  {
+    "id": "exam_sample_questions_q25",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 25,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Write simulation code for the following system. There is a single server, arrivals occur\n    according to a Poisson process with rate 0.5 per minute. Processing times are uniformly\n    distributed between 30 seconds and 90 seconds. The server keeps a FCFS queue and uses\n    the following scheduling policy.\n\n\n\n     (i) If there are two or more jobs in the system, it uses processor sharing amongst the\n         first two jobs in the queue.\n     (ii) If there is one job in the system, that job is processed."
+  },
+  {
+    "id": "exam_sample_questions_q26",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 26,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A system has two components. The first component has failure rate λ1 = 0.001 and repair\n    rate µ = 0.1. The second component has failure rate λ = 0.002 and repair rate µ2 = 0.08.\n    There is also an event, that happens at rate α = 0.0001 that causes both components to\n    fail (if this event happens when one component is failed, the other component fails). All\n    underlying distributions are exponential. The components can be repaired in parallel if\n    both are failed. Calculate the expected time until both components are failed."
+  },
+  {
+    "id": "exam_sample_questions_q27",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 27,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "A single server has arrivals that follow a Poisson process with rate λ = 0.08 and processing\n    times that follow the U [0, 20] distribution.\n\n     (a) Do the processing times have an increasing failure rate (i.e., are they more likely to\n         complete the longer that they have been processed)? Justify your answer.\n     (b) Would you prefer PS or FCFS scheduling for this system? Justify your answer."
+  },
+  {
+    "id": "exam_sample_questions_q28",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 28,
+    "category": "newer",
+    "is_true_false": false,
+    "body_plain": "Consider a two-component system, with the two components operating in parallel. The\n    system is considered failed when both components have failed. Failure times for the\n    components are exponentially distributed with rates 0.01 and 0.02, respectively. Repair\n    times for the components are exponentially distributed with rate 1 (the same rate for\n    both). Calculate the MTTF."
+  },
+  {
+    "id": "exam_sample_questions_q29",
+    "source_pdf": "exam_sample_questions.pdf",
+    "number_in_pdf": 29,
+    "category": "newer",
+    "is_true_false": true,
+    "body_plain": "True or False.\n    (a) Little’s Law requires that processing times be exponentially distributed.\n    (b) Fault tree analysis was used in the Websphere reliability analysis.\n    (c) If a component has a constant failure rate, its lifetime is exponentially distributed.\n    (d) PS and SRPT have the same mean response time in an M/G/1 queue.\n    (e) JSQ and Random Routing have the same long term server utilization.\n    (f) For a number of components in series, adding redundancy for the least expensive com-\n    ponent is the preferred choice if one wants to increase system reliability.\n    (g) In an M/G/1 queue, the mean response time of LCFS is insensitive to processing time\n    variance.\n    (h) Most commercial load balancers have Round Robin and Least Connections options.\n    (i) If one wants to decrease the width of a confidence interval by a factor of two, one must\n    double the number of samples.\n    (j) Using MVA, one can compute the utilization of a node."
+  },
+  {
+    "id": "test1_sample_questions_q1",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 1,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Short Answer Questions.\n\n    (a) The time between user requests is exponentially distributed with mean 1 minute.\n        One minute has passed since the last request. What is the expected time to the next\n        request?\n    (b) Calculate the variance of the following random variable: P (X = 0) = 1/3, P (X =\n        1) = 1/3 and P (X = 2) = 1/3."
+  },
+  {
+    "id": "test1_sample_questions_q2",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 2,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "The time (measured in years) required to complete a software project has a density of the\n    form                              (\n                                         kx(1 − x), 0 ≤ x < 1\n                              f (x) =\n                                         0,          otherwise\n   What is the probability that a project is finished in less than four months?"
+  },
+  {
+    "id": "test1_sample_questions_q3",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 3,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) The lifetime of a component is exponentially distributed with mean 1000 hours. What\n    is the probability a particular component has a lifetime that does not exceed 2000 hours?\n    (b) Repeat part (a) if the lifetime is uniformly distributed between 500 and 5000 hours.\n    (c) A random variable X has density f (x) = 3x2 for x between 0 and 1, and 0 otherwise.\n    Calculate the variance of X."
+  },
+  {
+    "id": "test1_sample_questions_q4",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 4,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A discrete random variable takes on the values 1, 2 or 3 with P (X = 1) = 0.5, P (X =\n    2) = a, P (X = 3) = b. The mean and variance of X are 1.40 and 1.04, respectively. Find\n    a and b."
+  },
+  {
+    "id": "test1_sample_questions_q5",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 5,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) A particular disk is busy 30 percent of the time. Each transaction requires 25 disk\n        accesses and each access takes 25 milliseconds. In transactions per second, what is\n        the throughput of the disk?\n    (b) A system has throughput of 3 jobs per minute, and the average number in the system\n        is seen to be 23. What is the average time in system (from arrival to departure) of\n        a job?"
+  },
+  {
+    "id": "test1_sample_questions_q6",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 6,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) A system resource executes an average of 10 requests per minute, with an average\n        service time of 4 seconds per request. Another resource in the same system executes\n        an average of 5 requests per minute, with an average service time of 11 seconds per\n        request. Which resource is the bottleneck?\n    (b) A transaction requires 2 visits on average to Resource A and 1 visit on average to\n        Resource B. Each visit to Resource A takes 20 seconds, each visit to Resource B\n        takes 30 seconds. Which Resource is the bottleneck?\n     (c) I have three resources with utilizations 0.8, 0.3 and 0.9. Given only this information,\n         which resource would it be most useful to upgrade?"
+  },
+  {
+    "id": "test1_sample_questions_q7",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 7,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with N users, a CPU and two disks. A request from the users first\n    visits the CPU. After processing at the CPU, with probability 0.8 the request visits disk\n    A, 0.16 it visits disk B and 0.04 it is completed and returns to the user. After processing\n    at either disk, the request returns to the CPU. The mean think time at the users is 5\n    seconds, the mean processing times (per visit) at the CPU, disk A, and disk B are 30, 25\n    and 40 milliseconds, respectively.\n    (a) What is the bottleneck device?\n    (b) What is the maximum possible system throughput (measured at the users)?\n    (c) Plot an upper bound on the system throughput as a function of N .\n    (d) What is the maximum possible disk B utilization?"
+  },
+  {
+    "id": "test1_sample_questions_q8",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 8,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with N users, a CPU and two disks. A request from the users first\n    visits the CPU. After processing at the CPU, with probability 0.48 the request visits disk\n    A, 0.48 it visits disk B and 0.04 it is completed and returns to the user. After processing\n    at either disk, the request returns to the CPU. The mean think time at the users is 3\n    seconds, the mean processing times (per visit) at the CPU, disk A, and disk B are 30, 25\n    and 40 milliseconds, respectively.\n    (a) What is the minimum expected response time?\n    (b) You are asked to give a recommendation for the number of users this system can\n    support. Provide such a recommendation and justify it.\n    (c) If you double the processing rate at the bottleneck device, what improvement (in\n    percentage terms) would you get for the maximum possible system throughput?"
+  },
+  {
+    "id": "test1_sample_questions_q9",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 9,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A server that is used for compilation jobs is monitored and reveals the following perfor-\n    mance data (compilations are the only activity performed by the server):\n\n    - Average number of active user logins: 230\n    - Average time to generate a new compilation request: 300 seconds per user\n    - Average server utilization: 48 percent\n    - Average CPU processing demand: 0.63 seconds per compilation\n\n    (a) What is the system throughput (in compiles per second)?\n    (b) What is the average compilation time (from compilation submission by a user to\n    completion)?"
+  },
+  {
+    "id": "test1_sample_questions_q10",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 10,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with three nodes: a user node, a CPU node, and an I/O node. Users\n    have think times with mean 40 seconds. A request first visits the CPU. After processing\n    at the CPU, it goes to the I/O with probability 0.9, otherwise the request is completed\n    and returned to the user. After processing at the I/O, requests are always returned to the\n    CPU. The total demand per request for the CPU is 4.2 seconds, while the mean processing\n    times at the I/O are 0.6 seconds per visit.\n    (a) Determine the bottleneck device and the maximum possible throughput for the system\n    (measured at the user node).\n\n\n\n    (b) How many users can this system support?\n    (c) You have a budget of 20 dollars. You can decrease the mean demand at the CPU by\n    0.1 seconds times the amount spent in dollars (fractions are allowed). Similarly, you can\n    decrease the mean time per visit at the I/O by 0.04 seconds times the amount spent in\n    dollars. If the goal is to maximize the number of users that the system can support, how\n    would you allocate the 20 dollars?"
+  },
+  {
+    "id": "test1_sample_questions_q11",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 11,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A database server receives requests from 50 clients. Each request to the DB server requires\n    that five reads be made on average from the server’s single disk. The average read time\n    per record is 9 msec. Each database request requires on average 15 msec of CPU time to\n    be processed.\n    (a) What is the bottleneck in the DB server?\n    (b) With the 50 clients, what is the throughput of the DB server?\n    (c) Consider the following three proposed design changes: (i) the average number of disk\n    reads per access can be reduced from 5 to 2.5; (ii) the disk is replaced by one 60 percent\n    faster; (iii) the CPU speed is doubled. Budgetary constraints allow for the implementation\n    of two of these three. If the goal is to maximize the system capacity (maximum possible\n    throughput), which two would you choose? Justify your answer."
+  },
+  {
+    "id": "test1_sample_questions_q12",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 12,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A computer system has one CPU and two disks. After monitoring the system for two\n    hours, the following observations were made. The utilization of the CPU was 43 percent\n    and the utilization of the first disk was 66 percent. Each transaction to the system makes\n    5 I/O requests to the first disk and 6 to the second disk. The average processing time\n    (per request) at the two disks are both 20 msec.\n\n     (a) What was the throughput of the system (in transactions per second)?\n     (b) What was the utilization of the second disk?\n     (c) What is the total processing demand (in milliseconds per transaction) at the CPU?"
+  },
+  {
+    "id": "test1_sample_questions_q13",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 13,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "You have three devices, A, B and C. Device A has average demand DA = 4 and devices\n    B and C are such that DB + DC = 6.\n    (a) Give all possible values of DB and DC that yield the highest possible maximum\n    throughput. As part of your answer, give the highest possible maximum throughput.\n    (b) Give all possible values of DB and DC that yield the lowest possible maximum through-\n    put. As part of your answer, give the lowest possible maximum throughput.\n    (c) For a specific choice of values of DB and DC from (a), compute the maximum number\n    of users that the system can support if the average user think time is Z = 40."
+  },
+  {
+    "id": "test1_sample_questions_q14",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 14,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider the following database server model. Each request to the server requires on\n    average five records to be read from the server’s single disk. The average read time per\n    record is 9 msec. Each database request requires 15 msec of CPU time.\n    (a) What is the maximum number of users that this system can support if the average\n    user think time is 100 seconds?\n    (b) You are given three upgrade options:\n\n\n\n    (i) More indexes can be built into the database to reduce the average number of reads\n    per access from 5 to 2.5.\n    (ii) The disk can be replaced by a disk 60 percent faster, so the average processing time\n    would drop to 5.63 msec.\n    (iii) The CPU speed can be doubled, i.e. the processing time per request is reduced to 7.5\n    msec.\n\n\n    If the goal is to maximize the maximum possible system throughput, which option would\n    you choose? (You can only choose one option.)"
+  },
+  {
+    "id": "test1_sample_questions_q15",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 15,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A server system consists of three resources. Each user request has resource demands as\n    follows: the processing times at resources A, B and C are 20, 30 and 15 msec, respectively.\n    The average number of visits to A, B and C are 5, 4 and 10, respectively.\n    (a) You are given the following three upgrade options:\n\n    (i) Reduce the average number of visits to resource C to 7.\n    (ii) Reduce the average processing time at resource B to 25 msec.\n    (iii) Reduce the average processing time at resource C to 10 msec.\n\n    If the design goal is to maximize the number of users that can be supported, which option\n    would you choose?\n    (b) If the average number of jobs at resource A is 2 and the average waiting time (from\n    arrival to departure at resource A) is 50 msec, what is the throughput of the system (in\n    user requests completed per second)?"
+  },
+  {
+    "id": "test1_sample_questions_q16",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 16,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system consisting of a single CPU, one disk, and some terminals (clients). The\n    average think times for each of the terminals is 60 seconds. Suppose that we are presented\n    with three configurations:\n                                      System DCP U Ddisk\n                                         A       4.6      4.0\n                                         B       5.1      1.9\n                                         C       3.1      1.9\n    (a) For System A, the utilization of the CPU is measured to be 0.85. What is the\n    utilization of the disk?\n    (b) For System B, what is the maximum possible throughput of the disk?\n    (c) If there is a requirement that the system be able to support at least 14 users, which\n    systems satisfy this requirement?"
+  },
+  {
+    "id": "test1_sample_questions_q17",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 17,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "In a timesharing system, accounting log data produced the following profile for user\n    programs\n\n    • each program requires 5 seconds of CPU time, makes 80 I/O requests to disk A and\n         100 I/O requests to disk B\n\n\n\n    • average think-time of a user was 18 seconds\n    • from the device specifications, it was determined that disk A takes 50 milliseconds to\n         satisfy an I/O request and disk B takes 30 milliseconds per request\n    • with 17 users, disk A throughput was observed to be 15.70 I/O requests per second\n    Find the system throughput and the utilizations of the CPU, disk A and disk B."
+  },
+  {
+    "id": "test1_sample_questions_q18",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 18,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Jobs arrive to a system at average rate 15 per hour. On observing the system, the average\n    number occupying it is 10 jobs. What is the mean response time for a job?"
+  },
+  {
+    "id": "test1_sample_questions_q19",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 19,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that a chess player has a 90 percent chance of winning any game in a competition.\n     (a) What is the probability that she wins exactly 3 games, if she plays a total of 5 games?\n    (b) Suppose that a match ends when one player wins 3 games over another player. What\n        is the probability that she wins a match?\n     (c) What is the probability that she wins a match in exactly three games?"
+  },
+  {
+    "id": "test1_sample_questions_q20",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 20,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with three nodes: a user node, a CPU node, and an I/O node. Users\n    have think times with mean 40 seconds. A request first visits the CPU. After processing\n    at the CPU, it goes to the I/O with probability 0.9, otherwise the request is completed\n    and returned to the user. After processing at the I/O, requests are always returned to\n    the CPU. The mean total demand (over all visits) per request for the CPU is 4.2 seconds,\n    while the mean processing times at the I/O are 0.6 seconds per visit.\n     (a) Determine the bottleneck device and the maximum possible throughput for the sys-\n         tem (measured at the user node).\n    (b) How many users can this system support?\n     (c) You have a budget of 20 dollars. You can decrease the mean demand at the CPU by\n         0.1 seconds times the amount spent in dollars (fractions are allowed). Similarly, you\n         can decrease the mean time per visit at the I/O by 0.04 seconds times the amount\n         spent in dollars. If the goal is to maximize the number of users that the system can\n         support, how would you allocate the 20 dollars?"
+  },
+  {
+    "id": "test1_sample_questions_q21",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 21,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) Database transactions perform an average of 4.5 disk operations on a database server\n        with a single disk. The database server was monitored during one hour and during\n        this period, 7,200 transactions were executed. What is the throughput of the disk\n        (in transactions per second)? If each disk operation takes 20 msec on average, what\n        is the disk utilization?\n    (b) What is the average processing time (per operation) for the disk in (a)?\n     (c) A corporate portal provides Web services to the company’s employees. On average,\n         500 employees are online requesting Web services from the portal. An analysis of\n         the portal’s log reveals that 6,480 requests are processed per hour on average. The\n         average response time was measured as 5 seconds. What is the average think time\n         of an employee?"
+  },
+  {
+    "id": "test1_sample_questions_q22",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 22,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A database server receives requests from 50 clients, each client having think time 2 seconds.\n    The server has one CPU and two disks. Each request requires an average of six accesses\n    to the first disk and four accesses to the second disk. The average time per access to each\n    disk is 10 msec and 12 msec, respectively. Each request requires an average of 30 msec of\n    CPU time.\n     (a) What is the bottleneck device?\n     (b) What is the average response time of the server?\n     (c) You are allowed to make two of the following three changes: (i) the average time per\n         access for the first disk can be decreased to 7 msec; (ii) the average time per access\n         for the second disk can be decreased to 11 msec; (iii) the CPU speed can be doubled,\n         resulting in average CPU time of 15 msec. Which two would you choose, if the goal\n         is to maximize the maximum possible throughput? Justify your answer."
+  },
+  {
+    "id": "test1_sample_questions_q23",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 23,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A random variable X has density\n                                              (\n                                                  x−2 1 ≤ x < c\n                                    f (x) =\n                                                  0   otherwise\n    where c > 0. If E[X] = 2, what is c? For your choice of c, calculate V ar(X)."
+  },
+  {
+    "id": "test1_sample_questions_q24",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 24,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose you have N identical servers. At a given point of time each server has probability\n    2/3 of working, independent of all of the other servers. What is the minimum value of N\n    to guarantee that the probability of at least 2 servers working is at least 2/3? Give both\n    your value of N and the probability that at least 2 servers are working."
+  },
+  {
+    "id": "test1_sample_questions_q25",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 25,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A system operates as follows. There are 30 users, each with average think time 20 seconds.\n    User requests first go to a CPU, with average processing time 0.05 seconds. From the\n    CPU, with probability 0.05 a request returns to the user, with probability 0.55 it goes to\n    Disk A, and with probability 0.40 it goes to Disk B. After visiting either disk, requests\n    always return to the CPU. The average processing times at Disk A and Disk B are 0.08\n    seconds and 0.04 seconds, respectively.\n     (a) What is the bottleneck device?\n     (b) Is an 8 second average response time feasible? If not, what minimum amount of\n         CPU speedup is required?"
+  },
+  {
+    "id": "test1_sample_questions_q26",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 26,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose a continuous random variable X has density function f (x) = k/x2 for x > 2 and\n    0 otherwise. What is V ar(X)? (As part of your solution, you should solve for k.)"
+  },
+  {
+    "id": "test1_sample_questions_q27",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 27,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A user’s behaviour in interacting with a database system is as follows (we assume that the\n    user is always connected). There are three actions: query, modify/delete, add. A query\n    action is followed by another query action with probability 0.8, by a modify/delete action\n    with probability 0.18 and by an add operation with probability 0.02. A modify/delete\n    action is followed by a modify/delete action with probability 0.05, otherwise it is followed\n    by a query action. Finally, an add action is always followed by a query action.\n\n\n\n     (a) If the first action is a query, what is the probability that the third action is not a\n         query?\n    (b) In steady-state, what is the probability that one sees two query actions in a row?"
+  },
+  {
+    "id": "test1_sample_questions_q28",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 28,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A simple agent in a computer game operates as follows. At each time-step, the agent\n    stands with probability 0.6, walks with probability 0.3, or runs with probability 0.1. Its\n    action at each time-step is independent of its action at all other time-steps.\n\n     (a) What is the probability that the agent stands, walks and runs, in any order, in 3\n         consecutive time-steps?\n    (b) What is the probability over 10 time steps the agent will walk or run at least once?"
+  },
+  {
+    "id": "test1_sample_questions_q29",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 29,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A web server system produces the following measurements.\n\n      • Each web server request requires an average of 1.2 seconds of CPU time and generates\n        an average of 40 disk accesses to Disk A and 20 disk accesses to Disk B.\n      • On average, an access to either Disk A or Disk B requires 10 msec.\n      • Disk A throughput is measured at 30 disk accesses per second.\n      • The average response time of Disk A is measured to be 25 msec.\n\n     (a) What is the utilization of the CPU?\n    (b) What is the average number of accesses waiting for Disk A?"
+  },
+  {
+    "id": "test1_sample_questions_q30",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 30,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A random variable X has density\n                                            (\n                                                ce−2x 0 < x ≤ 4\n                                  f (x) =\n                                                0     otherwise\n\n     (a) What is c?\n    (b) Calculate P (X > 2|X > 1).\n     (c) Is this distribution memoryless? Justify your answer."
+  },
+  {
+    "id": "test1_sample_questions_q31",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 31,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "In a file-sharing system, peers are chosen at random, and there is a probability .25 that\n    a peer has a requested file. The outcome when choosing a peer is independent of the\n    outcomes of choosing other peers. Peers are chosen until the file is found.\n\n     (a) What is the probability that the file is obtained from the third peer selected?\n    (b) What is the expected number of peers selected before the file is obtained?\n     (c) Once the file is found on a peer, the time to download it is exponentially distributed\n         with mean one minute. What is the probability that the download takes longer than\n         two minutes?"
+  },
+  {
+    "id": "test1_sample_questions_q32",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 32,
+    "category": "test1",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n\n\n     (a) The uniform distribution has the memoryless property.\n     (b) If A and B are independent events, P (B|A) = P (B).\n     (c) The bottleneck in a system is the device with the slowest processing rate."
+  },
+  {
+    "id": "test1_sample_questions_q33",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 33,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A continuous random variable has density\n                                             (\n                                                 4 3\n                                                 15 x   1≤x≤c\n                                   f (x) =\n                                                 0      otherwise\n\n     (a) What is c?"
+  },
+  {
+    "id": "test1_sample_questions_q34",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 34,
+    "category": "test1",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n     (a) The variance of X ∼ Exp(1) is less than or equal to the variance of Y ∼ U [0, 2].\n     (b) If A and B are independent events, P {B|A} = P {B}.\n     (c) If X ∼ Exp(10), then P {X > 15|X > 5} = P {X > 15}."
+  },
+  {
+    "id": "test1_sample_questions_q35",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 35,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have the following data on three resources in a system:\n\n       • Resource 1 has visit ratio of 5 and average processing time of 10 msec\n       • Resource 2 has average demand of 35 msec.\n       • Resource 3 has utilization of 0.5 and throughput of 1/50 msec.\n\n    Which resource is the bottleneck? Justify your answer."
+  },
+  {
+    "id": "test1_sample_questions_q36",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 36,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have three requests that we must assign to one of three servers. Each\n    request is assigned such that it is equally likely to go to each of the servers. The three\n    requests are assigned independently.\n\n     (a) What is the probability that the first server receives no requests?\n     (b) Given that the second server receives no requests, what is the probability that the\n         first server receives no requests?"
+  },
+  {
+    "id": "test1_sample_questions_q37",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 37,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Parts coming down an assembly line are inspected in order. If a part is defective, then with\n    probability .3, the next one is defective. If a part is not defective, then with probability\n    .1 the next part is defective. Let Xn be the condition (defective/not defective) of the nth\n    part.\n\n      (a) Give the matrix P which describes the Markov chain X.\n       (b) We observe the 8th part is defective. What is the probability that the 10th part is\n    also defective?"
+  },
+  {
+    "id": "test1_sample_questions_q38",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 38,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "An analyst is looking at the trends in a certain market and wants to start with a simple\n    model: he wants to check simply if is up or down on a given week. He finds that if one\n    week it is up, it is down the next with probability .2 and if one week it is down, the next\n    it is up with probability .3.\n    (a) What is the expected number of weeks in the year that the trend is up?\n    (b) Given that the trend is up one week, what is the probability that is is up two weeks\n    later?"
+  },
+  {
+    "id": "test1_sample_questions_q39",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 39,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "An electron can be in one of 3 energy states (1,2,3). The state is observed every second\n    and modelled as a Markov chain where Xn is the energy state at the nth second. If\n    in state 1, the next second it will be in state 2 with probability .4 and in state 3 with\n    probability .2. If in state 2, the next second it will be in state 3 with probability .4 and\n    in state 1 with probability .2. Finally, if in state 3, it is in state 1 the next second with\n    probability .3 and in state 3 otherwise.\n    (a) If at time 0 the electron is in state 1, what is the probability that it will be in state 1\n    at time 1 second and 2 seconds.\n    (b) Explain in words the interpretation of P 2 (1, 1). Why is this value different from your\n    answer to (a)?"
+  },
+  {
+    "id": "test1_sample_questions_q40",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 40,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "The number of people in a waiting room is observed every hour and modelled as a Markov\n    chain. If there are no people in the room, the next hour there is one with probability .5,\n    two with probability .2 and zero otherwise. If there is one person in the room, the next\n    hour there are none with probability .5, two with probability .1 and one otherwise. If\n    there are two people in the room, the next hour there are none with probability .2, one\n    with probability .6 and two otherwise. In steady-state, calculate\n    (a) The average number of people waiting.\n    (b) The variance of the number of people waiting."
+  },
+  {
+    "id": "test1_sample_questions_q41",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 41,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "The price of a commodity fluctuates between two values, call them high and low. The\n    price is observed each week. If one week it is high, the next week it is low with probability\n    .4. If one week it is low, the next week it is high with probability .1. Let {Xn } be the\n    Markov chain which gives the price at week n.\n    (a) Suppose the initial distribution is Pr{X0 = high} = .2, Pr{X0 = low} = .8). Calculate\n    the distribution at the first week (give Pr{X1 = high} and Pr{X1 = low}).\n    (b) If the high price is $110 and the low price is $90, what is the expected cost at the first\n    week (using the µ of (a))?"
+  },
+  {
+    "id": "test1_sample_questions_q42",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 42,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A worker can do three types of jobs (1, 2, 3). If on a given day she is doing job 1, the\n    next day she is doing job 1 with probability .3. If on a given day she is doing job 2, the\n    next day she is doing job 2 with probability .6. If on a given day she is doing job 3, the\n    next day she is doing job 3 with probability .9. If she changes jobs the following day, it\n    is equally likely that she changes to each of the other two options.\n    (a) What proportion of days (in steady-state) is she doing each job?\n\n\n\n    (b) Suppose on day 1 she is doing job 1. What is the probability that the next 2 days she\n    does both jobs 2 and 3 (in any order)?"
+  },
+  {
+    "id": "test1_sample_questions_q43",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 43,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A particle can be in one of two states: energized or deenergized. There are two particles\n    that act independently of each other. At time n, if a particle is energized, it is energized\n    at time (n + 1) with probability .8. At time n, if a particle is deenergized, it is energized\n    at time (n + 1) with probability .1.\n    (a) Let Xn be the number of particles energized at time n. Give its transition matrix P .\n    (b) Compute Pr{X52 = 2|X51 = 0, X50 = 0}."
+  },
+  {
+    "id": "test1_sample_questions_q44",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 44,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A machining center has two machines. The number of machines operating on day n is a\n    Markov chain with state space {0, 1, 2} and transition matrix\n                                                          \n                                              .1 .6 .3\n                                        P =  .1 .6 .3 \n                                                      \n                                              0 .1 .9\n\n    The profit gained per day is $100 per machine operating.\n    (a) In steady-state, find the expected profit per day.\n    (b) For a flat fee of $10 per day, one can change P (0, 1) = P (1, 1) = 0.5 and P (0, 2) =\n    P (1, 2) = .4, with the same profit as in (a). Is the change worthwhile?"
+  },
+  {
+    "id": "test1_sample_questions_q45",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 45,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A user submits requests to a database server. There are three kinds of requests supported:\n    query, add/modify and delete. If the previous request was a query, then the next request\n    is an add/modify request with probability 0.2, a delete request with probability 0.1 and\n    otherwise it is another query request. An add/modify request is followed by another\n    add/modify request with probability 0.1, otherwise it is followed by a query request. A\n    delete request is followed by another delete request with probability 0.1, otherwise it is\n    followed by a query request.\n\n     (a) If the first request is a query, what is the probability that the third request is a\n         query?\n     (b) In steady-state, what is the proportion of requests that are queries?\n     (c) A query requires 100 msec of processing, while add/modify and delete requests re-\n         quire 200 msec of processing. What is the expected processing time per request (in\n         steady-state)?"
+  },
+  {
+    "id": "test1_sample_questions_q46",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 46,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a multiprocessor system with two processors and two memory modules. At each\n    time point (time is discrete), requests are made in the following manner.\n\n     (a) If both processors are accessing different memory modules, at the next time point\n         each processor makes independent requests for the memory modules: with probabil-\n         ity 0.4, a request is made for memory module 1, otherwise the request is made for\n         memory module 2.\n\n\n\n     (b) If both processors are accessing the same module, only one processor makes a new\n         access request at the next time step (the other maintains its request for the same\n         memory module). The request probabilities are the same as above.\n\n    This can be modelled as a DTMC with three states. Using such a DTMC, calculate the\n    steady-state probability that the processors are accessing different memory modules."
+  },
+  {
+    "id": "test1_sample_questions_q47",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 47,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A computer program’s execution is modelled as a DTMC. The state is the resource being\n    used at time n. Suppose that there are three resources: CPU (state 1), Disk A (state 2)\n    and Disk B (state 3). The probability transition matrix is\n                                                           \n                                            0.8 0.1 0.1\n                                      P =  0.1 0.9 0 \n                                                       \n                                            0.1 0 0.9\n\n     (a) What is the probability that given the program is initially using the CPU, it is using\n         the CPU two time units later?\n     (b) What is the steady-state probability that Disk A is being used?"
+  },
+  {
+    "id": "test1_sample_questions_q48",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 48,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A user’s behaviour in interacting with a database system is as follows (we assume that the\n    user is always connected). There are three actions: query, modify/delete, add. A query\n    action is followed by another query action with probability 0.8, by a modify/delete action\n    with probability 0.18 and by an add operation with probability 0.02. A modify/delete\n    action is followed by a modify/delete action with probability 0.05, otherwise it is followed\n    by a query action. Finally, an add action is always followed by a query action.\n\n     (a) If the first action is a query, what is the probability that the third action is not a\n         query?\n     (b) In steady-state, what is the probability that one sees two query actions in a row?"
+  },
+  {
+    "id": "test1_sample_questions_q49",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 49,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a DTMC, {Xn } with transition matrix\n                                                            \n                                           1/2 1/4 1/4\n                                     P =  0 1/2 1/2 \n                                                      \n                                            1   0   0\n\n    The states are {0, 1, 2}.\n\n     (a) Calculate P (X3 = 0|X1 = 0).\n     (b) Suppose that X0 = 0. As n → ∞, what is the probability that Xn = 2?"
+  },
+  {
+    "id": "test1_sample_questions_q50",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 50,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a small system of three web pages, labelled A, B and C. Page A is always the\n    first page visited. After visiting A, pages B and C are equally likely to be visited next.\n    After page B is visited, page A is always visited next. After page C is visited, pages A\n    and B are equally likely to be visited next.\n\n\n\n     (a) What is the probability that A is the fourth page visited?\n     (b) In steady-state, what is the probability that A is visited?"
+  },
+  {
+    "id": "test1_sample_questions_q51",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 51,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with two components. We observe the state of the system every hour.\n    A component operating at hour n has probability 0.1 of being failed at hour n + 1. A\n    component that is failed at hour n has a probability of operating at hour n + 1 of 0.7.\n    The components operate independently of each other.\n\n     (a) Model this system as a DTMC. Define the states and give the transition matrix.\n     (b) What is the limiting probability that both components are failed at the same hour?"
+  },
+  {
+    "id": "test1_sample_questions_q52",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 52,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A board is divided into two. There are four markers on the board. Time is discrete. At\n    each time point, one marker is chosen at random and moved to the opposite side of the\n    board. What is the limiting probability that the numbers of markers on both sides of the\n    board are equal?"
+  },
+  {
+    "id": "test1_sample_questions_q53",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 53,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that a system has two identical servers. Only one server operates at a time. At\n    the end of each day, the operating server is inspected. With probability 0.1 it is taken\n    offline to be repaired and the other server becomes operational (if it is available). Repairs\n    take exactly two days and both servers can be concurrently repaired.\n\n     (a) Model this system as a DTMC and give the P matrix.\n     (b) Write down the equations that you would use to solve for the limiting distribution\n         (do not solve them). In terms of your limiting distribution, what is the probability\n         that you see two consecutive days where a server is taken offline to be repaired?"
+  },
+  {
+    "id": "test1_sample_questions_q54",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 54,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider the following game. A dart will hit the random point Y on the interval (0, 1)\n    according to the density fY (t) = 2t. You must guess the value of Y (your guess must be\n    a constant, not random). You will lose $2 times the magnitude of your error if Y is to the\n    left of your guess and will lose $1 times the magnitude of your error if Y is to the right\n    of your guess. What is the best guess to minimize your expected loss?"
+  },
+  {
+    "id": "test1_sample_questions_q55",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 55,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system of three web pages. There is a cache with room for two web pages. The\n    Least Recently Used (LRU) algorithm is employed to determine the cache contents - the\n    two most recently used web pages are placed in the cache. Suppose that the probabilities\n    that the web pages are accessed are 0.8 for the first page, 0.1 for the second page, and\n    0.1 for the third page.\n\n     (a) Determine an appropriate state space and a corresponding P matrix for a DTMC\n         that can be used to calculate the probability of a cache miss (a request does not find\n         its web page in the cache).\n     (b) In terms of the steady-state probabilities, what is the likelihood of a cache miss?\n         (There is no need to calculate the steady-state probabilities.)"
+  },
+  {
+    "id": "test1_sample_questions_q56",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 56,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A database server receives requests from 100 clients. The average think time of a client is\n    10 seconds. The database server has two disks and one CPU. In the current configuration,\n    the average number of disk accesses per client request is 20 for the first disk, and 30 for\n    the second disk. For both disks, the average time per access is 10 msec. For each client\n    request, the total amount of CPU time required has an average of 240 msec.\n\n     (a) Is this number of clients well supported by this system? Justify your answer.\n     (b) You are presented with two design options, both of equal cost. The first would\n         balance the loads on the disks (keeping the total load over both disks unchanged),\n         the second would decrease the demand on the CPU to 200 msec. Which option\n         would you choose? Justify your choice."
+  },
+  {
+    "id": "test1_sample_questions_q57",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 57,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "You simultaneously request three different files (f1 , f2 , f3 ). The times to download the\n    files are independent and exponentially distributed with means 1 minute, 1 minute and\n    2 minutes, respectively. What is the expected time until two files are downloaded (it can\n    be any two)?"
+  },
+  {
+    "id": "test1_sample_questions_q58",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 58,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) You simultaneously make two requests for the same file from two different servers.\n        The download times are independent. The download time from the first server is ex-\n        ponentially distributed with mean 20 seconds and the downlaod time from the second\n        server is exponentially distributed with mean 30 seconds. What is the probability\n        that the download from the first server completes first?\n     (b) Consider the problem in part (a), but now suppose that the download time from the\n         first server is exactly 20 seconds (the download time from the second server remains\n         exponentially distributed with mean 30 seconds). What is the probability that the\n         download from the first server completes first?"
+  },
+  {
+    "id": "test1_sample_questions_q59",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 59,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Red arrivals occur to a system according to a Poisson process with rate 1 per second.\n    Green arrivals occur to the same system according to a Poisson process with rate 4 per\n    second. The arrival processes are independent.\n\n     (a) What is the probability that two consecutive arrivals are red?\n     (b) What is the expected time of the second arrival to the system (colour does not\n         matter)?\n     (c) Suppose that we know that exactly one arrival occurred in the first 20 seconds. What\n         is the probability that it occurred in the first 10 seconds?"
+  },
+  {
+    "id": "test1_sample_questions_q60",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 60,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A particular computer model fails according to an exponential distribution with rate 1\n    per year. If you buy two machines of this model, what is the probability that both are\n    still operating at the end of one year? (Assume that failures are independent events.)"
+  },
+  {
+    "id": "test1_sample_questions_q61",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 61,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A series of experiments are run as follows. For each experiment, the only possibilities\n    are success or failure. For a particular experiment, n, a success occurs with probability\n    0.8 if the previous two experiments (n − 1 and n − 2) were successes. If at least one\n\n\n\n    of the two previous experiments was a failure, then a success occurs for experiment n\n    with probability 0.5. Calculate the steady-state probability that a success occurs for an\n    experiment."
+  },
+  {
+    "id": "test1_sample_questions_q62",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 62,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that in a sample of 10 chips, two chips are defective. You select three chips\n    (all at once). Let X be the number of defective chips chosen. Give the probability mass\n    function of X."
+  },
+  {
+    "id": "test1_sample_questions_q63",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 63,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that a random variable X has density\n                                               (\n                                                   x   1 ≤ x ≤ b;\n                                     f (x) =\n                                                   0   otherwise.\n\n    Find E[X]. (Your answer should be a number.)"
+  },
+  {
+    "id": "test1_sample_questions_q64",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 64,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider a system with 50 users, and a server consisting of a CPU and three disks. The\n    average response time perceived by a user is 10 seconds. The throughput of the system is\n    1.5 user requests per second. It is also known that each user request requires an average\n    of 0.52 seconds of CPU time.\n     (a) What is the average think time of a user?\n     (b) What is the CPU utilization?\n     (c) On average, how many requests is the server processing?"
+  },
+  {
+    "id": "test1_sample_questions_q65",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 65,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A system sends simultaneous requests to to two servers, where the response times have\n    means of 3 seconds and 2 seconds, respectively. The potential of sending requests to a\n    third server is being considered, but only if the response from this server is the first to\n    be received at least 20 percent of the time. If all response times are independent and\n    exponentially distributed, what is the maximum mean response time that is feasible for\n    the third server?"
+  },
+  {
+    "id": "test1_sample_questions_q66",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 66,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider the DTMC {Xn , n = 0, 1, 2, . . .} with states { 0,1,2 } and transition matrix\n                                                               \n                                           1/2 1/4 1/4\n                                     P =  1/3 0 2/3 \n                                                      \n                                           1/2 1/2 0\n\n     (a) Suppose that P {X0 = 0} = P {X0 = 1} = 1/4. Calculate P {X0 = 2, X1 = 1, X2 =\n         0}.\n     (b) What is the steady-state probability of being in state 0?"
+  },
+  {
+    "id": "test1_sample_questions_q67",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 67,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) A system searches for a file on a number of hosts. Each host searched has a proba-\n        bility of 0.25 of having the desired file (independently from the other hosts). First,\n        calculate the probability that at most 2 hosts need to be searched before finding the\n        file. Now, suppose that you have not found the file after the first four hosts have been\n        searched. What is the probability that you have to search at most 2 more hosts?\n\n\n\n     (b) Let a random variable X have density function\n                                                  (\n                                                      3x2 0 ≤ x ≤ k\n                                      fX (x) =\n                                                      0   otherwise\n\n         Calculate k and E[X]."
+  },
+  {
+    "id": "test1_sample_questions_q68",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 68,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A DTMC with states {0, 1, 2} has transition matrix\n                                                                 \n                                           1/3              1/3\n                                     P =  1/2         0\n                                                                 \n                                                                  \n                                                      3/4    0\n\n     (a) Fill in the blanks in P (give the complete P in your answer booklet, do not fill them\n         in on the test sheet).\n     (b) Calculate P {X5 = 0, X6 = 0, X7 = 2|X4 = 0, X3 = 1}.\n     (c) Calculate the steady-state probability of being in state 1."
+  },
+  {
+    "id": "test1_sample_questions_q69",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 69,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Consider the following transition matrix for a DTMC with states {0, 1, 2}:\n                                                                \n                                             .4 .2 .4\n                                       P =  .5 .25 .25 \n                                                       \n                                             .4 .5 .1\n\n     (a) What is P {X3 = 0|X1 = 2, X0 = 1}?\n     (b) What is the steady-state probability of being in state 0?"
+  },
+  {
+    "id": "test1_sample_questions_q70",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 70,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that you have an urn where balls are taken out and replaced. The rules for\n    operation are as follows.\n\n     (i) There are always three balls in the urn.\n     (ii) Each ball is either red or green.\n    (iii) At each time step, a ball is randomly chosen and replaced by a new ball. With\n          probability 1/3 the replacement ball is red, otherwise the replacement ball is green.\n    (iv) We are unsure as to the initial contents (at time step 0) of the urn, so we assume\n         that all possible initial contents are equally likely.\n\n     (a) Calculate the probability that at time step 2 there is at least one red ball in the urn.\n     (b) Calculate the limiting probability that the three balls are the same colour."
+  },
+  {
+    "id": "test1_sample_questions_q71",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 71,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A common model for software reliability is that faults arise according to a Poisson process.\n    Suppose that we have a product where faults occur according to a Poisson process with\n    rate 0.2 per day. With probability 0.05, a fault is major, otherwise it is minor.\n\n\n\n     (a) What is the expected number of major faults in one month? (Assume that one\n         month is 30 days.)\n     (b) Suppose that the last fault occurred 3.60 days ago and that it was a minor fault.\n         What is the expected time until the next minor fault occurs?"
+  },
+  {
+    "id": "test1_sample_questions_q72",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 72,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "(a) A program is executed three times, where the results of the executions are indepen-\n        dent of each other. The probability that an execution gives a correct result is 0.9.\n        Let X be the number of correct executions. Give the distribution (c.d.f.) of X and\n        its expected value.\n     (b) A continuous random variable X has distribution U [0, 1]. Calculate P {X > 0.9|X >\n         0.5}."
+  },
+  {
+    "id": "test1_sample_questions_q73",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 73,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Arrival rates to a server are modelled as follows. There are three rates: high, medium,\n    and low. The rates change between these three values as follows. If at time unit n it is\n    high, then at time unit n + 1 it is medium with probability 0.1, low with probability 0.1,\n    and it remains high otherwise. If at time unit n it is medium, then at time unit n + 1 it\n    is high with probability 0.2, low with probability 0.2, and it remains medium otherwise.\n    Finally, if at time unit n it is low, then at time unit n + 1 it is high with probability 0.25,\n    medium with probability 0.25, and it remains low otherwise.\n     (a) If the rate is high at time unit n = 0, what is the probability that in the next four\n         time units, it is high at both n = 2 and n = 4?\n     (b) Calculate the stationary probability that the request rate is high."
+  },
+  {
+    "id": "test1_sample_questions_q74",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 74,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Parts (a) and (b) are unrelated.\n     (a) A cluster has five servers, two of which have a required piece of data. If the servers\n         are queried in random order (a server is not queried twice), what is the expected\n         number of queries before the required piece of data is found?\n     (b) A chemical company estimates that the probability that one of its batches has a high\n         impurity level is 0.01. They have implemented a testing procedure that will falsely\n         give a reading of a high impurity level with probability 0.05 and falsely indicate a\n         satisfactory impurity level with probability 0.02. If a test results in a satisfactory\n         impurity level, what is the probability that the impurity level is actually satisfactory?"
+  },
+  {
+    "id": "test1_sample_questions_q75",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 75,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A load balancer sends five requests to three servers. Each request is sent independently\n    of the others. With probability 0.2 it is sent to Server 1, with probability 0.4 it is sent\n    to Server 2, and with probability 0.4 it is sent to Server 3. Calculate the mean and the\n    variance of the number of jobs sent to Server 1."
+  },
+  {
+    "id": "test1_sample_questions_q76",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 76,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A computer random number generator produces values that follow a uniform distribution\n    between 0 and 1.\n     (a) If three values are generated, what is the probability that all of the values are less\n         than 0.4?\n\n\n\n     (b) If three values are generated, let X be the number of values that are between 0.2\n         and 0.8. Find the mean and the variance of X."
+  },
+  {
+    "id": "test1_sample_questions_q77",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 77,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A professor is setting a test with T/F questions. A question with a T answer is followed\n    by another question with a T answer with probability 3/4. A question with an F answer\n    is followed by a question with an F answer with probability 2/3.\n\n     (a) Suppose that the first three questions have T answers. What is the probability that\n         the fifth question has a T answer?\n     (b) If the exam has 100 questions, provide a good approximation for how many you\n         would expect to be T answers."
+  },
+  {
+    "id": "test1_sample_questions_q78",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 78,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A client/server system is monitored for one hour. During this time, the utilization of\n    a certain disk is measured to be 50 percent. Each user request makes an average of\n    2 accesses to this disk, and each disk access has an average processing time of 25 ms.\n    Suppose that there are 150 clients, each with average think time of 10 seconds. What is\n    the average response time of the server?"
+  },
+  {
+    "id": "test1_sample_questions_q79",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 79,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have a system with 30 users that each have average think time of 30\n    seconds. They submit requests to a server that consists of three devices: CPU, disk\n    1 and disk 2. The average processing times are E[SCP U ] = 0.05, E[Sdisk1 ] = 0.08,\n    E[Sdisk2 ] = 0.04 and the visit ratios are E[VCP U ] = 20, E[Vdisk1 ] = 11, and E[Vdisk2 ] = 8.\n    Is an average response time of 8 seconds feasible? If not, what changes are required?"
+  },
+  {
+    "id": "test1_sample_questions_q80",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 80,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A DTMC {Xn } with states {0, 1, 2, 3} has transition matrix\n                                                                     \n                                     0 2/3  1/3      0\n                                   0   x    0    1/2 + x \n                               P =\n                                                         \n                                   0   0 1/3 − y 2/3 − y \n                                                          \n\n                                    1/2 0    0      1/2\n\n    Suppose that X0 = 0. Find the expected number of time units until the DTMC reaches\n    state 3. You should be able to give an explicit number, in other words your final answer\n    should not depend on x and y."
+  },
+  {
+    "id": "test1_sample_questions_q81",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 81,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "You interviewed for a software engineer position at a company. The company has two\n    types of recruiters:\n\n       • Type A: gets back to you in a time that is exponentially distributed with mean 10\n         days.\n       • Type B: never gets back to you.\n\n    Suppose that you are equally likely to be assigned to the two types of recruiters. What\n    is the probability that your recruiter was Type B given that you have not heard back in\n    10 days?"
+  },
+  {
+    "id": "test1_sample_questions_q82",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 82,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A car insurance company puts policy holders in three categories:\n\n      • no discount on premiums\n      • 25% discount on premiums\n      • 50% discount on premiums\n\n    New policy holders start with no discount. Their premiums evolve as follows:\n\n      • If they made no claims in a given year, they move up one level of discount in the\n        next year\n      • If they make at least one claim in a given year, they move down one level of discount\n        in the next year\n      • If they have the maximum discount in a given year and make no claims, they remain\n        at the maximum discount in the next year\n      • If they have no discount in a given year and make at least one claim, they remain at\n        the minimum discount in the next year\n\n    The probability that a policy holder does not make a claim in a given year is 3/4.\n\n     (a) What is the probability that a new policy holder has no discount three years later?\n    (b) In steady-state, what is the probability that a policy holder has no discount in a\n        given year?"
+  },
+  {
+    "id": "test1_sample_questions_q83",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 83,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A system has M users, each with average think time Z = 20 seconds. A user request first\n    visits a CPU. After visiting the CPU, with probability 0.55 the request goes to Disk 1;\n    with probability 0.40 the request goes to Disk 2; otherwise the request is complete and\n    returned to the user. The average processing times are 0.05 seconds at the CPU; 0.08\n    seconds at Disk 1; 0.04 seconds at Disk 2.\n\n     (a) What is the maximum value of M before the system performance begins to degrade?\n    (b) Is a 10-second average response time feasible when M = 50? If not, what minimum\n        amount of CPU speedup is required?"
+  },
+  {
+    "id": "test1_sample_questions_q84",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 84,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A server is either working or down (and being repaired). If it is working today, then\n    there is a 95% chance that it will be working tomorrow (otherwise it is down). If it is\n    down today, there is a 40% chance that it will be working tomorrow (otherwise it remains\n    down). If the server is down on a fourth consecutive day, the server is replaced by a new\n    one, so on the next day it is working.\n\n     (a) Model this system as a DTMC and give the corresponding transition matrix.\n    (b) How would you determine the steady-state probability that the server is working?\n        Just give the equations that you would solve and a final answer in terms of the\n        solution to these equations - there is no need to give an explicit solution."
+  },
+  {
+    "id": "test1_sample_questions_q85",
+    "source_pdf": "test1_sample_questions.pdf",
+    "number_in_pdf": 85,
+    "category": "test1",
+    "is_true_false": false,
+    "body_plain": "A job can be one of two types. If the job is of Type 1, its processing time is exponentially\n    distributed with mean 5 minutes. If the job is of Type 2, its processing time is exponen-\n    tially distributed with mean 60 minutes. A job is twice as likely to be of Type 1 than of\n    Type 2. If a job has been in process for 4 minutes and is not yet complete, what is the\n    likelihood that it is a Type 1 job?"
+  },
+  {
+    "id": "test2_sample_questions_q1",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 1,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Jobs arrive at a system according to a Poisson process with rate 10 per hour. The service\n    requirement of each job has an exponential distribution with mean 5 minutes. For use of\n    the system, each arriving job is charged one dollar, with a 20 cent rebate if the job has\n    to wait before entering service (the jobs wait in one queue). A server costs 1 dollar per\n    hour to operate (this is a fixed cost, and does not depend on the server utilization). To\n    maximize expected revenue for the system, should one or two servers be used?"
+  },
+  {
+    "id": "test2_sample_questions_q2",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 2,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Short Answer Questions\n\n    (i) Very briefly explain why it is not a good idea to operate a queueing system under a\n         heavy load (arrival rate close to service rate).\n    (ii) Very briefly explain why an infinite buffer queue is said to be “unstable” when the\n         mean arrival rate is greater than the mean service rate.\n    (iii) A professor schedules student appointments every ten minutes. This is on the as-\n          sumption that she can advise the average student in ten minutes. Will there be a\n          long line outside of her office?"
+  },
+  {
+    "id": "test2_sample_questions_q3",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 3,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A call centre is using the following staffing rule: the average time in queue (before service\n    commences) of a customer must be less than 5 minutes. The minimum staff level should\n    be kept. The time spent with a customer (service time) is exponentially distributed with\n    mean 4 minutes and interarrival times are exponentially distributed.\n    (a) For what range of arrival rates can one staff person be used?\n    (b) Suppose the staffing rule was changed such that all customers should have a wait of\n    less than 5 minutes. Is this achievable? Explain."
+  },
+  {
+    "id": "test2_sample_questions_q4",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 4,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Jobs arrive to a single server according to a Poisson process with rate 3 per hour. Service\n    times are exponentially distributed with mean 1/µ hours.\n    (a) Find µ so that the steady-state probability that there is more than 1 customer in the\n    system is .25.\n    (b) Now assume that µ = 5. The server gets a bonus of $1 per job that does not have\n    to wait in the queue before entering service. Calculate the expected bonus per hour that\n    the server makes."
+  },
+  {
+    "id": "test2_sample_questions_q5",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 5,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Arrivals to a single server follow a Poisson process with rate 30 per hour. Service times\n    are exponentially distributed with mean 60/35 minutes. What fraction of the arrival\n    rate given in the question yields half the expected number in system? Explain why this\n    fraction is more or less than one half."
+  },
+  {
+    "id": "test2_sample_questions_q6",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 6,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates as follows: requests arrive according to a Poisson process with rate\n    1 per second. There are two processors, each with exponentially distributed processing\n    times with mean 1.25 seconds per request. The second processor only operates when\n    there are at least T requests waiting for processing. The first processor always operates\n\n\n\n    if possible.\n    (a) For T = 3, calculate the probability that an arriving request has to wait before being\n    processed.\n    (b) Is the value calculated in (a) an increasing or decreasing function of T ? Explain your\n    answer."
+  },
+  {
+    "id": "test2_sample_questions_q7",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 7,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An existing system consists of a single server. Requests arrive according to a Poisson\n    process with rate three per hour. The processing times are exponentially distributed with\n    mean 18 minutes. You are asked whether it would be beneficial to add a second (identical)\n    processor. The two processors would share a common queue. The costs are as follows:\n    operating costs of 25 dollars per hour per processor and cost of delay of five dollars per\n    hour per request."
+  },
+  {
+    "id": "test2_sample_questions_q8",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 8,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates as follows. Arrivals occur according to a Poisson process with rate 1\n    per minute. There is a single server and room for at most three jobs in the system. If\n    there are one or two jobs in the system, the server has service times that are exponentially\n    distributed with mean one minute. However, if there are three jobs in the system, the\n    server speeds up so that the service times are exponentially distributed with mean 30\n    seconds. Calculate the expected number of jobs in the system (in steady-state)."
+  },
+  {
+    "id": "test2_sample_questions_q9",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 9,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "The average waiting time (W ) on a database system is three seconds. During a one minute\n    observation interval, the idle time on the system was measured to be 10 seconds. Using\n    an M/M/1 model, determine the mean service time per query."
+  },
+  {
+    "id": "test2_sample_questions_q10",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 10,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system works as follows. Arrivals occur according to a Poisson process with rate 2 per\n    minute. If there are one or two jobs in the system, a single server processes the jobs,\n    the processing times being exponentially distributed with mean 40 seconds. If there are\n    three jobs in the system, two servers process the jobs, each server having processing times\n    exponentially distributed with mean 40 seconds. Finally, an arriving job that sees three\n    jobs in the system is rejected. In steady-state, calculate the expected number of jobs in\n    the system."
+  },
+  {
+    "id": "test2_sample_questions_q11",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 11,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Arrivals occur to a system according to a Poisson process with rate one per minute. The\n    blocking probability for the system is measured to be 0.1. The expected number of jobs\n    in the system is 2.5. What is the expected response time?"
+  },
+  {
+    "id": "test2_sample_questions_q12",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 12,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Students arrive at a single copy machine according to a Poisson process with rate 10\n    students per hour. The time a student spends at the copying machine is exponentially\n    distributed with a mean of 4 minutes.\n    (a) What is the probability that a student arriving at the machine will have to wait?\n    (b) What is the mean number of students waiting for the copier (not including the one\n    making copies)?"
+  },
+  {
+    "id": "test2_sample_questions_q13",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 13,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a single processor implementing a priority discipline. There are two classes of\n    jobs, high priority and low priority. Arriving jobs follow Poisson processes. The processing\n    times are exponentially distributed.\n\n\n\n    (i) Low priority jobs are only processed if no high priority jobs are present. That is,\n         any high priority jobs in the queue are served, one at a time, before the processor\n         processes low priority jobs.\n    (ii) If the queue only has low priority jobs, an arriving high priority job will instantly\n         displace the low priority job at the processor and take its place.\n\n    Let the arrival rate be 5 jobs per millisecond for each class and the processing rate be 20\n    jobs (of either class) per millisecond. Calculate the average number of high priority jobs\n    in the system and the average number of jobs of both classes in the system. Use these two\n    answers to deduce the average number of low priority jobs in the system. (Hint: Think\n    carefully how high priority jobs are processed.)"
+  },
+  {
+    "id": "test2_sample_questions_q14",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 14,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single server systems has arrivals that occur according to a Poisson process with rate λ\n    per hour. The processing times are exponentially distributed with mean 1/µ hours. The\n    cost of waiting jobs is $ C1 per job per hour. The cost of operating the system is $ µC2\n    per unit per hour, whether or not it is always in operation. How large should µ be to\n    minimize the total cost?"
+  },
+  {
+    "id": "test2_sample_questions_q15",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 15,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A designer is trying to decide how many processors to have in a system. Each processor\n    works at a rate of 100 jobs per hour and the system is such that a processor upon becoming\n    idle chooses the next waiting job. The system is being designed for an arrival rate of 150\n    jobs per hour. Assume all underlying distributions (interarrival and service times) are\n    exponential. If the design criterion is that the probability that an arriving job has to wait\n    is no larger than .5, what is the smallest number of processors that can be chosen?"
+  },
+  {
+    "id": "test2_sample_questions_q16",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 16,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider two M/M/1 systems with arrival rates λ1 = 0.5 per second and processing rates\n    µ1 = 1 per second and an M/M/2 system with arrival rate λ2 = 2λ1 = 1 per second and\n    processing rate µ2 = µ1 = 1 per second for each server. Compare the mean waiting time\n    times for both systems. Discuss your result, giving a physical explanation for why one\n    system is better."
+  },
+  {
+    "id": "test2_sample_questions_q17",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 17,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An M/M/1 system has a processing rate of 1 per second.\n    (a) What is the maximum arrival rate that this system can support, if the requirement is\n    that there are, on average, less than 4 jobs in the system, 90 percent of the time?\n    (b) Suppose that at time t, there are 4 jobs in the system, with the job being processed\n    having begun processing at time t − 0.5. What is the expected time of the next departure\n    from the system?"
+  },
+  {
+    "id": "test2_sample_questions_q18",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 18,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system is described as follows. Arrivals occur according to a Poisson process with rate\n    1 per second. There is room in the system for 3 jobs (including the one being processed).\n    A single server has exponentially distributed processing times, but the rate depends on\n    the number in system. A good fit is that when there are n jobs in the system, the\n                      √\n    processing rate is n jobs per second. Calculate the mean number of jobs in the system,\n    in steady-state."
+  },
+  {
+    "id": "test2_sample_questions_q19",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 19,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "(a) Consider an M/M/1/4 system. The observed mean number in system is 2, the mean\n    waiting time (from arrival to departure) is 4 seconds. The arrival rate, λ (without taking\n    the losses into account) is λ = 0.75 jobs per second. What is the loss (blocking) proba-\n    bility?\n    (b) Consider an M/M/c system with arrival rate 5 per minute. Each processor has a mean\n    processing time of 20 seconds. How many processors are required so that the system is\n    stable (i.e. the steady-state probabilities pn exist)?\n    (c) If you could convert the system in (b) to c M/M/1’s, where an arrival joins each queue\n    with probability 1/c, would you make the change? Briefly explain why or why not."
+  },
+  {
+    "id": "test2_sample_questions_q20",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 20,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider two M/M/1 systems with arrival rates λ1 = 0.5 per second and processing rates\n    µ1 = 1 per second and an M/M/2 system with arrival rate λ2 = 2λ1 = 1 per second and\n    processing rate µ2 = µ1 = 1 per second for each server. Compare the mean waiting time\n    times for both systems. Discuss your result, giving a physical explanation for why one\n    system is better."
+  },
+  {
+    "id": "test2_sample_questions_q21",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 21,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You are asked to design a system for which you receive 1 dollar in revenue for every\n    arriving job that is served without waiting before processing and 50 cents for every job\n    that is processed but has to wait before processing. Arrivals occur according to a Poisson\n    process with rate 54 per hour and the processing times are exponentially distributed with\n    mean 1 minute. You are considering the following two choices:\n\n     (a) A single processor, admit all arrivals, processing in FIFO order.\n    (b) A single processor, limit the number in system to 5, serve arrivals in FIFO order.\n\n    Which would you choose if your goal is to maximize the rate of revenue?"
+  },
+  {
+    "id": "test2_sample_questions_q22",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 22,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single processor has room for at most three in the system. Processing times are exponen-\n    tially distributed with mean 1, while the interarrival times are modelled as exponentially\n    distributed with the following rates:\n\n                                 number in system arrival rate\n                                        0             1.5\n                                        1             1.0\n                                        2             0.5\n\n    Calculate the utilization of the processor."
+  },
+  {
+    "id": "test2_sample_questions_q23",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 23,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "There are two independent arrival streams (following independent Poisson processes) with\n    respective arrival rates λ1 = 20 and λ2 = 15 per hour. Processing times for both types\n    of jobs are exponentially distributed with mean 2 minutes. You have two processors and\n    have the choice of dedicating one processor to each arrival stream, or combining the two\n    arrival streams into a single queue and serving the arrivals in a FIFO manner at the first\n    available processor of the two. Which configuration would you choose? Quantify the\n    resulting performance difference between the two configurations."
+  },
+  {
+    "id": "test2_sample_questions_q24",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 24,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An M/M/1/3 system has an arrival rate of 8 per hour and mean processing time of 6\n    minutes. The profit received from each arrival that is admitted into the system is 5\n    dollars. For an extra 60 dollars per day, you can convert it to an M/M/1/4. Would you\n    make the change?"
+  },
+  {
+    "id": "test2_sample_questions_q25",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 25,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "As a first cut at dimensioning a database server, we assume that the server has arrivals\n    occurring as a Poisson process with rate 2 per minute and that the processing times are\n    exponentially distributed with rate µ. If one pays a fixed cost of µ per minute for the\n    capital investment and 10 for each arrival that has to wait to begin processing, what\n    would you choose for µ?"
+  },
+  {
+    "id": "test2_sample_questions_q26",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 26,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system has room for at most two in system (i.e. arrivals finding two in the system are\n    lost). Arrivals follow a Poisson process with rate 1 per minute. The processing times are\n    exponentially distributed with mean 40 seconds if there is one job in the system and 20\n    seconds if there are two jobs in the system. Find the expected number of lost arrivals in\n    a one hour interval."
+  },
+  {
+    "id": "test2_sample_questions_q27",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 27,
+    "category": "test2",
+    "is_true_false": true,
+    "body_plain": "True or False.\n    (a) One M/M/4 queue has lower mean waiting time in system than 4 M/M/1 queues.\n    (The arrival rate is 4λ to the M/M/4, while the arrival rate is λ to each M/M/1. All\n    servers have rate µ.)\n    (b) One M/M/4 queue has lower average server utilization than 4 M/M/1 queues. (The\n    arrival rate is 4λ to the M/M/4, while the arrival rate is λ to each M/M/1. All servers\n    have rate µ.)\n    (c) A system has an arrival rate of 2 per minute and an average waiting time in system\n    of 10 minutes. The average number in system is 20."
+  },
+  {
+    "id": "test2_sample_questions_q28",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 28,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You are setting up a server system that has a single queue. Service is FCFS and you need\n    to decide the number of servers. For cost reasons, you would like to choose the smallest\n    number of servers. Arrivals follow a Poisson process with rate 20 per hour. Processing\n    times are exponentially distributed with mean 2 minutes. There is a requirement that\n    there is at most one job in the system 75 percent of the time. How many servers would\n    you choose?"
+  },
+  {
+    "id": "test2_sample_questions_q29",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 29,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system is modelled as follows. There is space for at most two jobs in the system.\n    Arrivals occur according to a Poisson process with rate 1 per minute. Arrivals finding\n    two in the system are lost. If there is one job in the system, it is processed at rate 2\n    per minute. If there are two in the system, due to contention, they are each processed\n    at rate 0.75 per minute. Each job has its own processing time and processing times are\n    exponentially distributed. Calculate the steady-state probability that there is exactly one\n    job in the system."
+  },
+  {
+    "id": "test2_sample_questions_q30",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 30,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An administrator is trying to calculate how many (identical) servers are required for\n    a database server system. Suppose arrivals occur according to a Poisson process with\n    rate 1 per second. The administrator estimates that the processing time of a request is\n\n\n\n    exponentially distributed with mean 0.8 seconds. If the SLA (Service Level Agreement)\n    is that the mean response time be less than 3 seconds, how many servers are required?"
+  },
+  {
+    "id": "test2_sample_questions_q31",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 31,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates as follows. Arrivals occur to a single server according to a Poisson\n    process with rate 2 per minute. If there is one job in the system, its processing time is\n    exponentially distributed with mean 30 seconds. If there are two jobs in the system, job\n    processing times are exponentially distributed with mean 20 seconds. If an arriving job\n    finds two jobs in the system, it is lost.\n    (a) Calculate the steady-state probability that the server is idle.\n    (b) Suppose that the last arrival occurred twenty seconds ago. How long would you expect\n    to wait until the next arrival occurs?"
+  },
+  {
+    "id": "test2_sample_questions_q32",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 32,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "The performance of a system with fault detection is evaluated as follows. When operating,\n    faults occur at a rate of λ = 1 per hour, with fault times being exponentially distributed.\n    With probability 0.99, a fault is detected and recovery takes an exponentially distributed\n    period of time with mean 1 second. If the fault is not detected, recovery takes an ex-\n    ponentially distributed period of time with mean 5 minutes. Calculate the steady-state\n    probability that the system is operating."
+  },
+  {
+    "id": "test2_sample_questions_q33",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 33,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system with arrivals following a Poisson process and having processing times\n    that are exponentially distributed. Suppose that the state is the number of jobs in the\n    system and the only non-zero rates are:\n\n                                     λ0 = λ\n                                           λ\n                                     λn =    ,         n = 1, 2\n                                          n2\n                                     µn = µ,         n = 1, 2, 3.\n\n    Calculate the steady-state probability that the system has less than 2 jobs present if λ = 2\n    per second and µ = 1 per second."
+  },
+  {
+    "id": "test2_sample_questions_q34",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 34,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates with a central server that processes incoming requests. The operating\n    cost of the server is 20 dollars per hour, whether it is working or not. The cost of a\n    waiting user is 15 dollars per hour per user. If the processing time of a job is exponentially\n    distributed with mean three minutes and the arriving requests follow a Poisson process\n    with rate 15 per hour, should another server be purchased?"
+  },
+  {
+    "id": "test2_sample_questions_q35",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 35,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system is described as follows. Arrivals occur according to a Poisson process with rate\n    10 per minute. There is room in the system for 4 jobs (including the one being processed).\n    A single server has exponentially distributed processing times, but the rate increases with\n    the number in system. When there are n jobs in the system, the processing rate is 4n jobs\n    per minute. Calculate the utilization of the server and the probability that an arriving\n    job cannot enter the system."
+  },
+  {
+    "id": "test2_sample_questions_q36",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 36,
+    "category": "test2",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n\n\n     (a) One M/M/10 queue has lower mean number in system than 10 M/M/1 queues.\n         (The arrival rate is 10λ to the M/M/10 system and λ to each of the M/M/1’s. The\n         processing rate is µ for each server.)"
+  },
+  {
+    "id": "test2_sample_questions_q37",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 37,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A service system consists of a single server, where arrivals to the server occur according to\n    a Poisson process with rate three per hour. Processing times are exponentially distributed\n    with mean 7/24 hours. The operating costs of the server are $7.50 per hour and the cost\n    due to waiting jobs is 50 cents per hour per job waiting. A design change could reduce\n    the mean processing time by five minutes, but operating costs would be increased. How\n    much of an increase in operating costs could be tolerated?"
+  },
+  {
+    "id": "test2_sample_questions_q38",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 38,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system with two identical processors. There are two independent arrival\n    streams following Poisson processes with rate λ1 = 25 per hour to the first processor and\n    λ2 = 10 per hour to the second processor. Each processor has mean processing time of\n    two minutes and processing times are exponentially distributed.\n    (a) Calculate the mean response time at each processor.\n    (b) Suppose that the arrival streams are combined and we have one queue for both\n    processors, does the mean response time decrease for all arrivals? Justify your answer\n    with appropriate calculations."
+  },
+  {
+    "id": "test2_sample_questions_q39",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 39,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates with a central server that processes incoming requests. The operating\n    cost of a server is 20 dollars per hour. whether it is working or not. The cost of waiting\n    requests is 15 dollars per hour per request. If the processing times are exponentially\n    distributed with mean three minutes and the arriving requests follow a Poisson process\n    with rate 15 per hour, should another server be purchased?"
+  },
+  {
+    "id": "test2_sample_questions_q40",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 40,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A web server is modelled as follows. We assume that it is a single server where arrivals\n    follow a Poisson process with rate λ and the processing times are exponentially distributed\n    with rate µ. The mean response time of the server is 10 seconds and its utilization is 0.8.\n    What are λ and µ?"
+  },
+  {
+    "id": "test2_sample_questions_q41",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 41,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following system. Arrivals occur according to a Poisson process with rate\n    1 per minute if there are less than 2 jobs in the system and at rate 1 every 2 minutes if\n    there are 2 jobs in the system. If there are 3 jobs in the system, arrivals are rejected.\n    There are 3 identical servers - processing times are exponentially distributed with mean\n    30 seconds. Calculate the steady-state probability that 2 or more servers are idle."
+  },
+  {
+    "id": "test2_sample_questions_q42",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 42,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Arrivals occur to a system of two servers (each with its own queue), according to a Poisson\n    process with rate 1 per minute. The processing times for each server are exponentially\n    distributed with mean 90 seconds. With probability 1/2, an arrival is sent to each of the\n    servers.\n\n     (a) The last arrival to the first server occurred 1 minute ago. What is the expected time\n         until the next arrival to the first server?\n     (b) Calculate the mean response time at each queue."
+  },
+  {
+    "id": "test2_sample_questions_q43",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 43,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "As a first cut at dimensioning a database server, we assume that the srever has arivals\n    according to a Poisson process with rate 2 per minute and that the processing times are\n    exponentially distributed with rate µ. If one pays a fixed cost of µ per minute for the\n    cost of the server and a cost of 10 for each arrival that has to wait to begin processing,\n    what would you choose for µ?"
+  },
+  {
+    "id": "test2_sample_questions_q44",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 44,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "(a) A remote sensing station has three identical sensors. The three sensors fail inde-\n        pendently, where the failure times are exponentially distributed with mean 90 days.\n        When all three sensors are failed, a repairman is sent, and the time to repair all\n        three sensors (simultaneously) is exponentially distributed with mean 3 days. What\n        is the steady-state probability that all three sensors are operating?\n     (b) What is the rate (in steady-state) of visits of the repairman to the station?"
+  },
+  {
+    "id": "test2_sample_questions_q45",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 45,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Suppose we have a system that has two processors in parallel with a single queue. The\n    arrivals follow a Poisson process with rate 100 per hour and each processor has processing\n    times that are exponentially distributed with rate 75 per hour. We would like to replace\n    the two processors with a single processor. What processing rate is required for the single\n    processor so that the mean response time is unchanged (assume that the processing times\n    remain exponentially distributed)?"
+  },
+  {
+    "id": "test2_sample_questions_q46",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 46,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A simplified game server is modelled as follows. Players arrive to the server according to\n    a Poisson process with rate of one every 2 minutes. Arrivals wait until three players have\n    arrived, at which point the game immediately starts. The game takes an exponentially\n    distributed period of time with mean 20 minutes. When the game is complete, all of\n    the players leave the system. This infinitely repeats, i.e. another game is started after\n    three more players arrive. Potential players that arrive when a game is in progress leave\n    without waiting.\n\n     (a) Calculate the limiting probability that a game is being played.\n     (b) Suppose that we add room so that one player can wait for the next game while the\n         current game is in progress (three players are still required for a game). Draw the\n         transition rate diagram (do not solve for the limiting probabilities)."
+  },
+  {
+    "id": "test2_sample_questions_q47",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 47,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You are asked to design a system for which you receive 1 dollar in revenue for every\n    arriving job that is served without waiting before processing and 50 cents for every job\n    that is processed but has to wait before processing. Arrivals occur according to a Poisson\n    process with rate 54 per hour and the processing times are exponentially distributed with\n    mean 1 minute. You are considering the following two choices:\n\n     (a) A single processor, admit all arrivals, processing in FIFO order.\n     (b) A single processor, limit the number in system to 5, serve arrivals in FIFO order.\n\n    Which would you choose if your goal is to maximize the rate of revenue?"
+  },
+  {
+    "id": "test2_sample_questions_q48",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 48,
+    "category": "test2",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n\n\n     (a) One needs λ < µ in an M/M/∞ queue for the limiting distribution to exist.\n     (b) An M/M/1/4 queue can be modelled as a Birth-Death process.\n     (c) When the number of servers in an M/M/k system becomes large, k = 2λ/µ servers\n         is a good choice to get reasonable performance while keeping k as low as possible.\n     (d) In an M/M/1 queue, for some choice of arrival rate, it is possible to double the\n         expected response time with a one percent increase in the arrival rate."
+  },
+  {
+    "id": "test2_sample_questions_q49",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 49,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider an M/M/2 system with arrival rate 2 per second and processing times with mean\n    1.2 seconds. If we replace this by two M/M/1 queues with the overall arrival rate of 2 per\n    second and random routing (an arriving job is equally likely to go to either queue), what\n    would the processing rates of the M/M/1 queues need to be so that the mean response\n    time for a job remains unchanged?"
+  },
+  {
+    "id": "test2_sample_questions_q50",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 50,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A computer server experiences one failure per 1000 hours of operation. Upon failure\n    detection, a diagnostic process is run. In 95 percent of the cases, the cause of failure can\n    be removed based on the diagnostic and service is restored in (on average) 15 minutes. In\n    the remaining 5 percent of the cases, a repair person must be summoned and the expected\n    time to service restoration is 12 hours. If you assume that all underlying distributions are\n    exponential, calculate the probability that the server is working."
+  },
+  {
+    "id": "test2_sample_questions_q51",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 51,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A simple game server operates as follows. Two players are required to play the game,\n    and only one game can be played at a time. Players arrive to the server following a\n    Poisson process at rate 4 per hour. If a player arrives and finds a game in progress, that\n    player does not enter the system. Once two players are waiting, the game immediately\n    commences. The time to play a game is exponentially distributed with mean 30 minutes\n    and both players exit the system once the game completes. Furthermore, players are\n    impatient. That is, when a single player is waiting for another to arrive and the game to\n    start, if they wait longer than an exponentially distributed random variable with mean\n    30 minutes, they exit the system. The server is idle when no game is being played. What\n    is the steady-state probability that the server is idle?"
+  },
+  {
+    "id": "test2_sample_questions_q52",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 52,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider an M/M/2 system with λ = 1.5 and µ = 1. We wish to replace this with an\n    M/M/1 system (with the same λ). We want to keep the probability that a job waits before\n    beginning processing to be the same for both systems. What must be the processing rate\n    of the M/M/1 system?"
+  },
+  {
+    "id": "test2_sample_questions_q53",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 53,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A firm attracts new clients according to a Poisson process with rate one per week. Each\n    client remains with the firm for an exponentially distributed period of time with mean 40\n    weeks. In steady-state, what is the expected number of clients that the firm has?"
+  },
+  {
+    "id": "test2_sample_questions_q54",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 54,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You are asked to determine the number of servers that a system should have. Requests\n    arrive to the system according to a Poisson process with rate two per minute. The mean\n    time to process a request on a server is exponentially distributed with mean 20 seconds.\n\n\n\n    If an arriving request finds all of the servers busy, it is lost. Determine the minimum\n    number of servers needed such that the probability of losing a request is at most 0.15."
+  },
+  {
+    "id": "test2_sample_questions_q55",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 55,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system with two processors. Arrivals to the system occur according to a\n    Poisson process with rate 2. The first processor works at rate 2, the second processor\n    at rate 1 (processing times are exponentially distributed). The system is a loss system,\n    so if both processors are busy, arrivals are lost. Also, if the system is empty, the faster\n    processor is assigned to an arrival. Once a processor starts processing a job, it cannot be\n    transferred to the other processor. Determine the steady-state probability that the slower\n    processor is busy."
+  },
+  {
+    "id": "test2_sample_questions_q56",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 56,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "(a) Consider an M/M/1 system with arrival rate 10. If the performance requirement is\n        that there are no more than two jobs in the system 95 percent of the time, what is\n        the required processing rate, µ.\n     (b) For your choice of µ in (a), would an M/M/∞ model be a good approximation of the\n         M/M/1 model? Here, a good approximation is if the mean response time is within\n         10 percent of the actual value. Justify your answer."
+  },
+  {
+    "id": "test2_sample_questions_q57",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 57,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have a system with three machines, each with failure rate 1 per day.\n    Repair times have mean 2 hours, and repairs are made by a single repair person. Suppose\n    that it costs 400 dollars per day for a repair person (whether they are busy or not) and\n    10,000 dollars per day whenever the number of operating machines drops below two. (For\n    example, if half of the time less than two machines are operating, then you pay 5,000\n    dollars per day.) Should a second repair person be added?"
+  },
+  {
+    "id": "test2_sample_questions_q58",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 58,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a single server that has 2 GB of memory. Two kinds of arrivals occur to the\n    server: type 1 arrivals that require 1 GB of memory and type 2 arrivals that require 2\n    GB of memory. Type 1 arrivals follow a Poisson process with rate 1 per minute and Type\n    2 arrivals follow a Poisson process with rate 0.5 per minute. Processing times for type 1\n    jobs are exponentially distributed with mean 30 seconds. Processing times for type 2 jobs\n    are exponentially distributed with mean 1 minute. Any arrivals that need more memory\n    than is available are rejected. Calculate the utilization of the server and the probability\n    that a type 1 arrival is rejected."
+  },
+  {
+    "id": "test2_sample_questions_q59",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 59,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system with two users and one server. The two users have think times that are\n    exponentially distributed with rates λ1 and λ2 , respectively. The CPU uses FCFS and\n    has processing times that are exponentially distributed with rate µ. Draw an appropriate\n    transition rate diagram for this system."
+  },
+  {
+    "id": "test2_sample_questions_q60",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 60,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system is described by an M/M/1 queue with rates λ = 1 and µ = 2. You are considering\n    a design change that would result in a self-service system (each job is its own server), but\n    the mean processing time would increase. What is the maximum mean processing time\n    allowable so that there is an improvement in the mean response time?"
+  },
+  {
+    "id": "test2_sample_questions_q61",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 61,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system operates with a central server that processes requests from a large number of\n    users. The operating cost of the server is 20 dollars per hour, whether it is working or\n    not. The cost of a waiting user is 15 dollars per hour per user.\n    (a) If the processing time of a job is exponentially distributed with mean three minutes\n    and the arriving requests follow a Poisson process with rate 15 per hour, should another\n    server be purchased?\n    (b) If the processing times and interarrival times are both deterministic (the values are\n    the same as the means in (a)), would your recommendation change?"
+  },
+  {
+    "id": "test2_sample_questions_q62",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 62,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system with three nodes. Arrivals occur to node 1 according to a Poisson\n    process of rate 2 per second. Arrivals occur to node 2 according to a Poisson process\n    of rate 1 per second. After processing at node 1, jobs return to node 1 with probability\n    0.25, otherwise they go to node 3. After processing at node 2, jobs return to node 2 with\n    probability 0.2, otherwise they go to node 3. After processing at node 3, jobs leave the\n    system. The service policy at each node is FCFS. The processing times at each node\n    are exponentially distributed with rates 3 per second, 2 per second and 5 per second,\n    respectively.\n    (a) Calculate the expected number of jobs at node 3.\n    (b) You wish to improve the expected time in system for jobs that originally arrive to\n    node 2. To do this, you are allowed to increase the processing rate of one node by ten\n    percent. Which processor would you improve?"
+  },
+  {
+    "id": "test2_sample_questions_q63",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 63,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "We consider a system that allows a constant level of N programs (jobs) sharing main\n    memory. It has 2 servers, server 1 being the CPU and server 2 being the I/O. The mean\n    service time for a job at the CPU is 0.02 seconds, the mean service time for a job at the\n    I/O subsystem is 0.04 seconds (assume all times are exponentially distributed). After a\n    job completes at the I/O subsystem, it always goes to the CPU. After completion of a\n    job at the CPU, a job exits the system with probability 0.05, otherwise it goes to I/O.\n    When a job exits a system, another immediately enters at the CPU, thus there are always\n    exactly N jobs in the system. For N = 2, calculate the utilization of the CPU (proportion\n    of time CPU is busy)."
+  },
+  {
+    "id": "test2_sample_questions_q64",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 64,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A network consists of three single server nodes. External arrivals to the first node follow\n    a Poisson process with rate 10 per minute. After service at node 1, jobs go to node 2 with\n    probability .5 and go to node 3 otherwise. After service at node 2, jobs return to node\n    2 with probability .7 and go to node 3 otherwise. After service at node 3, jobs always\n    exit the system. The service times at each node are exponentially distributed, with the\n    following means: Node 1 - 5 seconds, Node 2 - 2 seconds, Node 3 - 4 seconds.\n    (a) Find the expected number of customers at node 2.\n    (b) If you could increase the service rate at one node, which node would be your last\n    choice to do so?"
+  },
+  {
+    "id": "test2_sample_questions_q65",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 65,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A closed network operates as follows. It has 4 nodes, the processing rates being 5, 10,\n    10, 1 at the nodes, respectively. After finishing processing at node 1, jobs proceed to\n\n\n\n    either node 2 or 3 with equal probability. After processing at either nodes 2 or 3, with\n    probability 1/10 a job visits node 4, otherwise it returns to node 1. After processing at\n    node 4, jobs return to node 1.\n    Calculate the throughput of this system with 2 jobs circulating. If you were to improve one\n    processing rate, which would it be? Would you expect your recommendation to change\n    as we increase the number of jobs in the system?"
+  },
+  {
+    "id": "test2_sample_questions_q66",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 66,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a closed queueing network with N = 3 nodes and M = 2 jobs. The processing\n    times are exponentially distributed with rates µ1 = 0.72, µ2 = 0.64, µ3 = 1.00. The\n    routing probabilities are r31 = 0.4, r32 = 0.6, r13 = 1.0, r23 = 1.0.\n    (a) Calculate the throughput of the system.\n    (b) Which node is the bottleneck?"
+  },
+  {
+    "id": "test2_sample_questions_q67",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 67,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Construct a closed queueing network with two jobs and two servers such that the through-\n    put is one per second. (You are free to choose all network parameters other than the\n    number of jobs and servers.)"
+  },
+  {
+    "id": "test2_sample_questions_q68",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 68,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A queueing network is described as follows. Arrivals occur to node one according to a\n    Poisson process with rate one per minute. Processing times at node one are exponentially\n    distributed with mean 20 seconds. After exiting node one, jobs go to nodes two or three\n    with equal probability. The processing times at nodes two and three are exponentially\n    distributed with means of 60 and 70 seconds, respectively. After processing at node two\n    or three, a job leaves the system with probability 0.75, otherwise it returns to node one.\n    Calculate the network bottleneck."
+  },
+  {
+    "id": "test2_sample_questions_q69",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 69,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a network where external arrivals occur to node 1 at a rate of γ jobs per second.\n    After processing at node 1, a job is routed to node 2 with probability 0.4 or to node 3\n    with probability 0.3. Otherwise, it leaves the network. After processing at node 2 or node\n    3, jobs always return to node 1. Processing times at nodes 1, 2, and 3 are exponentially\n    distributed with rates 10 per second, 2 per second, and 2 per second, respectively.\n    (a) If the utilization of node 3 is measured to be 0.7, what is γ?\n    (b) Using the value of γ from (a), if the bottleneck processor has its processing rate\n    doubled, calculate the mean number of jobs in the network."
+  },
+  {
+    "id": "test2_sample_questions_q70",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 70,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system has four single server FCFS nodes, the CPU (node one), Printer (node two), Disk\n    (node three), and an Input Device (node four). Processing times at each of the nodes\n    are exponentially distributed with means 1/µ1 = 0.04 seconds, 1/µ2 = 0.03 seconds,\n    1/µ3 = 0.06 seconds, and 1/µ4 = 0.05 seconds. Arrivals to the system occur to node 4\n    at a rate of 4 jobs per second. The non-zero routing probabilities are p12 = p13 = 0.5,\n    p41 = p21 = 1, and p31 = 0.6.\n    (a) Compute the probability that there are exactly three jobs at the CPU, two jobs at\n    the printer, four jobs at the disk, and one job at the input device.\n    (b) Calculate the mean time that a job spends in the system (from arrival to departure).\n\n\n\n    (c) If the bottleneck device has its processing rate doubled, is there a new bottleneck\n    device? If so, which device is it?"
+  },
+  {
+    "id": "test2_sample_questions_q71",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 71,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following closed queueing network. There are three nodes, each having a\n    single processor and exponentially distributed processing times. Departures from node 1\n    are equally likely to go to the other two nodes. Departures from node 2 go to node 1 with\n    probability 0.8, otherwise they go to node 3. Departures from node 3 always go to node\n    1. The mean processing times at the three nodes are 0.5, 1 and 1.2, respectively. Two\n    jobs circulate in the network.\n    (a) What is the system bottleneck?\n    (b) Calculate the throughput at node 1.\n    (c) Calculate the mean waiting time at node 2."
+  },
+  {
+    "id": "test2_sample_questions_q72",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 72,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following network. Arrivals occur from outside to node 1 according to a\n    Poisson process with rate 2 per minute. After processing at node 1, jobs go to node 2\n    with probability 1/3 and to node 3 with probability 2/3. After processing at node 2, jobs\n    return to node 1 with probability 1/2, otherwise they leave the network. After processing\n    at node 3, jobs return to node 1 with probability 1/2, otherwise they leave the network.\n    All processing times are exponentially distributed, each node has a single processor that\n    uses FCFS. The mean processing times are node 1 - 7.5 seconds, node 2 - 40 seconds and\n    node 3 - 15 seconds.\n    (a) Find the probability that there is exactly one job in the network.\n    (b) If you were to improve the processing rate at exactly one node, which would it be?"
+  },
+  {
+    "id": "test2_sample_questions_q73",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 73,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a closed queueing network with N = 3 nodes and M = 2 jobs. Processing\n    times at the three nodes are exponentially distributed with rates µ1 = 0.7, µ2 = 0.1 and\n    µ3 = 1.5. After processing at nodes 1 or 2, jobs always go back to node 3. After processing\n    at node 3, jobs go to node 1 with probability 0.4 and node 2 with probability 0.6.\n    (a) Calculate the bottleneck node.\n    (b) Calculate the throughput at node 3."
+  },
+  {
+    "id": "test2_sample_questions_q74",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 74,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a closed queueing network with N = 3 nodes and M = 2 jobs. Processing\n    times at the three nodes are exponentially distributed with rates µ1 = 0.7, µ2 = 0.1 and\n    µ3 = 1.5. After processing at nodes 1 or 2, jobs always go back to node 3. After processing\n    at node 3, jobs go to node 1 with probability 0.4 and node 2 with probability 0.6.\n    (a) Calculate the bottleneck node.\n    (b) Calculate the throughput at node 2."
+  },
+  {
+    "id": "test2_sample_questions_q75",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 75,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following open network. External arrivals occur to node 1 according to a\n    Poisson process with rate 2 per second. External arrivals occur to node 2 according to\n    a Poisson process with rate 1 per second. After processing at node 1, jobs immediately\n    return to node 1 with probability 0.25, otherwise they go to node 3. After processing\n    at node 2, jobs immediately return to node 2 with probability 0.2, otherwise they go to\n    node 3. After processing at node 3, jobs leave the system. The processing times at each\n\n\n\n    node are exponentially distributed with rate µ per second, 2 per second and 5 per second,\n    respectively. There is one processor at each node.\n    (a) For what range of values of µ is node 1 the bottleneck (while still keeping the system\n    stable)?\n    (b) Let the processing rate at node 1 be twice the maximum value in (a). What is the\n    steady-state probability that all three processors are simultaneously busy?"
+  },
+  {
+    "id": "test2_sample_questions_q76",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 76,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A closed network operates as follows. It has 4 nodes, the processing rates being 5, 10,\n    10, 1 at the nodes, respectively. After finishing processing at node 1, jobs proceed to\n    either node 2 or 3 with equal probability. After processing at either nodes 2 or 3, with\n    probability 1/10 a job visits node 4, otherwise it returns to node 1. After processing at\n    node 4, jobs return to node 1.\n    Calculate the throughput of this system with 2 jobs circulating. If you were to improve one\n    processing rate, which would it be? Would you expect your recommendation to change\n    as we increase the number of jobs in the system?"
+  },
+  {
+    "id": "test2_sample_questions_q77",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 77,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "We consider a system that allows a constant level of N programs (jobs) sharing main\n    memory. It has 2 servers, server 1 being the CPU and server 2 being the I/O. The mean\n    service time for a job at the CPU is 0.02 seconds, the mean service time for a job at the\n    I/O subsystem is 0.04 seconds (assume all times are exponentially distributed). After a\n    job completes at the I/O subsystem, it always goes to the CPU. After completion of a\n    job at the CPU, a job exits the system with probability 0.05, otherwise it goes to I/O.\n    When a job exits a system, another immediately enters at the CPU, thus there are always\n    exactly N jobs in the system. For N = 2, calculate the utilization of the CPU (proportion\n    of time CPU is busy)."
+  },
+  {
+    "id": "test2_sample_questions_q78",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 78,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An open queueing network is described as follows. External arrivals occur to node 1\n    according to a Poisson process with rate 1 per minute and to node 2 according to a\n    Poisson process with rate 3 per minute. After completing processing at node 1, a job\n    is equally likely to go to nodes 2 or 3. After completing processing at node 2, a job is\n    equally likely to go to nodes 1 or 3. After completing processing at node 3, a job goes to\n    node 2 with probability 1/2, otherwise it leaves the network. Each node has processing\n    rate 12 per minute, with processing times being exponentially distributed.\n    (a) Calculate the steady-state probability that there is exactly one job in the network.\n    (b) Calculate the mean number of jobs at node 1."
+  },
+  {
+    "id": "test2_sample_questions_q79",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 79,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "(a) A closed network has two jobs circulating. There are three queues, with a single\n        server at each. The first server has processing rate µ per second, the second and\n        third servers both have processing rates of 1 per second. All processing times are\n        exponentially distributed. The routing probabilities are P12 = 0.4, P13 = 0.6 and\n        P21 = P31 = 1. For what range of µ is server 1 the bottleneck?\n    (b) Choose a µ such that server 1 is the bottleneck. For your choice of µ, what is the\n        probability that server 2 is idle?"
+  },
+  {
+    "id": "test2_sample_questions_q80",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 80,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a closed network with two nodes and M jobs circulating. The processing rate at\n    the first node is 1 job per minute, while for the second node it is 3 jobs per minute. The\n    network is cyclic, i.e. the routing probabilities are P12 = P21 = 1. All processing times\n    are exponentially distributed. What is the minimum value of M such that the first node\n    has a utilization of at least 0.9? Justify your answer."
+  },
+  {
+    "id": "test2_sample_questions_q81",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 81,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a network with three nodes. Arrivals occur to the first node according to a\n    Poisson process with rate four per hour. When jobs are finished processing at the first\n    node, they always go to the second node. When finished processing at the second node,\n    jobs exit the network with probability 0.25, go to the third node with probability 0.25,\n    or return to the second node with probability 0.5. After processing at the third node,\n    jobs always exit the network. Processing times are exponentially distributed, with the\n    following rates: six per hour at the first node, 16 per hour at the second node, and 2.5\n    per hour at the third node.\n\n     (a) What is the expected amount of time that a job spends in the network (from arrival\n         to exiting)?\n     (b) If the bottleneck node had its processing rate doubled, how would your answer in\n         part (a) change?"
+  },
+  {
+    "id": "test2_sample_questions_q82",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 82,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A network consists of three single server nodes. External arrivals to the first node follow\n    a Poisson process with rate 10 per minute. After service at node 1, jobs go to node 2 with\n    probability .5 and go to node 3 otherwise. After service at node 2, jobs return to node\n    2 with probability .7 and go to node 3 otherwise. After service at node 3, jobs always\n    exit the system. The service times at each node are exponentially distributed, with the\n    following means: Node 1 - 5 seconds, Node 2 - 2 seconds, Node 3 - 4 seconds.\n\n     (a) Find the expected number of jobs at node 2.\n     (b) If you could increase the service rate at one node, which node would be your last\n         choice to do so?"
+  },
+  {
+    "id": "test2_sample_questions_q83",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 83,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a system of three single-server, infinite-buffer nodes. From the outside, arrivals\n    occur to node 1 according to a Poisson process with rate 5 per minute. Jobs departing\n    node 1 are equally likely to go to node 2 or node 3. Jobs departing node 2 or node 3 are\n    equally likely to exit the network or return to node 1. Processing times at the nodes are\n    exponentially distributed with mean 5 seconds (node 1), 8 seconds (node 2), and 9 seconds\n    (node 3). Determine which node is the bottleneck and also calculate the probability that\n    the network is empty."
+  },
+  {
+    "id": "test2_sample_questions_q84",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 84,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a web server modelled as an open network. The server has one CPU and two\n    disks. Arrivals occur to the CPU according to a Poisson process with rate 2 per second.\n    After being processed at the CPU, with probability 0.02 a job leaves the network, with\n    probability 0.40 it goes to disk A, and with probability 0.58 it goes to disk B. After being\n    processed at either of the disks, a job goes to the CPU. The processing times (per visit)\n\n\n\n    at the CPU are exponentially distributed with rate 200 per second. At the two disks, the\n    processing times (per visit) are exponentially distributed with rate 60 per second.\n    (a) If you were to improve the processing rate of one device, which would it be?\n    (b) Suppose that you balanced the loads on the disks. What would be the resulting mean\n    number of jobs in the system?"
+  },
+  {
+    "id": "test2_sample_questions_q85",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 85,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider a closed queueing network with three nodes and two jobs circulating. The\n    routing probabilities are P12 = 1.0, P21 = P23 = P31 = P32 = 0.5. The processing rates\n    are µ1 = µ2 = µ3 = 1. Processing times at all nodes are exponentially distributed. Find\n    the expected number of jobs at the bottleneck node."
+  },
+  {
+    "id": "test2_sample_questions_q86",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 86,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A server provides downloads for two files, file A and file B. Requests follow a Poisson\n    process with rate 0.15 per second. A request is for file A with probability 0.75 and for\n    file B with probability 0.25. The time for a file A download is exponentially distributed\n    with mean 8 seconds and the time for a file B download is exponentially distributed with\n    mean 3 seconds. A request that arrives to the server when it is performing a download is\n    lost. Find the probability (in steady-state) that the server is busy."
+  },
+  {
+    "id": "test2_sample_questions_q87",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 87,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Arrivals occur to a common queue (of infinite size) with rate 0.7 per minute. Processing\n    times are exponentially distributed with mean one minute.\n     (a) If the requirement is that the probability that an arriving job waits to begin pro-\n         cessing is less than 0.2, what is the minimum number of servers that can be used?\n     (b) Suppose that budget constraints are such that only one server can be used, so we\n         decide to use a finite buffer instead. What size buffer would you choose if you wish\n         to maximize the throughput while ensuring that that the probability that a job waits\n         to begin processing is less than 0.2?"
+  },
+  {
+    "id": "test2_sample_questions_q88",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 88,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A closed network has 3 nodes and 2 jobs circulating. After visiting node 1, a job is equally\n    likely to visit nodes 2 or 3. After processing at node 2 or node 3, jobs always return to\n    node 1. The processing times at nodes 1, 2 and 3 are exponentially distributed with\n    means 1, 1, and 3, respectively. Calculate the probability that the bottleneck node is idle."
+  },
+  {
+    "id": "test2_sample_questions_q89",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 89,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following system. There are two servers in parallel, each can hold exactly one\n    job (the job that it is processing). The processing times at each server are exponentially\n    distributed with mean 30 seconds. Arrivals to the system occur as follows.\n     (i) Type 1 arrivals follow a Poisson process with rate 2 per minute. If Server 1 is idle,\n         they are assigned to Server 1, otherwise they are rejected.\n     (ii) Type 2 arrivals follow a Poisson process with rate 2 per minute. If both servers are\n          idle, the job is replicated on both servers (with independent processing times). If\n          only one server is idle, it is assigned to that server. If both servers are busy, the job\n          is rejected.\n    (iii) If both servers are processing a replicated Type 2 job, and one server completes, the\n          remaining replica is immediately killed.\n\n\n\n    Calculate the throughput of both Type 1 and Type 2 jobs."
+  },
+  {
+    "id": "test2_sample_questions_q90",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 90,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Jobs arrive to node one of a network according to a Poisson process with rate 1.25 per\n    minute. With probability 0.4, jobs exiting node one go to node two, with probability\n    0.5, jobs exiting node one go to node three, otherwise they exit the system. Jobs exiting\n    node two go to node three or node one with equal probability. Jobs exiting node three\n    go to node two or node one with equal probability. Processing times at nodes one, two\n    and three are exponentially distributed with means 3 seconds, 5 seconds and 4 seconds,\n    respectively. Determine\n\n     (a) the network bottleneck\n    (b) the mean time that a job spends in the network, from arrival to departure"
+  },
+  {
+    "id": "test2_sample_questions_q91",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 91,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A job’s execution is modelled as follows. To complete the job, three tasks must be\n    completed. Tasks 1 and 2 can be done in parallel, requiring times that are exponentially\n    distributed with rates µ1 and µ2 , respectively. After Tasks 1 and 2 are both complete,\n    Task 3 is executed, requiring a time that is exponentially distributed with rate µ3 . A\n    system continuously executes these jobs, so that when one job is completed, another\n    immediately begins.\n\n     (a) Show how a CTMC model can be used to determine the steady-state probability\n         that Task 3 is executing. (Construct the CTMC and give the equations that must\n         be solved to determine the required probability.)\n    (b) In terms of your answer for (a), what would the throughput of the system be (in\n        jobs per time unit)?"
+  },
+  {
+    "id": "test2_sample_questions_q92",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 92,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Suppose that we have an M/M/2 system where both servers are busy and there is one\n    job waiting in the queue. What is the probability that the job waiting in the queue leaves\n    the system before one of the jobs currently being processed?"
+  },
+  {
+    "id": "test2_sample_questions_q93",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 93,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A system is operating with a single queue and two servers. The arrival rate is λ = 1 and\n    the processing rate of each of the servers is µ = 2/3. All underlying distributions are\n    exponential. We wish to replace the two servers by a single server working at rate µ∗ .\n    What must µ∗ be to ensure that the probability that a job waits before being processed\n    is equal to that of the two-server system?"
+  },
+  {
+    "id": "test2_sample_questions_q94",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 94,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following network of single-server nodes. Arrivals occur from outside to\n    node 1 according to a Poisson process with rate 1 job per second. The processing times\n    at node 1 are exponentially distributed with rate 3 jobs per second. Jobs departing node\n    1 always go to node 2. Node 2 processing times are exponentially distributed with rate 5\n    jobs per second. After departing node 2, with probability 0.25 a job departs the network,\n    otherwise it goes to node 3. Processing times at node 3 are exponentially distributed with\n    rate 4 jobs per second. A job departing node 3 always goes to node 2.\n\n     (a) Calculate the mean time that a job spends in the network, from arrival to departure.\n\n\n\n     (b) You can either double the speed of server 3 or server 2. Which choice would you\n         prefer? Justify your answer."
+  },
+  {
+    "id": "test2_sample_questions_q95",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 95,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single server operates as follows. Arrivals occur according to a Poisson process with\n    rate 0.15 per minute, of which 75% are of type H and 25% are type L. If a type L arrival\n    occurs and the server is busy, it is lost, otherwise it begins processing. If a type H arrival\n    occurs, there are three possibilities:\n\n     (i) if the server is idle, the arriving job immediately begins processing\n     (ii) if the server is busy with a type H job, the arriving job is lost\n    (iii) if the server is busy with a type L job, the arriving job immediately begins processing\n          and the type L job has its processing suspended; when the type H job completes\n          processing, the type L job resumes processing\n\n    The processing times for type H jobs are exponentially distributed with mean 8 minutes\n    and the processing times of type L jobs are exponentially distributed with mean 3 minutes.\n    Calculate the steady-state utilization of the server."
+  },
+  {
+    "id": "test2_sample_questions_q96",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 96,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single-server system has arrivals that follow a Poisson process with rate 0.8 per minute.\n    Processing times are exponentially distributed with mean 1 minute. There is room for\n    three jobs in the system (arrivals that find three jobs in the system are lost). What is the\n    throughput of this system?"
+  },
+  {
+    "id": "test2_sample_questions_q97",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 97,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A closed network operates as follows. It has 4 nodes, the processing rates being 5, 10,\n    10, 1 at the nodes, respectively. After finishing processing at node 1, jobs proceed to\n    either node 2 or 3 with equal probability. After processing at either nodes 2 or 3, with\n    probability 1/10 a job visits node 4, otherwise it returns to node 1. After processing\n    at node 4, jobs return to node 1. Calculate the throughput of this system with 2 jobs\n    circulating. If you were to improve one processing rate, which would it be? Would you\n    expect your recommendation to change as we increase the number of jobs in the system?"
+  },
+  {
+    "id": "test2_sample_questions_q98",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 98,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A continuous random variable has density\n                                              (\n                                                  4 3\n                                                  15 x   1≤x≤c\n                                    f (x) =\n                                                  0      otherwise\n\n     (a) What is c?\n     (b) Given a sample from a U [0, 1] distribution, how would one generate a sample for a\n         random variable with density f ?"
+  },
+  {
+    "id": "test2_sample_questions_q99",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 99,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Suppose that a CPU’s processing times follow the distribution\n                                              \n                                               0\n                                                  x<0\n                                     G(x) =     x2 0 ≤ x ≤ 1\n                                              \n                                               1  x>1\n\n\n\n     Given a sample from a U [0, 1] distribution, how can one generate a sample from the\n     distribution G?"
+  },
+  {
+    "id": "test2_sample_questions_q100",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 100,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Response times from six independent runs of a simulation are (in msec) 102.5, 101.7,\n     103.1, 100.9, 100.5 and 102.2. What is the 95 percent confidence interval for the mean\n     response time? How many more simulation runs would you recommend in order to reduce\n     the width of the confidence interval by a factor of two?"
+  },
+  {
+    "id": "test2_sample_questions_q101",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 101,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You have the following data: 9.50, 2.31, 6.07, 4.86, 8.91, 7.62, 4.56, 0.19, 8.21, 4.45. The\n     confidence interval constructed for the mean was [3.94, 7.40]. What confidence level was\n     used?"
+  },
+  {
+    "id": "test2_sample_questions_q102",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 102,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You are asked to construct a 95 percent confidence interval for a mean and construct it\n     to be (.22, 1.35). You then get another set of data, which you believe is from the same\n     distribution, that gives an average of 1.40. Is this consistent with the confidence interval\n     that you constructed?"
+  },
+  {
+    "id": "test2_sample_questions_q103",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 103,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Calculate a 95 percent confidence interval for the following set of data: 10.95, 10.23, 10.61,\n     10.49, 10.89, 10.76, 10.46, 10.02, 10.82, 10.44."
+  },
+  {
+    "id": "test2_sample_questions_q104",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 104,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Ten independent simulation runs give values for the average number in system of 3.36,\n     3.65, 4.11, 3.31, 3.44, 3.50, 3.50, 3.90, 3.57, 3.50. With what level of confidence can you\n     say that the true mean number in system is less than 4.12?"
+  },
+  {
+    "id": "test2_sample_questions_q105",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 105,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "An experimenter feels that for her experiment, the sample standard deviation will be no\n     larger than 100. A 95 percent confidence interval is desired to be constructed for the\n     mean which has a width of at most 5.0. What sample size would you recommend?"
+  },
+  {
+    "id": "test2_sample_questions_q106",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 106,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Ten data points are collected, measuring the execution time of a computer job (in seconds):\n     9.5, 2.3, 6.1, 4.9, 8.9, 7.6, 4.5, 0.2, 8.2, 4.4. With what level of confidence can we say that\n     the mean execution time is less than 7.5 seconds?"
+  },
+  {
+    "id": "test2_sample_questions_q107",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 107,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "You wish to generate a sample from a distribution with density\n                                                (\n                                                     x/2 0 ≤ x ≤ 2\n                                      f (x) =\n                                                     0   otherwise\n\n     Using only a sample from a U [0, 1] distribution, how would you do so?"
+  },
+  {
+    "id": "test2_sample_questions_q108",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 108,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Suppose that a random variable X has density\n                                                 (\n                                                     x   1 ≤ x ≤ b;\n                                       f (x) =\n                                                     0   otherwise.\n\n     A system has implemented a PRNG that generates samples from a U [0, 10] distribution\n     (note that this is not U [0, 1]). Given a sample u from this PRNG, how can you generate\n     a sample of X?"
+  },
+  {
+    "id": "test2_sample_questions_q109",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 109,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Five independent replications of a simulation are run to estimate the mean response time\n     for a server. The replications had average response times of 124, 124, 128, 130, 127. With\n     95 percent confidence, can we say that the true mean response time is between 120 and\n     132? Justify your answer. Would your answer change if the values were the response\n     times of consecutive departures from the server?"
+  },
+  {
+    "id": "test2_sample_questions_q110",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 110,
+    "category": "test2",
+    "is_true_false": true,
+    "body_plain": "True or False.\n\n      (a) In an M/M/k system, the expected waiting time for jobs that must wait depends\n          only on ρ, the load on the system."
+  },
+  {
+    "id": "test2_sample_questions_q111",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 111,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "(a) Given only a PRNG that returns samples from a U [0, 1] distribution, how would you\n         generate samples from a random variable with density:\n\n                                             fX (x) = x2 + 2/3\n\n          for 0 ≤ x ≤ 1 and 0 otherwise?\n\n      (b) The following single-server system is simulated. There is an infinite buffer, schedul-\n          ing is FCFS, arrivals follow a Poisson process with rate 1 per minute, and processing\n          times are distributed according to the random variable in (a). Running the simu-\n          lation for 10 independent replicas gives the following average response times: 0.94,\n          1.33, 1.12, 1.41, 0.90, 1.49, 1.06, 1.49, 1.05, 1.05. Is it plausible that the simulation\n          code is correct? Justify your answer."
+  },
+  {
+    "id": "test2_sample_questions_q112",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 112,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following network. There are three nodes, each having a single processor\n     and exponentially distributed processing times. Departures from node 1 are equally likely\n     to go to the other two nodes. Departures from node 2 go to node 1 with probability 0.7,\n     otherwise they go to node 3. Departures from node 3 go to node 1 with probability 0.9,\n     otherwise they return to node 3. The mean processing times at the three nodes are 1.5,\n     1 and 2, respectively. Two jobs circulate in the network.\n\n      (a) What is the system bottleneck?\n      (b) Calculate the throughput at node 1.\n      (c) Calculate the expected number of jobs at node 2."
+  },
+  {
+    "id": "test2_sample_questions_q113",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 113,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single server system operates as follows. Arrivals occur according to a Poisson process\n     with rate λ per time unit. Processing times are exponentially distributed with mean 1\n     time unit. Costs are as follows: 1 per job that must wait to be processed, 1 per time unit\n     when the processor is busy, and 0.3 per time unit when the processor is idle. You have a\n     budget of 1.5 per time unit. What is the maximum value of λ allowed?"
+  },
+  {
+    "id": "test2_sample_questions_q114",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 114,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following system consisting of two servers.\n\n\n\n      (i) Type 1 arrivals follow a Poisson process with rate 2 per minute. If there is an idle\n          server, a Type 1 arrival is assigned to it (if both servers are idle, one server is chosen\n          randomly), otherwise it is rejected. Processing times of Type 1 jobs are exponentially\n          distributed with mean 20 seconds.\n      (ii) Type 2 arrivals follow a Poisson process with rate 1 per minute. Type 2 arrivals\n           require the use of both servers simultaneously, for a processing time that is exponen-\n           tially distributed with mean 30 seconds. If the system is busy with a Type 2 job, an\n           arriving Type 2 job is rejected. If the system is busy with one or more Type 1 jobs,\n           the Type 1 jobs are removed from the system and the Type 2 job begins processing.\n\n     Calculate the throughput of both Type 1 and Type 2 jobs."
+  },
+  {
+    "id": "test2_sample_questions_q115",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 115,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Consider the following network. Arrivals to the first node follow a Poisson process with\n     rate 1 per time unit. After processing at node 1, jobs go to node 2 with probability 0.3\n     and to node 3 with probability 0.6; otherwise, they leave the system. After processing at\n     node 2 or 3, jobs return to node 1. There is a single server at each node, where processing\n     times are exponentially distributed with rates 12 per time unit (node 1); 4 per time unit\n     (node 2); and 8 per time unit (node 3).\n\n      (a) Calculate the expected number of jobs at node 3.\n      (b) Suppose that all three servers are busy. What is the probability that an arrival\n          occurs to node 1 (from either inside or outside of the network) before the job being\n          processed at node 1 completes?"
+  },
+  {
+    "id": "test2_sample_questions_q116",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 116,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "Parts (a) and (b) are unrelated.\n\n      (a) Given only a PRNG that returns samples from a U [0, 1] distribution, how would you\n          generate samples for a random variable X with distribution\n                                           FX (x) = 1 − e−(x/3)\n\n      (b) You are given simulation output for an M/M/2/2 system with λ = 1 and µ = 1. The\n          metric estimated is the mean number of jobs in the system. Ten independent runs\n          of the simulation give the following values for average number of jobs in the system:\n          1.026, 1.062, 0.751, 1.065, 0.953, 0.739, 0.811, 0.919, 1.083, 1.086. What are your\n          conclusions as to whether the simulation was implemented correctly?"
+  },
+  {
+    "id": "test2_sample_questions_q117",
+    "source_pdf": "test2_sample_questions.pdf",
+    "number_in_pdf": 117,
+    "category": "test2",
+    "is_true_false": false,
+    "body_plain": "A single server operates as follows. Arrivals occur according to a Poisson process with\n     rate 0.8 per time unit. Processing times are exponentially distributed with mean 1 time\n     unit. Costs are as follows: 1 per job that must wait before beginning processing, 1 per\n     time unit when the server is busy, and 0.3 per time unit when the server is idle. Should\n     a second server be added? (The busy/idle costs for the second server are the same as for\n     the first server and the two servers would share a common queue.)"
+  }
+]

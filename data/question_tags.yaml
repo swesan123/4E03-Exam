@@ -1,0 +1,3 @@
+# Optional overrides: map question id (from data/questions.json) to test1 | test2 | newer.
+# Filename-based categories apply when an id is not listed here.
+{}

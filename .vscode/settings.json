@@ -1,0 +1,55 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (lualatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-lualatex",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk (pdflatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (lualatex)",
+      "tools": ["latexmk (lualatex)"]
+    },
+    {
+      "name": "latexmk (pdflatex)",
+      "tools": ["latexmk (pdflatex)"]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["latexmk (xelatex)"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "latexmk (lualatex)"
+}
