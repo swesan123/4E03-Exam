@@ -1,0 +1,9 @@
+\section*{Networks of queues (open / Jackson)}
+\textbf{Pattern:} M/M/1 nodes + Poisson ext.\ + prob.\ routing.\\
+\textbf{Steps:} $\mu_i=1/E[S_i]$;\quad $\lambda_i=r_i+\sum_j P_{ji}\lambda_j$;\quad solve $\lambda_i$'s.\\
+$\rho_i=\lambda_i/\mu_i<1$ $\forall i$.\\
+Joint: $\Prob(N_1{=}n_1,\ldots)=\prod_i (1-\rho_i)\rho_i^{n_i}$.\\
+$E[N_i]=\rho_i/(1-\rho_i)$;\quad $E[N]=\sum_i E[N_i]$;\quad $E[T]=E[N]/X$.\\
+Open: $X=\sum_i r_i$ (total external entry rate); one feed $\Rightarrow$ $X=r_i$ for that $i$.\\
+Bottleneck: $\max_i D_i$,\ $D_i=V_i E[S_i]$,\ $V_i=\lambda_i/X$.\\
+Service rate $\times2$ at node $i$ $\Rightarrow$ halve $E[S_i]$ there; recompute $D_i$'s.

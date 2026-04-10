@@ -1,0 +1,159 @@
+source_pdf: multiserver.pdf
+source_path: slides/multiserver.pdf
+pages: 13
+format_version: 1
+
+--- PAGE 1 ---
+Multiserver Systems
+
+--- PAGE 2 ---
+Section 14.4
+Compare the following three systems:
+
+1. # M/M/1 systems, each with arrival rate $/# and
+
+processing rate &
+2. M/M/1 system, arrival rate $, processing rate #&
+3. M/M/k system, arrival rate $, each server has processing
+rate &
+
+--- PAGE 3 ---
+𝑘 M/M/1 versus M/M/1
+For the fast M/M/1 system and one of the 𝑘 slow M/M/1
+queues, the number in system is the same, as both the arrival
+rate and processing rate are scaled up by a factor of 𝑘 in the
+fast M/M/1 system
+𝐸 𝑇
+
+1
+
+𝐸 𝑇2
+
+1
+𝑘
+=
+=
+𝜇 − 𝜆/𝑘 𝑘𝜇 − 𝜆
+1
+=
+𝑘𝜇 − 𝜆
+
+--- PAGE 4 ---
+M/M/1 versus M/M/!
+For the M/M/# system:
+' +# = ' +# ,-.-./01 2#
+3
+=
+2#
+1−3
+1
+3
+1
+' ( = 2#
++
+$ 1−3 &
+
+--- PAGE 5 ---
+𝜌
+1
+1
+𝑃
++
+3
+𝑄
+𝐸[𝑇 ] 𝜆 1 − 𝜌 𝜇
+=
+2
+1 𝜌
+𝐸[𝑇 ]
+𝜆1−𝜌
+𝜆1−𝜌
+= 𝑃𝑄 +
+𝜇 𝜌
+= 𝑃𝑄 + 𝑘(1 − 𝜌)
+
+--- PAGE 6 ---
+1. 3 ≈ 0 gives 2# ≈ 0, so the M/M/1 is # times faster – this
+
+should make intuitive sense
+2. 3 ≈ 1 gives 2# ≈ 1, so the two systems perform the same
+– does this make intuitive sense?
+
+--- PAGE 7 ---
+Capacity Provisioning
+For an M/M/# system:
+
+1
+3
+' (# = 2#
+$ 1−3
+where as a reminder, 3 = $/#&.
+' (# = ' (# <.=>?.< 2# + ' (# 0@A <.=>?.< 1 − 2#
+= ' (# <.=>?.< 2#
+'[(# ]
+= '[(# |<.=>?.<]
+2#
+
+--- PAGE 8 ---
+Expected waiting time of those jobs that are delayed:
+'[(# ] 1 3
+1
+=
+=
+2#
+$ 1 − 3 #&(1 − 3)
+Fix 3 – this is a decreasing function of #.
+
+--- PAGE 9 ---
+• Insight: for high values of system utilization, 3, jobs will not
+necessarily suffer, provided that there are sufficiently many
+servers
+• Intuition: Even at high utilizations, as the number of servers
+grows, the probability that there is a free server increases
+
+--- PAGE 10 ---
+Capacity Provisioning Rule
+• How many servers are needed in an M/M/# to keep the
+probability of queueing below a certain level?
+• Definition: For an M/M/# queue with arrival rate $ and
+processing rate &, the quantity C = $/& is equivalently
+1. minimum number of servers needed to keep system stable
+2. expected number of busy servers
+3. expected number of jobs being processed
+
+--- PAGE 11 ---
+• If C large, then # = C + C yields 2# below 20 percent
+• What is the probability of more than C + C jobs in
+M/M/∞?
+• We know that the limiting distribution is a Poisson
+distribution, with mean C
+
+--- PAGE 12 ---
+M/M/∞ lower bound
+• For C large, 2@/EE@0(C) will be approximated well by
++@FG>=(C, C)
+• Thus, the probability of more than C + C is the probability
+that the +@FG>=(C, C) is more than one standard deviation
+above its mean.
+• Probability that +@FG>=(0,1) exceeds its mean by one
+standard deviation is 1 − Φ(1) ≈ 0.16.
+• M/M/∞ is a lower bound, as the fraction of time an M/M/∞
+has more than K servers busy is lower than the fraction of
+time that an M/M/# has more than K servers busy
+
+--- PAGE 13 ---
+Capacity Provisioning Theorem
+Theorem. Given an M/M/# with arrival rate $ and server
+speed & and C = $/&, where C is large, let #%∗ denote the
+( ⁄(/*
+least number of servers needed to ensure that 2#
+< M.
+Then
+#%∗ ≈ C + N C
+where N solves
+NΦ(N) 1 − M
+=
+O(N)
+M
+and where Φ(P) is the cdf of a +@FG>=(0,1) and O(P) is its
+density.

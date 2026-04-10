@@ -75,6 +75,15 @@ python3 generate_practice_exam.py --marks 10,10,10,10,10,10,15,5 --tf-marks 10 -
 - **LaTeX Workshop**: default recipe is **latexmk (lualatex)** in [`.vscode/settings.json`](.vscode/settings.json).
 - Question banks are plain UTF-8; auto-escaping is minimal—spot-check the PDF for math-heavy lines.
 
+## Cheatsheet (LaTeX)
+
+- Source: [`cheatsheets/`](cheatsheets/) — `main.tex`, [`formatting/`](cheatsheets/formatting/), [`sections/`](cheatsheets/sections/).
+- Build (writes aux under `cheatsheets/build/`, PDF copy to `cheatsheets/generated/`):
+
+```bash
+./cheatsheets/compile_cheatsheet.sh
+```
+
 ## Optional tag overrides
 
 Edit [`data/question_tags.yaml`](data/question_tags.yaml) to force a question id into another bucket (keys must match `id` in `questions.json`):

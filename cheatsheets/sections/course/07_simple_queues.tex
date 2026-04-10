@@ -1,0 +1,7 @@
+\section*{7.\ Simple queues}
+\textbf{$M/M/1$.}\ $\rho=\lambda/\mu$;\ $p_n=(1-\rho)\rho^n$;\ $\E[N]=\rho/(1-\rho)$;\ $\E[T]=1/(\mu-\lambda)$.\\
+\textbf{Finite buffer / loss.}\ $P(\text{wait})=\sum_{n=1}^{U-1}\pi_n=1-\pi_0-\pi_U$ (finite $U$).\\
+\textbf{Loss / no-wait (2-state).}\ 1 server, lost if busy:\ $\pi_1=\lambda/(\lambda+\mu_{\mathrm{eff}})$,\ $\mu_{\mathrm{eff}}=1/E[S]$;\ mix types: $E[S]=\sum p_iE[S_i]$.\\
+\textbf{$M/G/1$ FCFS (PK).}\ $\E[W]=\dfrac{\lambda\E[S^2]}{2(1-\rho)}$,\ $\rho=\lambda E[S]$;\ $\E[T]=\E[W]+E[S]$;\ slide form $\E[T]=\dfrac{\lambda\E[S^2]}{2(1-\rho)}+\dfrac{1}{\mu}$ with $E[S]=1/\mu$.\\
+\textbf{SCV.}\ $C_S^2=\Var(S)/(E[S])^2$:\ $0$ det.;\ $1$ exp.;\ $>1$ heavy tail.\\
+\textbf{Design compare.}\ Compute $\E[T]$ (or cost) per option;\ pick smaller.

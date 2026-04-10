@@ -1,0 +1,7 @@
+\section*{12.\ Impact of variance on scheduling}
+\textbf{$M/G/1$ FCFS.}\ $\E[T]$ grows with $\E[S^2]$ (PK; slide vs $\E[W]+\E[S]$ forms in topic~7).\\
+\textbf{Variability tradeoff.}\ Lower $\Var(S)$ helps $\E[T]$ if mean fixed; reducing $\Var$ may increase mean service (design tradeoff).\\
+\textbf{Processor sharing (PS).}\ Idealized fair share;\ $\E[T]=\frac{1/\mu}{1-\rho}$;\ insensitive to service-time variance beyond mean.\\
+\textbf{Preemptive LCFS.}\ Same mean $\E[T]$ as PS in $M/G/1$ (slides).\\
+\textbf{SRPT.}\ Minimizes $\E[N(t)]$ sample path $\Rightarrow$ minimizes mean response time when sizes known.\\
+\textbf{Practice.}\ OS / Apache: pinning vs migration changes mean vs variance (example).

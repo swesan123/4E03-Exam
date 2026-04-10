@@ -1,0 +1,318 @@
+source_pdf: simulation.pdf
+source_path: slides/simulation.pdf
+pages: 33
+format_version: 1
+
+--- PAGE 1 ---
+Simulation
+
+--- PAGE 2 ---
+Random Number Generation
+Two issues to discuss:
+1. How do computers generate random numbers?
+2. How does one generate a sample from a given
+distribution?
+
+--- PAGE 3 ---
+Pseudo Random Number Generation
+• computers not capable of generating truly random numbers
+(roll a die, for example)
+• there are techniques that sample the physical world: for
+example Cloudflare’s lava lamps, skyrmions
+• Typically, one produces a sequence of pseudo random
+numbers – appears to be random, but is not
+• in other words, passes statistical tests of randomness
+
+--- PAGE 4 ---
+• many approaches – RNG has a long history
+• goal here is to give one (primitive) approach to provide
+general idea
+• no expectations for you to write a PRNG, but you should
+have an idea of how they work
+
+--- PAGE 5 ---
+Multiplicative Congruential Method
+• Choose 𝑥! (the seed) and recursively compute the values
+𝑥" , 𝑛 ≥ 1 via
+𝑥" = 𝑎𝑥"#$ 𝑚𝑜𝑑 𝑚
+where 𝑎 and 𝑚 are given positive integers
+• 𝑥" is an integer between 0 and 𝑚 − 1
+• take 𝑥" /𝑚 as a sample from 𝑈[0,1]
+• trivial fact – after some finite number of values (no more
+than 𝑚), a value in the sequence repeats itself, and from this
+point, the entire sequence repeats
+
+--- PAGE 6 ---
+Desirable Properties of PRNG
+1. For any seed, the resultant sequence has the “appearance”
+of being a sequence of independent random variables,
+taken from the 𝑈[0,1] distribution.
+2. For any seed, the number of samples that can be
+generated before repetition begins is large.
+3. The values can be efficiently computed.
+
+--- PAGE 7 ---
+Back to Multiplicative Congruential Method
+• the parameter 𝑚 should be a large prime number, that can
+be fit in the word size
+• for a 32-bit word, where the first bit is the sign, 𝑚 = 2%$ − 1
+and 𝑎 = 7& work well
+• a good choice requires some experimentation
+• computation is easy here, as the modulo operation is simple
+to implement
+
+--- PAGE 8 ---
+PRNG - assumptions
+• there is lots of information out there about PRNG
+• for our purposes, assume that we have a built-in PRNG (not
+always of high quality) that generates samples from a 𝑈[0,1]
+distribution
+
+--- PAGE 9 ---
+Generating Samples from a Given Distribution
+Suppose that we are only able to generate samples from a
+𝑈[0,1] distribution. How do we generate samples from some
+other distribution that we would like to use in our simulation?
+
+--- PAGE 10 ---
+Discrete Case
+• Generate a sample, 𝑥, from a discrete random variable
+having given pmf 𝑃 𝑋 = 𝑥' = 𝑝'
+• Suppose that {𝑥' } is a finite set
+• There is then a simple algorithm: first generate a sample 𝑢
+from 𝑈 0,1 . If 𝑢 < 𝑝$ , set 𝑥 = 𝑥$ . Else, if 𝑢 < 𝑝$ + 𝑝( , set
+𝑥 = 𝑥( . Else, if 𝑢 < 𝑝$ + 𝑝( + 𝑝% , set 𝑥 = 𝑥% . Continue.
+• If the set of possible values is infinite, need to truncate at
+some point
+• The time required to generate a sample is proportional to
+the number of possible values.
+
+--- PAGE 11 ---
+Discrete Case - Example
+Suppose that we want to choose values from a distribution
+with 𝑝$ = 0.20, 𝑝( = 0.15, 𝑝% = 0.25, 𝑝) = 0.40.
+Implementing the algorithm from the previous slide:
+1. if 𝑢 < 0.20, set 𝑥 = 1
+2. else if 𝑢 < 0.35, set 𝑥 = 2
+3. else if 𝑢 < 0.60, set 𝑥 = 3
+4. else set 𝑥 = 4
+
+--- PAGE 12 ---
+It is more efficient to use
+1. if 𝑢 < 0.40, set 𝑥 = 4
+2. else if 𝑢 < 0.65, set 𝑥 = 3
+3. else if 𝑢 < 0.85, set 𝑥 = 1
+4. else set 𝑥 = 2
+
+--- PAGE 13 ---
+Continuous Case
+Want: mapping from a 𝑈[0,1] random variable to 𝐹(𝑥)
+𝑢 = 𝑃 0 < 𝑈 ≤ 𝑢 = 𝑃 0 < 𝑋 ≤ 𝑥 = 𝐹(𝑥)
+So, 𝑥 = 𝐹 #$ 𝑢 .
+
+--- PAGE 14 ---
+Continuous Case - Example
+• 𝐹(𝑥) is an exponential distribution, with rate 𝜆 - 𝐹 𝑥 = 1 −
+𝑒 #*+ , 𝑥 ≥ 0.
+• 𝐹 #$ 𝑢 = −ln(1 − 𝑢)/𝜆
+• if 𝑢 is a sample from 𝑈[0,1], then 1 − 𝑢 is also a sample
+from 𝑈[0,1], so we can replace 1 − 𝑢 by 𝑢
+
+--- PAGE 15 ---
+Constructing a Simulation
+A discrete event simulation has the following general
+structure. There are sets of variables and events. Generally,
+we have the following variables:
+1. time variable 𝑡 – the elapsed (simulated) time
+2. counter variables – track the number of times that certain
+events have occurred (by time 𝑡)
+3. state variables – “state” of the system at time 𝑡. The state
+should be chosen such that the next state can be uniquely
+determined given any event occurrence
+4. output variables
+
+--- PAGE 16 ---
+• whenever an event occurs, values of variables updated
+• must determine when next event occurs – keep an event list
+(may not be explicit) that lists the nearest future events and
+when they are scheduled to occur
+
+--- PAGE 17 ---
+Simulation Example
+Simulate two single-server queues in series (output of the first
+feeds the second).
+1. time between arrivals: 𝐸𝑥𝑝(𝜆)
+2. processing times of first server: 𝐸𝑥𝑝(𝜇$ )
+3. processing times of second server: 𝐸𝑥𝑝(𝜇( )
+4. FCFS processing at both servers
+
+--- PAGE 18 ---
+Three kinds of events:
+1. arrival to system
+2. departure from queue 1
+3. departure from queue 2
+The event list in this case consists of the time of the next arrival,
+the next completion at queue 1, and the next completion at queue
+2. (Equivalently, the time until the next occurrence of each of
+these events.) The state is the queue length at each server
+(including the job in service if there is one).
+
+--- PAGE 19 ---
+Processing events - arrival
+• update time, state, times to next events
+• note arrival time (response time is output variable)
+• generate new arrival time (new time to next arrival)
+• if queue 1 was empty, generate new processing time at
+queue 1
+
+--- PAGE 20 ---
+Processing events – completion at queue 1
+• update time, state, times to next events
+• if queue 1 not empty, generate new server 1 processing time
+• if queue 2 was empty, generate new server 2 processing time
+
+--- PAGE 21 ---
+Processing events – completion at queue 2
+• update time, state, times to next events
+• note departure time, calculate response time (now or at the
+end)
+• if queue 2 not empty, generate new processing time at
+queue 2
+
+--- PAGE 22 ---
+Matlab implementation
+Discussion of two_queue.m available on Avenue.
+
+--- PAGE 23 ---
+Simulation Packages
+It would be nice if this were to some degree automated. There
+are quite a number of discrete event simulation pacakages, for
+example:
+• SimPy
+• SimEvents
+• Arena
+• CloudSim
+
+--- PAGE 24 ---
+Confidence Intervals
+• Suppose that we have the following data points (samples):
+23, 33, 14, 15, 42, 28, 33, 45, 23, 34, 39, 21, 36, 23, 34, 36,
+25, 9, 11, 19, 35, 24, 31, 29, 16, 23, 34, 24, 38, 15, 13, 35, 28
+L
+• Compute the average: 26.91 (𝑋)
+• However, this is typically not good enough. Would like to
+know “how good” our estimate is, one way is to provide
+bounds such that
+𝑃 𝑎 ≤𝐸 𝑋 ≤𝑏 =1−𝛼
+
+--- PAGE 25 ---
+• The problem is, given a set of samples and 𝛼, calculate 𝑎 and
+𝑏
+• 100 1 − 𝛼 is the confidence level, here given as a
+percentage – this is typically close to 100 percent, we will
+typically use 90 or 95 percent
+• 𝛼 is the significance level
+• (𝑎, 𝑏) is the confidence interval
+
+--- PAGE 26 ---
+• You may have seen other techniques, but we will use the
+following, which is generally applicable
+• Find 𝑡[$#!;"#$] , the 1 − 𝛼/2 quantile of the 𝑡-statistic with
+"
+
+𝑛 − 1 degrees of freedom
+• For our example, 𝑛 = 33. Choose 1 − 𝛼 = 0.90 (90 percent
+CI)
+• The CI is
+𝑡 $#/;"#$ 𝑠
+𝑡 $#/;"#$ 𝑠
+(
+(
+L
+L
+𝑋−
+,𝑋 +
+𝑛
+𝑛
+
+--- PAGE 27 ---
+• For our example, 𝑡[!.1&;%(] ≈ 1.697 (use 𝑛 = 30). So, CI is
+26.91 −
+
+1.697𝑠
+33
+
+, 26.91 +
+
+1.697𝑠
+33
+
+--- PAGE 28 ---
+• The value 𝑠 ( is the sample variance
+"
+
+1
+R 𝑥2 − 𝑋L (
+𝑛−1
+23$
+
+• Here, 𝑠 = 9.49
+• Resulting CI is (24.11,29.71)
+• If we only took the first ten samples, then 𝑋L = 29.00, 𝑠 =
+10.41, 𝑡[$#!;"#$] = 1.8333 and the resulting 90 percent CI is
+"
+
+(22.97, 35.03)
+
+--- PAGE 29 ---
+Output Analysis
+Suppose that we had one long trace of response time
+observations. The initial transient could potentially bias the
+results. Potential remedies for this include:
+1. Discard the first 𝑘 observations, for some suitably chosen
+value of 𝑘. One possibility would be to discard the first 10
+percent of the trace.
+2. Eyeball the results and do transient removal in an ad hoc,
+intuitive manner.
+3. Simulate so long that the effect of the initial transient
+period is negligible.
+
+--- PAGE 30 ---
+• Suppose that 𝑟4 is the response time of the 𝑘th job in the
+trace
+• Using 𝑟4 values themselves to construct CI is problematic, as
+consecutive observations are not independent
+• Could use only samples that are very far apart, but that
+means throwing away a lot of data
+• A couple of techniques address this problem
+
+--- PAGE 31 ---
+Independent Replicas
+• Repeat the simulation 𝑁 times, each time using a different
+seed for the PRNG
+• If run 𝑖 has average statistic 𝑌2 , we now have 𝑁 independent
+observations {𝑌2 }
+• Pro – straightforward (I use this technique in my work)
+• Con – must do transient removal for each run and not clear
+how large 𝑁 should be
+
+--- PAGE 32 ---
+Putting It All Together
+Discussion of two_queue_final.m, available on Avenue.
+
+--- PAGE 33 ---
+Model Validation
+Beyond logical correctness, we would like to check that the
+simulation is implementing the correct model.
+1. Expert intuition – you may want a domain expert to validate
+your input and/or your output. Presenting your results to
+experts is somewhat “ad hoc” but can be very effective. We will
+also build intuition from our analytic results.
+2. Real system measurements – this is the most reliable and
+preferred way. However, it may be problematic, as the real
+system may not exist or measurements may be expensive to
+carry out.
+3. Theoretical results – suppose that we are simulating a system
+that cannot be exactly analyzed (if we could, no need for
+simulation). If assumptions are made, the model may become
+tractable, so one could use this for partial validation.

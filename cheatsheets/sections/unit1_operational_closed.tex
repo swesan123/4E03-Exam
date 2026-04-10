@@ -1,0 +1,7 @@
+\section*{Operational analysis (closed, $N$ clients)}
+\textbf{Model:} $N$ users, think $Z$, demands $D_i$, total $D=\sum D_i$.\\
+\textbf{Use:} bottleneck law / saturation bounds.\\
+$X \le \min\bigl(1/D_{\max},\, N/(D+Z)\bigr)$;\quad $D_{\max}=\max_i D_i$.\\
+Saturation user count: $N^\ast \approx (D+Z)/D_{\max}$ (round per problem).\\
+\textbf{Steps:} $V_i$ from routing (e.g.\ exit prob $q\Rightarrow V_{\mathrm{CPU}}=1/q$); $D_i=V_i E[S_i]$; bottleneck $=\arg\max D_i$.\\
+\textbf{Spend split (ex.):} equalize $D_{\mathrm{CPU}}(x)$ and $D_{\mathrm{IO}}(x)$ after parameterizing costs.

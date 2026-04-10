@@ -1,0 +1,192 @@
+source_pdf: expandpp.pdf
+source_path: slides/expandpp.pdf
+pages: 19
+format_version: 1
+
+--- PAGE 1 ---
+Exponential Distribution and Poisson Process
+
+--- PAGE 2 ---
+Exponential Distribution: Property 1
+As a reminder, the memoryless property is defined as
+𝑃 𝑋 >𝑠+𝑡 𝑋 >𝑠 =𝑃 𝑋 >𝑡
+With this in mind, we have the first property. Given
+𝑋! ~𝐸𝑥𝑝(𝜆! ), 𝑋" ~𝐸𝑥𝑝 𝜆" , and 𝑋! , 𝑋" are independent. Then
+$
+
+𝑃 𝑋! < 𝑋" = 0 𝑃 𝑋! < 𝑋" 𝑋" = 𝑥 𝑓%! 𝑥 𝑑𝑥
+#
+
+--- PAGE 3 ---
+Exponential Distribution: Property 1
+$
+
+= 0 𝑃 𝑋! < 𝑥 𝜆" 𝑒 &'! ( 𝑑𝑥
+#$
+
+=0
+#$
+
+1 − 𝑒 &'" ( 𝜆" 𝑒 &'! ( 𝑑𝑥
+$
+
+= 0 𝜆" 𝑒 &'! ( 𝑑𝑥 − 0 𝜆" 𝑒 & '" )'! ( 𝑑𝑥
+#
+
+#
+𝜆!
+
+𝜆"
+=1−
+=
+𝜆! + 𝜆" 𝜆! + 𝜆"
+
+--- PAGE 4 ---
+Exponential Distribution: Property 1
+Compare to 𝑋! ~𝑈[1,2] and 𝑋" ~𝑈[3,4].
+
+--- PAGE 5 ---
+Exponential Distribution: Property 2
+Given 𝑋! ~𝐸𝑥𝑝(𝜆! ), 𝐸𝑥𝑝(𝜆" ), and 𝑋! , 𝑋" are independent.
+Then
+𝑋 = min(𝑋! , 𝑋" )~𝐸𝑥𝑝(𝜆! + 𝜆" )
+
+--- PAGE 6 ---
+Proof of Property 2
+𝑃 𝑋 > 𝑡 = 𝑃 min 𝑋! , 𝑋" > 𝑡
+= 𝑃 𝑋! > 𝑡, 𝑋" > 𝑡
+= 𝑃 𝑋! > 𝑡 𝑃 𝑋" > 𝑡
+= 𝑒 &'" * 𝑒 &'! *
+= 𝑒 & '" )'! *
+
+--- PAGE 7 ---
+Example
+The download time for File 1 is 𝑋! ~𝐸𝑥𝑝(1). The download
+!
+time for File 2 is 𝑋" ~𝐸𝑥𝑝( ). The downloads are started
+"
+simultaneously and the download times are independent.
+a) What is the expected time to download one file?
+b) What is the probability that File 1 is downloaded first?
+c) What is the expected time to download both files?
+
+--- PAGE 8 ---
+Counting Process
+Let 𝑁(𝑡) be a counting process:
+
+1. 𝑁 𝑡 is nondecreasing
+2. 𝑁 𝑡 = 0,1,2, …
+The process 𝑁(𝑡) counts events – arrivals, for example.
+
+--- PAGE 9 ---
+Independent Increments
+A process has independent increments if for non-overlapping
+time intervals 𝑡# , 𝑡! , 𝑡" , 𝑡+ , 𝑡, , 𝑡- , … , (𝑡". , 𝑡".)! ), we
+have
+𝑃{𝑁 𝑡! − 𝑁 𝑡# = 𝑘# , 𝑁 𝑡+ − 𝑁 𝑡"
+= 𝑘! , … , 𝑁 𝑡".)! − 𝑁 𝑡". = 𝑘. }
+= 𝑃 𝑁 𝑡! − 𝑁 𝑡# = 𝑘# 𝑃{𝑁(𝑡+ − 𝑁 𝑡"
+= 𝑘! } ⋯ 𝑃{𝑁 𝑡".)! − 𝑁 𝑡". = 𝑘. }
+
+--- PAGE 10 ---
+Stationary Increments
+A process has stationary increments if ∀𝑠 ≥ 0
+𝑃 𝑁 𝑡 + 𝑠 − 𝑁 𝑠 = 𝑘 = 𝑃{𝑁 𝑡 = 𝑘}
+
+--- PAGE 11 ---
+Poisson Process: Definition 1
+A Poisson process with rate 𝜆 is a counting process such that
+
+1. 𝑁 0 = 0
+2. The process has independent increments
+3. The number of events in any interval of length 𝑡 is Poisson
+distributed with mean 𝜆𝑡. That is, ∀𝑠, 𝑡 ≥ 0
+𝑒 &'* 𝜆𝑡 /
+𝑃 𝑁 𝑡+𝑠 −𝑁 𝑠 =𝑘 =
+, 𝑘 = 0,1, …
+𝑘!
+
+--- PAGE 12 ---
+Poisson Process: Definition 2
+A Poisson process with rate 𝜆 is a counting process such that
+the interarrival times are i.i.d. Exponential random variables
+with rate 𝜆 and 𝑁 0 = 0.
+
+--- PAGE 13 ---
+Poisson Process Definitions
+• The two definitions are equivalent.
+• That Definition 1 implies Definition 2 is easy to show.
+• That Definition 2 implies Definition 1 is somewhat more
+difficult.
+
+--- PAGE 14 ---
+Merging Poisson Processes
+Theorem. Given two independent Poisson processes, where
+process 1 has rate 𝜆! and process 2 has rate 𝜆" , the merge of
+process 1 and process 2 is a single Poisson process with rate
+𝜆! + 𝜆" .
+
+--- PAGE 15 ---
+Proof
+The time to the first event is the time to the minimum of the
+times to the first event from each process. Let these times be
+𝑋! and 𝑋" , respectively. Then,
+min(𝑋! , 𝑋" )~𝐸𝑥𝑝(𝜆! + 𝜆" )
+
+--- PAGE 16 ---
+Splitting a Poisson Process
+Theorem. Given a Poisson process with rate 𝜆, suppose that each event is
+classified as “type A” with probability 𝑝 and “type B” with probability 1 − 𝑝.
+Then type A events form a Poisson process with rate 𝑝𝜆, type B events form a
+Poisson process with rate (1 − 𝑝)𝜆, and these two processes are independent.
+Specifically, if 𝑁! (𝑡) denotes the number of type A events by time 𝑡, and 𝑁" (𝑡)
+denotes the number of type B events by time 𝑡, then
+𝑃 𝑁! 𝑡 = 𝑛, 𝑁" 𝑡 = 𝑚 = 𝑃 𝑁! 𝑡 = 𝑛 𝑃 𝑁" 𝑡 = 𝑚
+'
+𝜆𝑡 1 − 𝑝
+𝜆𝑡𝑝
+#$%&
+#$%()#&)
+=𝑒
+𝑒
+𝑛!
+𝑚!
+See text for proof.
+
++
+
+--- PAGE 17 ---
+Theorem. Given that exactly one event of a Poisson process
+has occurred by time 𝑡, that event is equally likely to have
+occurred anywhere in 0, 𝑡 .
+
+--- PAGE 18 ---
+Proof
+Let 𝑇! denote the time of the one event
+𝑃{𝑇! ≤ 𝑠, 𝑁 𝑡 = 1}
+𝑃 𝑇! ≤ 𝑠 𝑁 𝑡 = 1 =
+𝑃{𝑁 𝑡 = 1}
+𝑃{1 𝑒𝑣𝑒𝑛𝑡 𝑖𝑛 0, 𝑠 , 0 𝑒𝑣𝑒𝑛𝑡𝑠 𝑖𝑛 𝑠, 𝑡 }
+=
+𝑒 &'* 𝜆𝑡 ! /1!
+𝑃 1 𝑒𝑣𝑒𝑛𝑡 𝑖𝑛 0, 𝑠 𝑃{0 𝑒𝑣𝑒𝑛𝑡𝑠 𝑖𝑛 𝑠, 𝑡 }
+=
+𝜆𝑡𝑒 &'* #
+𝑒 &'0 𝜆𝑠𝑒 &' *&0 𝜆 𝑡 − 𝑠
+=
+𝜆𝑡𝑒 &'*
+= 𝑠/𝑡
+
+--- PAGE 19 ---
+Example
+Requests arrive to a web server in the following manner:
+Requests for domain a.com according to a Poisson process
+with rate four per minute, while requests for b.com arrive
+according to a Poisson process with rate six per minute. The
+two processes are independent.
+a) What is the expected time of the next arrival to the server?
+b) If 10 arrivals occurred to the system in one minute, what is
+the probability that exactly four of them are for a.com?
+c) The last a.com arrival was 10 seconds ago. The last b.com
+arrival was 15 seconds ago. What is the expected time to
+the next a.com arrival?

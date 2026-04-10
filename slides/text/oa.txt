@@ -1,0 +1,355 @@
+source_pdf: oa.pdf
+source_path: slides/oa.pdf
+pages: 31
+format_version: 1
+
+--- PAGE 1 ---
+Operational Analysis
+
+--- PAGE 2 ---
+Description of a Queueing System
+• a simple queue consists of a buffer/queue where arriving
+jobs wait to be served by a server – after completion, they
+depart
+• Must describe:
+1. Arrivals: the time between arrivals is given by a probability
+distribution
+2. Queue – size (infinite or finite)
+3. How server operates – number of servers, order of service
+(FCFS, LCFS, etc.), processing times (the probability
+distribution that determines them)
+
+--- PAGE 3 ---
+Performance Indicators/Metrics
+1. Response time – time from arrival to departure
+2. Throughput – number of jobs served per unit time
+
+--- PAGE 4 ---
+Queueing Networks
+We may be interested in more complicated systems, where
+queues are connected together.
+
+--- PAGE 5 ---
+Analysis Directions
+We are faced with two possibilities when doing analysis:
+1. Exact analysis: try to formulate equations that yield the
+desired performance metric, then solve
+2. Simulation: by generating realizations/samples from the
+underlying distributions, we can follow the logic of the
+system to estimate the performance measure(s) of interest.
+For example, generate a (large) number of “real” response
+times, compute average
+
+--- PAGE 6 ---
+Operational Laws
+First cut at analytic models. Suppose that we have the
+following data:
+• !! (#): number of arrivals to device/node % at time #
+• &! # : number of completions (departures) from node % at
+time #
+• '! # : busy time of node % at time #
+
+--- PAGE 7 ---
+Some Simple Calculations
+From the data, we can quickly derive the following quantities:
+• Arrival rate at node %: (! # = !! (#)/#
+• Throughput of node %: +! # = &! (#)/#
+• Utilization of node %: ,! # = '! (#)/#
+• Average processing time at node %: -! # = '! (#)/&! (#)
+
+--- PAGE 8 ---
+Ergodicity Assumptions
+Assume that the system is ergodic, i.e., time averages lead to
+actual underlying means:
+(! # → (!
++! # → +!
+,! # → ,!
+-! # → / -! = 1/1!
+
+--- PAGE 9 ---
+Utilization Law
+'! (#) &! (#) '! #
+=
+2
+#
+#
+&! #
+,! # = +! # -! #
+Letting # → ∞,
+,! = +! /[-! ]
+
+--- PAGE 10 ---
+Forced Flow Law
+Suppose that !! # = &! (#). Let /[6! ] be the expected
+number of visits to node % per job. This requires a reference
+node, which we will call node 0. By definition, / 6" = 1. So,
+we have
+&! (#)
+&" (#)
+lim
+= lim
+/[6! ]
+#→% #
+#→%
+#
+&! (#)
+/ 6! = lim
+#→% &" (#)
+
+--- PAGE 11 ---
+Forced Flow Law
+Define: system throughput + measured through node 0. The
+throughput of node % is
+&! (#) &! (#) &" (#)
++! # =
+=
+#
+&" (#) #
+Taking limits as # → ∞
++! = / 6! +
+
+--- PAGE 12 ---
+Device Demands
+• Utilization Law: ,! = +! /[-! ]
+• Forced Flow Law: +! = / 6! +
+• Combining these two: ,! = / -! / 6! +
+• Define the average demand at node %: / :! = / -! /[6! ]
+• Then, ,! = / :! +
+The demand at node %, /[:! ], is the expected processing time
+at node % summed over all visits of a job. We will see that the
+bottleneck is the device with the highest /[:! ].
+
+--- PAGE 13 ---
+Little’s Law
+/ ;! = (! /[<! ]
+This relates the number of jobs in a queueing system, /[;! ],
+the arrival rate to the queueing system, (! , and the mean
+response time, /[<! ].
+
+--- PAGE 14 ---
+Outline of Derivation
+• The number in system at time #, ;(#), can be written as
+; # = ! # − &(#)
+• The arrival rate at time # is ( # = !(#)/#
+• The average response time in system in system for jobs that
+#
+&
+arrived in (0, #) is < # =
+∫" ! A − & A BA
+'(#)
+
+& #
+C
+• The average number in system at time # is ; = ∫" D! A −
+#
+& A EBA
+
+--- PAGE 15 ---
+Outline of Derivation
+So,
+C # =
+;
+
+#
+∫" ! A
+
+− & A BA
+#
+
+< # !(#)
+=
+= ( # <(#)
+#
+
+Letting # → ∞,
+/ ; = (/[<]
+
+--- PAGE 16 ---
+Users/Clients
+We consider a model where there are F users (clients) who
+operate as follows:
+1. Each user thinks for a period of time that has mean /[G]
+time units (the think time)
+2. At the end of a think time, the user submits the
+job/request to a subsystem
+3. Once processing is complete at the subsystem (and
+returned to the user), the user begins another think time
+
+--- PAGE 17 ---
+General Response Time Law
+Consider a system with F users connected to a subsystem
+that has H nodes. We are interested in the mean response
+time for the subsystem, /[<]. Inside the subsystem the mean
+number of jobs /[;] satisfies
+/ ; = +/ <
+= / ;& + / ;* + ⋯ + / ;+
++/ < = +& / <& + +* / <* + ⋯ + ++ / <+
+/ < = / 6& / <& + / <* / 6* + ⋯ + / 6+ /[<+ ]
+
+--- PAGE 18 ---
+General Response Time Law
+This then gives our final result
++
+
+/ < = K / 6! /[<! ]
+!,&
+
+--- PAGE 19 ---
+Interactive Response Time Law
+• Consider the same system as for the General Response Time
+Law
+• The total mean cycle time of a client’s job is / G + /[<]
+• So, in a given time period of length #, each client generates
+on average
+#
+/ G + /[<]
+requests
+
+--- PAGE 20 ---
+Interactive Response Time Law
+• The throughput is then given by
+#
+F(
+)
+/ G +/ <
++=
+#
+F
+=
+/ G + /[<]
+• The end result is
+F
+/ < = − /[G]
++
+
+--- PAGE 21 ---
+Bottleneck Analysis
+Let : = / :& + / :* + ⋯ + /[:+ ] be the average total
+demand. We then have
+1
+
+F
++ ≤ min
+,
+:-./ : + / G
+/[<] ≥ max(:, F:-./ − / G )
+where :-./ = max /[:! ] is the maximum demand in the
+!
+subsystem. :-./ is the “bottleneck demand” and the device
+that achieves :-./ is the “bottleneck”.
+
+--- PAGE 22 ---
+Proof of Bounds
+1. At the bottleneck,
+!!"# = #$!"# ≤ 1 ⟹ # ≤
+2. With one client,
+
+1
+$!"#
+
+( ) = ( $$ + ( $% + ⋯ + ( $&
+=$
+([)] ≥ $
+as the mean response time is lowest with one client.
+
+--- PAGE 23 ---
+Proof of Bounds
+From the Interactive Response Time Law,
+3.
+F
+/ < = −/ G
++
+≥ F:-./ − /[G]
+4.
+F
++=
+/ < + /[G]
+F
+≤
+: + /[G]
+
+--- PAGE 24 ---
+Example
+A computer system has one CPU and two disks. After
+monitoring the system for two hours, the following
+observations were made. The utilization of the CPU was 43
+percent and the utilization of the first disk was 66 percent.
+Each transaction to the system makes 5 I/O requests to the
+first disk and 6 to the second disk. The average processing
+time (per request) at the two disks were both 20 msec.
+a) What was the throughput of the system (in transactions
+per second)?
+b) What was the utilization of the second disk?
+c) What was the total processing demand (in milliseconds per
+transaction) at the CPU?
+
+--- PAGE 25 ---
+Another Example
+Suppose that we have F clients that submit requests to three
+single-server nodes in series (i.e., a client request needs to be
+processed by three servers, in order). The mean demands at
+the three nodes are / :. = 2, /[:0 ] = 3, / :1 = 1. The
+average think time of a client, /[G], is 30.
+
+--- PAGE 26 ---
+Bottleneck Analysis
+The throughput is bounded above by
+1 5
+min( , )
+3 36
+and the mean response time is bounded below by
+max(6,35 − 30)
+One can see that these bounds both have break points at 5∗ =
+12. This value is often known as the number of clients that the
+system can support. Below this number, performance scales well,
+above this number, performance degrades considerably.
+
+--- PAGE 27 ---
+Load Balancing
+Suppose that we were free to choose / :. , /[:0 ] and /[:1 ]
+to be any (nonnegative) value. What would be a good choice?
+
+--- PAGE 28 ---
+One More Example
+A database server receives requests from 50 clients. Each request
+to the DB server requires the five reads be made on average from
+the server’s single disk. The average read time is 9 msec. Each
+database request requires on average 15 msec of CPU time to be
+processed. Consider the following three proposed design changes:
+i. The average number of disk reads per access can be reduced
+from 5 to 2.5
+ii. The disk is replaced by one 60 percent faster
+iii. The CPU speed is doubled
+If you were to do one of these, which would you do? If you were
+to do two of them?
+
+--- PAGE 29 ---
+Final Example
+• Application with three microservices: 1, 2 and 3.
+• Users have a think time of 1 minute
+• How many users can the system support?
+
+--- PAGE 30 ---
+Final Example
+1. Need to estimate processing rates, in this case throughput
+was easy to measure
+𝜌𝑖 = 𝑋𝑖 𝐸[𝑆𝑖 ]
+So, load each microservice until utilization close to 1, then
+1
+𝐸 𝑆𝑖 ≈ .
+𝑋𝑖
+
+2. Get visit ratios from architecture, in this case, 2, 1, 1
+3. Here, 𝑆1 = 1/170, 𝑆2 = 1/450, 𝑆3 = 1/250. Visit ratios
+are 2, 1, 1. So demands are 2/170, 1/450, 1/250
+
+--- PAGE 31 ---
+Final Example
+4.
+
+𝑀∗
+1
+=
+𝐷 + 𝐸[𝑍] 𝐷𝑚𝑎𝑥
+
+Here, 𝐷 + 𝐸 𝑍 ≈ 𝐸 𝑍 , so 𝑀 ∗ ≈ 170 × 60 ≈ 5000

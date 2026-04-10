@@ -6,3 +6,5 @@ venv/
 generated_exams/
 build/generated/
 generated_exams_work/
+cheatsheets/build/
+cheatsheets/generated/

@@ -1,0 +1,8 @@
+\section*{9.\ Networks of queues}
+\textbf{Open Jackson.}\ M/M/1 nodes;\ external Poisson $r_i$ to $i$;\ routing $P_{ji}$ (to $i$ from $j$).\\
+\textbf{Traffic.}\ $\lambda_i=r_i+\sum_j P_{ji}\lambda_j$;\ solve linear system;\ $\rho_i=\lambda_i/\mu_i<1$.\\
+\textbf{Product form.}\ $\Prob(N_1{=}n_1,\ldots)=\prod_i(1-\rho_i)\rho_i^{n_i}$.\\
+\textbf{Means.}\ $\E[N_i]=\rho_i/(1-\rho_i)$;\ $\E[N]=\sum_i\E[N_i]$;\ $\E[T]=\E[N]/X$.\\
+\textbf{Throughput.}\ $X=\sum_i r_i$ (one entry per job);\ single feed $\Rightarrow$ $X=r_i$.\\
+\textbf{Bottleneck.}\ $\max_i D_i$,\ $D_i=V_iE[S_i]$,\ $V_i=\lambda_i/X$.\\
+\textbf{BCMP (pointer).}\ FCFS exp.\ same class;\ PS / LCFS-PR / IS relaxations---see \texttt{BCMP.txt}.

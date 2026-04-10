@@ -1,0 +1,6 @@
+\section*{13.\ Load balancing}
+\textbf{Model.}\ Poisson $\lambda$;\ $k$ parallel servers exp$(\mu)$;\ route on arrival.\\
+\textbf{Random.}\ Prob.\ $1/k$ each $\Rightarrow$ $k$ separate $M/M/1$ at rate $\lambda/k$.\\
+\textbf{Round robin.}\ Same long-run rates;\ lower inter-arrival variance to each queue.\\
+\textbf{JSQ.}\ Join shortest queue;\ as $\lambda\to k\mu$, $\E[T]\to M/M/k$ (best).\\
+\textbf{Overhead.}\ JSQ needs state;\ power-of-two choices;\ idle-server hints + random fallback.

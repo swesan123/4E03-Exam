@@ -1,0 +1,45 @@
+source_pdf: thread_pool.pdf
+source_path: slides/thread_pool.pdf
+pages: 4
+format_version: 1
+
+--- PAGE 1 ---
+Thread Pool Management
+
+--- PAGE 2 ---
+Closed Network Model of Server
+• Closed network with a single CPU and 𝑛 resources (disks,
+etc.)
+• Demands known: 𝐸[𝐷! ] (CPU) and 𝐸 𝐷" , 𝑖 = 1, … , 𝑛
+• With 𝑀 jobs in the network, can calculate throughput and
+mean response time using MVA, for example
+
+--- PAGE 3 ---
+Thread Management Problem
+• An arrival to a server that sees all threads occupied is
+rejected
+• How many threads should be in the thread pool?
+• Choose 𝑀 to maximize the throughput (minimize rejection
+probability) subject to a constraint on the mean response
+time
+• We know that the throughput is an increasing function of 𝑀,
+so maximizing the throughput means maximizing 𝑀
+• Keep increasing 𝑀 until 𝐸 𝑇 > 𝐶 (𝐸[𝑇] ≤ 𝐶 is the
+performance requirement), call the resulting value of 𝑀, 𝑀∗
+• Simply choose 𝑀∗ − 1
+
+--- PAGE 4 ---
+Checking Assumptions
+• As number of threads increases, amount of memory
+assigned to each thread decreases, thrashing may become
+frequent
+• Result is that demands increase
+• Typically demands are constant up to some number of
+1 then begin to increase
+threads, 𝑀,
+• There are analytic techniques (BCMP networks, “load
+dependent” version of MVA) available
+1 threads, i.e.,
+• Simple solution is to not allow more than 𝑀
+1
+choose the number of threads to be min(𝑀∗ − 1, 𝑀)

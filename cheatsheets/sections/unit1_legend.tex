@@ -1,0 +1,18 @@
+\section*{Legend}
+$\lambda$ arrival rate;\quad $\mu$ service rate (per server);\quad $\rho$ utilization\\
+$E[T]$ response (system);\quad $E[W]$ wait (queue);\quad $E[S]$ service time\\
+$E[S^2]=\int_0^\infty s^2 f_S(s)\,ds=\Var(S)+(E[S])^2$\\
+$C_S^2=\Var(S)/(E[S])^2$ (SCV of service)\\
+$X$ throughput;\quad $Z$ think time;\quad $N$ clients (same as $F$ in \texttt{oa.txt})\\
+$V_i$ visits to $i$;\quad $D_i=V_i E[S_i]$,\ $D=\sum_i D_i$\\
+$\pi_i$, $p_n$: steady-state probs (chain / queue length)
+
+\textbf{$C_S^2$ cases:}\ $0$ deterministic;\ $1$ exponential ($\Var(S)=E[S]^2$);\ $>1$ heavy tail;\ $<1$ lighter than exp.\\
+Uniform $[a,b]$: $\Var(S)=(b-a)^2/12$.\quad \textbf{Trap:} convert time units before compare.
+
+\textbf{M/G/1 (PK):}\ $E[W]=\dfrac{\lambda E[S^2]}{2(1-\rho)}$,\ $\rho=\lambda/\mu=\lambda E[S]$;\quad $E[T]=E[W]+E[S]$.
+
+\textbf{Compare designs (min $E[T]$):} compute $E[T]$ for each; pick smaller.
+
+\textbf{MVA:} means at nodes via mean-value recursion ($E[T],X,E[N]$).\\
+\textbf{Trap:} blocking/rejection needs state probs $\pi_n$, not MVA alone.

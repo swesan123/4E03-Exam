@@ -1,0 +1,9 @@
+\section*{Discrete-time Markov chains (DTMC)}
+\textbf{Pattern:} discrete obs.\ + Markov $\Rightarrow$ DTMC; states from wording.\\
+\textbf{Solve:} $\boldsymbol{\pi}=\boldsymbol{\pi}P$,\ $\sum_i\pi_i=1$;\quad row $i$ of $P$ = from $i$.\\
+Missing row entries $=1-\sum$ given.\\
+$E[X]=\sum_i i\pi_i$;\quad $\E[X^2]=\sum_i i^2\pi_i$;\quad $\Var(X)=\E[X^2]-(\E[X])^2$.\\
+$n$-step: $\boldsymbol{\alpha}_n=\boldsymbol{\alpha}_0 P^n$.\\
+\textbf{Discount chain:} states $=$ discount tiers only; claims tweak probs, not extra states.\\
+0-claim $\to$ tier up;\ claim $\to$ tier down;\ reflect at boundaries.\\
+$P=\begin{bmatrix}1/4&3/4&0\\[2pt]1/4&0&3/4\\[2pt]0&1/4&3/4\end{bmatrix}$ (template).

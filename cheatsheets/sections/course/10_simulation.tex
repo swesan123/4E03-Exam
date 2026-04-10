@@ -1,0 +1,7 @@
+\section*{10.\ Simulation}
+\textbf{PRNG.}\ Pseudo-random $U[0,1]$;\ periodic;\ use decent library.\\
+\textbf{Samples.}\ Discrete: inverse cdf / table;\ continuous: $x=F^{-1}(u)$ (e.g.\ $\mathrm{Exp}$: $-\ln u/\lambda$).\\
+\textbf{Discrete-event.}\ Clock $t$;\ state;\ event list (next arrival, next completion, $\ldots$).\\
+\textbf{Output analysis.}\ Remove transient;\ indep.\ replicas + different seeds.\\
+\textbf{Confidence.}\ $\bar X\pm t_{1-\alpha/2}\,s/\sqrt{n}$ ($n$ replica means or batched means).\\
+\textbf{Validation.}\ Experts;\ measurements;\ analytic special cases.

@@ -1,0 +1,7 @@
+\section*{2.\ Discrete-time Markov chains}
+\textbf{Setup.}\ Discrete observations + Markov property $\Rightarrow$ DTMC; states from wording.\\
+\textbf{Stationary dist.}\ $\boldsymbol{\pi}=\boldsymbol{\pi}P$,\ $\sum_i\pi_i=1$;\quad row $i$ of $P$ = transitions \emph{from} $i$;\quad missing entries $=1-\sum$ given.\\
+\textbf{Moments.}\ $\E[X]=\sum_i i\pi_i$;\quad $\E[X^2]=\sum_i i^2\pi_i$;\quad $\Var(X)=\E[X^2]-(\E[X])^2$.\\
+\textbf{$n$-step.}\ $\boldsymbol{\alpha}_n=\boldsymbol{\alpha}_0 P^n$.\\
+\textbf{Discount / tier chain.}\ States $=$ tiers only; claims change probs;\ 0-claim $\to$ up,\ claim $\to$ down,\ reflect at ends.\\
+\textbf{Template $P$.}\ $\begin{bmatrix}1/4&3/4&0\\[1pt]1/4&0&3/4\\[1pt]0&1/4&3/4\end{bmatrix}$.

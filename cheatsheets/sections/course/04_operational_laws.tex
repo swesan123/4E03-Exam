@@ -1,0 +1,9 @@
+\section*{4.\ Operational laws}
+\textbf{From measurements.}\ $X_i$ throughput at $i$;\ $U_i$ utilization;\ $E[S_i]$ mean service;\ visits $V_i$ per job (ref.\ node).\\
+\textbf{Utilization.}\ $U_i=X_i\,E[S_i]$ (time avg.).\\
+\textbf{Forced flow.}\ $X_i=V_i X_0$ (same job flow, choose ref.\ node $0$).\\
+\textbf{Demand.}\ $D_i=V_i E[S_i]$;\ $D=\sum_i D_i$;\ bottleneck $\arg\max_i D_i$.\\
+\textbf{Little's Law.}\ $L=\lambda W$ (subsystem: mean jobs $L$, arrival rate $\lambda$, mean time $W$ in subsystem).\\
+\textbf{Closed interactive ($N$ clients).}\ $N$ is the slide/client count denoted $F$ in \texttt{oa.txt}. Think mean $Z$;\ $N/X=Z+E[R_{\mathrm{sub}}]$;\quad $X\le\min\bigl(1/D_{\max},\,N/(D+Z)\bigr)$,\ $D_{\max}=\max_i D_i$.\\
+\textbf{Saturation.}\ $N^\ast\approx(D+Z)/D_{\max}$ (round per problem).\\
+\textbf{Steps.}\ $V_i$ from routing (e.g.\ exit prob $q\Rightarrow V_{\mathrm{CPU}}=1/q$);\ $D_i=V_iE[S_i]$.

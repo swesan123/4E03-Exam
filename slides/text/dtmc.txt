@@ -1,0 +1,761 @@
+source_pdf: dtmc.pdf
+source_path: slides/dtmc.pdf
+pages: 45
+format_version: 1
+
+--- PAGE 1 ---
+Discrete Time Markov Chains
+
+--- PAGE 2 ---
+Stochastic Models
+May want to capture how a system evolves, using dependent
+random variables, described by some dynamics. A very simple
+model that sees wide application is a Discrete Time Markov
+Chain. They have been used for the following (this is far from
+exhaustive):
+user web page navigation, cache contents and performance,
+speech recognition, machine learning (reinforcement
+learning), algorithmic music composition, sports
+
+--- PAGE 3 ---
+Introductory Example
+Consider the following (very simplified) scenario:
+• three web pages that link to each other A, B, C
+• page A has links to B and C
+• page B has links to C
+• page C has links to A and B
+• when a user leaves A, 1/3 of the time a link to B is selected,
+otherwise a link to C is selected
+• B always links to C
+• C links to A or B with equal probability
+• Choice of next page is completely independent of the past (only
+depends on current page)
+Q: What proportion of visits are made to each page?
+
+--- PAGE 4 ---
+Discrete-time systems
+• this is a discrete-time system
+• the nth “time point” corresponds to the nth page visited
+• natural for some time settings: a continuous-time framework
+may be more suitable for others
+
+--- PAGE 5 ---
+Discrete-Time Markov Chains
+Definition. A DTMC (discrete-time Markov chain) is a
+stochastic process {𝑋𝑛 , 𝑛 = 0,1,2, … } where 𝑋𝑛 denotes the
+state at (discrete) time step 𝑛 and such that, ∀𝑛 ≥ 0, ∀𝑖, 𝑗 and
+∀𝑖0 , … , 𝑖𝑛−1
+𝑃 𝑋𝑛+1=𝑗 𝑋𝑛 = 𝑖, 𝑋𝑛−1 = 𝑖𝑛−1 , … 𝑋0 = 𝑖0
+= 𝑃 𝑋𝑛+1=𝑗 𝑋𝑛 = 𝑖 = 𝑃𝑖𝑗
+• last equality is a property known as stationarity: statistics of
+process independent of time, 𝑃𝑖𝑗 is independent of the time
+step and of history
+• “chain” refers to the state space being discrete
+
+--- PAGE 6 ---
+Markovian Property and 𝑃
+• Markovian property – the conditional distribution of the next
+state 𝑋𝑛+1 , given past states 𝑋0 , 𝑋1 , … , 𝑋𝑛−1 and the present
+state 𝑋𝑛 , is independent of past states and depends only on
+the present state 𝑋𝑛
+• Transition (probability) matrix, 𝑃 – associated with any DTMC
+is a matrix, 𝑃, whose 𝑖, 𝑗 entry, 𝑃𝑖𝑗 represents the probability
+of moving to state 𝑗 on the next transition, given that the
+current state is 𝑖
+• 𝑃 may have infinite dimension
+• 𝑃 is square
+
+--- PAGE 7 ---
+Markovian Property and 𝑃
+• Rows of 𝑃 sum to one – the system must be in some state at
+each step
+• 𝑃𝑖𝑖 > 0 is possible
+
+--- PAGE 8 ---
+First Example Revisited
+If the states are taken as A, B, C in that order, then
+0
+𝑃= 0
+1/2
+
+1/3
+0
+1/2
+
+2/3
+1
+0
+
+--- PAGE 9 ---
+Umbrella Problem
+• an absent-minded professor has two umbrellas that are used
+for making trips from home to work and back
+• if it rains and an umbrella is at the current location, an
+umbrella is taken
+• if it is not raining, no umbrella is taken
+• it rains with probability p when each trip is made,
+independent of prior trips
+• eventual goal: determine the fraction of trips during which
+the professor gets wet
+
+--- PAGE 10 ---
+Umbrella Problem (cont’d)
+• state space: track the number of umbrellas at current
+location
+• state transition diagram given on the board
+• transition probability matrix is
+0
+0
+𝑃=
+1−𝑝
+
+0
+1−𝑝
+𝑝
+
+1
+𝑝
+0
+
+--- PAGE 11 ---
+Umbrella Problem (cont’d)
+Could model this with six states, where the state is the
+ordered pair that consists of the number of umbrellas at
+home and the current location of the professor.
+
+--- PAGE 12 ---
+More examples
+There are two more examples in the book, a repair model and
+a program analysis model – please try to read!
+
+--- PAGE 13 ---
+n-step Transition Probabilities
+• Let 𝑃 𝑛 = 𝑃 × 𝑃 × ⋯ × 𝑃, i.e., 𝑛 copies of 𝑃 multiplied
+together
+𝑛
+• 𝑃𝑖𝑗 : (𝑖, 𝑗) entry of 𝑃 𝑛
+𝑛
+• What does 𝑃𝑖𝑗 represent?
+
+--- PAGE 14 ---
+2-step Transition Probabilities
+• Let’s look at a 3-state DTMC (states 0, 1 and 2)
+• The probability of going from state 0 to state 1 in 2 steps is,
+by exhausting all possibilities (0 → 0 → 1, 0 → 1 → 1, 0 →
+2 → 1):
+𝑃00 𝑃01 + 𝑃01 𝑃11 + 𝑃02 𝑃21
+2
+So, the required probability is 𝑃01
+, the (0,1) entry of 𝑃 2 . In
+general,
+𝑀−1
+
+2
+𝑃𝑖𝑗 = ෍ 𝑃𝑖𝑘 𝑃𝑘𝑗
+𝑘=0
+
+so the 2-step probabilities are given by the entries in 𝑃 2
+
+--- PAGE 15 ---
+n-step Transition Probabilities
+In general, if we know that the (𝑛 − 1)-step transition
+𝑛−1
+probabilities are given by 𝑃𝑖𝑘 , then by the exhaustive
+enumeration of all possibilities:
+𝑀−1
+
+𝑛−1
+𝑃𝑖𝑗𝑛 = ෍ 𝑃𝑖𝑘
+𝑃𝑘𝑗
+𝑘=0
+
+This allows an inductive argument that the 𝑛-step transition
+probability of going from state 𝑖 to state 𝑗 is given by the (𝑖, 𝑗)
+entry of 𝑃 𝑛 .
+
+--- PAGE 16 ---
+Limiting Probabilities
+Let’s return to the first example:
+0
+𝑃= 0
+1/2
+
+1/3
+0
+1/2
+
+2/3
+1
+0
+
+1/3
+𝑃 2 = 1/2
+0
+
+1/3
+1/2
+1/6
+
+1/3
+0
+5/6
+
+--- PAGE 17 ---
+Limiting Probabilities
+.1944
+𝑃 5 = .0833
+.3472
+
+.2870
+.2222
+.3750
+
+.5185
+.6944
+.2778
+
+.2309
+𝑃 20 = .2312
+.2305
+
+.3077
+.3079
+.3075
+
+.4614
+.4609
+.4620
+
+It appears that all of the rows are becoming the same. What
+this says is that the probability of being in state 𝑗 becomes
+independent of the starting state 𝑖.
+
+--- PAGE 18 ---
+Limiting Probabilities
+Definition. Let
+
+𝝅𝒋 = lim 𝑷𝒏𝒊𝒋
+𝒏→∞
+
+The values 𝜋𝑗 represent the limiting probability that the DTMC
+is in state 𝑗. For an 𝑀-state DTMC, with states 0,1, … , 𝑀 − 1
+𝜋 = 𝜋0 , 𝜋1 , … , 𝜋𝑀−1 ,
+𝑀−1
+σ
+with 𝑖=0 𝜋𝑖 = 1 is a vector of the limiting probabilities of
+being in each state.
+
+--- PAGE 19 ---
+Limiting Probabilities
+• not obvious that limit always exists (in fact, sometimes it
+does not)
+• not obvious that limiting probabilities form a distribution
+• for our purposes, we will continue with these assumptions
+(they are not unreasonable)
+
+--- PAGE 20 ---
+Umbrella Problem Revisited
+Here, with 𝑝 = 0.4,
+.230
+𝑃 30 = .230
+.230
+
+.385
+.385
+.385
+
+.385
+.385
+.385
+
+So, one could conclude that the limiting probability that one
+gets wet is 𝑝𝜋0 = 0.4 0.23 = 0.092.
+
+--- PAGE 21 ---
+Calculating Limiting Probabilities
+Is there a better way to find 𝜋𝑖 , as opposed to raising 𝑃 to a
+large number?
+
+--- PAGE 22 ---
+Stationary Probabilities
+Definition. A probability distribution 𝜋 is said to be stationary
+for a DTMC if
+𝝅𝑷 = 𝝅
+and
+𝑀−1
+
+෍ 𝜋𝑖 = 1
+𝑖=0
+
+We refer to this set of equations as the stationary equations.
+
+--- PAGE 23 ---
+Stationary Probabilities
+We can rewrite the equations as
+𝑀−1
+
+෍ 𝜋𝑖 𝑃𝑖𝑗 = 𝜋𝑗 ,
+
+𝑗 = 0, … , 𝑀 − 1
+
+𝑖=0
+
+and
+
+𝑀−1
+
+෍ 𝜋𝑖 = 1
+𝑖=0
+
+In the first set of equations, the LHS determines the
+probability of being in state 𝑗 if the initial distribution is 𝜋.
+Hence the term stationary, if we start with this distribution, it
+never changes.
+
+--- PAGE 24 ---
+Key Theorem
+Theorem. Given a finite-state DTMC with 𝑀 states, let
+𝝅𝒋 = lim 𝑷𝒏𝒊𝒋 > 𝟎
+𝒏→∞
+
+be the limiting probability of being in state 𝑗 and let 𝜋 =
+[𝜋0, 𝜋1 , … , 𝜋𝑀−1 ], where σ𝑀−1
+𝑖=0 𝜋𝑖 = 1 be the limiting
+distribution. Assuming that the limiting distribution exists,
+then 𝜋 is also a stationary distribution and no other stationary
+distribution exists.
+
+--- PAGE 25 ---
+Proof
+First we show that a limiting distribution satisfies the stationary
+equations.
+𝜋𝑗 = lim 𝑃𝑖𝑗𝑛+1
+𝑛→∞
+
+𝑀−1
+
+𝑛
+= lim ෍ 𝑃𝑖𝑘
+𝑃𝑘𝑗
+𝑛→∞
+𝑀−1 𝑘=0
+
+𝑛
+= ෍ lim 𝑃𝑖𝑘
+𝑃𝑘𝑗
+𝑘=0
+
+𝑛→∞
+
+𝑀−1
+
+= ෍ 𝜋𝑘 𝑃𝑘𝑗
+𝑘=0
+
+--- PAGE 26 ---
+Proof
+Next we show that any solution to the stationary equations
+must be equal to the limiting distribution. Suppose that 𝜋′ is a
+stationary distribution and we start with initial state having
+distribution 𝜋′. So,
+𝜋𝑗′ = 𝑃 𝑋𝑛 = 𝑗 , ∀𝑛
+𝑀−1
+
+= ෍ 𝑃 𝑋𝑛 = 𝑗 𝑋0 = 𝑖 𝑃 𝑋0 = 𝑖 , ∀𝑛
+𝑖=0𝑀−1
+
+=෍
+𝑖=0
+
+𝑃𝑖𝑗𝑛 𝜋𝑖′ , ∀𝑛
+
+--- PAGE 27 ---
+Proof
+𝜋𝑗′ = lim 𝜋𝑗′
+𝑛→∞
+
+𝑀−1
+
+= ෍ lim 𝑃𝑖𝑗𝑛 𝜋𝑖′
+𝑛→∞
+
+𝑖=0
+𝑀−1
+
+= ෍ 𝜋𝑗 𝜋𝑖′
+𝑖=0
+𝑀−1
+
+= 𝜋𝑗 ෍ 𝜋𝑖′
+= 𝜋𝑗 𝑖=0
+
+--- PAGE 28 ---
+Example
+A computer program’s execution is modelled as a DTMC. The state
+is the resource being used at time 𝑛. Suppose that there are three
+resources: CPU (state 0), Disk A (state 1), and Disk B (state 2). The
+probability transition matrix is
+0.9 0.05 0.05
+𝑃 = 0.2 0.8
+0
+0.2
+0
+0.8
+1. What is the probability that, given the program is initially using
+the CPU, it is using Disk A two time units later?
+2. What is the steady-state probability that Disk A is being used?
+
+--- PAGE 29 ---
+Example
+Consider a multiprocessor system with two processors and two
+memory modules (MMs). At each time point, requests for an MM
+are made in the following manner.
+1. If both processors are accessing different MMs, at the next
+time point each processor makes independent requests for the
+memory modules: with probability 0.4, a request is made for
+MM1, otherwise the request is made for MM2.
+2. If both processors are accessing the same MM, only one
+processor makes a new request at the next time step (the
+other maintains its request for the same MM). The request
+probabilities are the same as in the first case.
+Calculate the steady-state probability that the processors are
+accessing different memory modules.
+
+--- PAGE 30 ---
+Expected time to reach a state
+• Consider an example with states {0,1,2,3} and transition
+matrix
+0 0.4 0.6 0
+0 0.4 0.6 0
+𝑃=
+0 0.9 0 0.1
+0 0
+0
+1
+• Define 𝑇0,3 to be the number of steps to enter state 3, given
+that the system starts in state 0.
+• We can write
+𝐸 𝑇0,3 = 1 + 0.4𝐸 𝑇1,3 + 0.6𝐸[𝑇2,3 ]
+
+--- PAGE 31 ---
+Expected time to reach a state
+• On the RHS, the value comes from the fact that we always
+take one step from 0, no matter what. We then need to add
+the number of steps starting from the next state. With
+probability 0.4, we count the number of steps from state 1,
+and with probability 0.6, the number of steps from state 2.
+• In a similar manner, we can generate the additional
+equations:
+𝐸 𝑇1,3 = 1 + 0.4𝐸 𝑇1,3 + 0.6𝐸 𝑇2,3
+𝐸 𝑇2,3 = 1 + 0.9𝐸 𝑇1,3 + 0.1𝐸[𝑇3,3 ]
+
+--- PAGE 32 ---
+Expected time to reach a state
+• Using 𝐸[𝑇3,3 ] = 0, we now have three equations in three
+unknowns.
+• Solve these to yield 𝐸 𝑇0,3 = 26.67
+
+--- PAGE 33 ---
+General Result
+• Assume states are {0,1, … , 𝑁}
+• Assume that we are interested in computing 𝐸 𝑇0,𝑁 .
+• For 𝑗 = 0, … , 𝑁 − 1, generate
+𝑁
+
+𝐸 𝑇𝑗,𝑁 = 1 + ෍ 𝑃𝑗𝑙 𝐸[𝑇𝑙,𝑁 ]
+𝑙=0
+
+• Set 𝐸 𝑇𝑁,𝑁 = 0, wherever it appears.
+• Solve the resulting set of linear equations.
+
+--- PAGE 34 ---
+Caching Example
+
+--- PAGE 35 ---
+Introduction
+• wish to compare strategies for virtual memory paging in OS
+• will model the system as a ranked set of pages
+• suppose that we have eight pages, currently ranked
+𝑃! , 𝑃" , 𝑃# , 𝑃$ , 𝑃% , 𝑃& , 𝑃' , 𝑃(
+• next request for page 𝑃%
+• new ranking under LRU?
+• new ranking under Move-Ahead (move up one in the
+ranking)?
+
+--- PAGE 36 ---
+Introduction
+• updated rank for LRU: 𝑃% , 𝑃! , 𝑃" , 𝑃# , 𝑃$ , 𝑃& , 𝑃' , 𝑃(
+• updated rank for Move-Ahead: 𝑃! , 𝑃" , 𝑃# , 𝑃% , 𝑃$ , 𝑃& , 𝑃' , 𝑃(
+• suppose that the first three pages in memory, cache miss if
+not in memory
+
+--- PAGE 37 ---
+System State
+• if 𝑁 is the number of pages, state is permutation of {1, … , 𝑁}
+• size of the state space is 𝑁!
+• Linux system: page size 4 kB, memory size 1 GB, swap disk
+size 1 GB, so state space has size 500000!
+
+--- PAGE 38 ---
+Request Model
+• requests random
+• requests follow an i.i.d. (independent and identically
+distributed) sequence with 𝑃 𝑅) = 𝑃* = 𝑝*
+• suppose that we want to consider performance when there
+is a “more frequent page” 𝑃+
+• assume that
+𝑎 = 𝑃 𝑅) = 𝑃+
+𝑏 = 𝑃 𝑅) = 𝑃* , 𝑃* ≠ 𝑃+
+• 𝑎 and 𝑏 satisfy 𝑎 > 𝑏 and 𝑎 + 𝑁 − 1 𝑏 = 1.
+
+--- PAGE 39 ---
+Request Model
+• note that this allows that 𝑎 is (much) smaller than 𝑁 − 1 𝑏
+• can we reduce the state space?
+
+--- PAGE 40 ---
+State Space Reduction
+• {𝑋) } is the position of page 𝑃+ after the 𝑛th request
+• state space is size 𝑁
+• assume 𝑁 = 8
+
+--- PAGE 41 ---
+LRU: Transition Matrix
+𝑎
+𝑎
+𝑎
+𝑎
+𝑃=
+𝑎
+𝑎
+𝑎
+𝑎
+
+7𝑏
+𝑏
+0
+0
+0
+0
+0
+0
+
+0
+6𝑏
+2𝑏
+0
+0
+0
+0
+0
+
+0
+0
+5𝑏
+3𝑏
+0
+0
+0
+0
+
+0
+0
+0
+4𝑏
+4𝑏
+0
+0
+0
+
+0
+0
+0
+0
+3𝑏
+5𝑏
+0
+0
+
+0
+0
+0
+0
+0
+2𝑏
+6𝑏
+0
+
+0
+0
+0
+0
+0
+0
+𝑏
+7𝑏
+
+--- PAGE 42 ---
+LRU: Stationary Distribution
+With 𝑎 = 0.3, 𝑏 = 0.1,
+0.30
+0.23
+0.18
+0.12
+,
+𝜋 =
+0.08
+0.05
+0.03
+0.01
+
+--- PAGE 43 ---
+Move-Ahead: Transition Matrix
+𝑎 + 6𝑏
+𝑎
+0
+0
+𝑃=
+0
+0
+0
+0
+
+𝑏
+6𝑏
+𝑎
+0
+0
+0
+0
+0
+
+0
+𝑏
+6𝑏
+𝑎
+0
+0
+0
+0
+
+0
+0
+𝑏
+6𝑏
+𝑎
+0
+0
+0
+
+0
+0
+0
+𝑏
+6𝑏
+𝑎
+0
+0
+
+0
+0
+0
+0
+𝑏
+6𝑏
+𝑎
+0
+
+0
+0
+0
+0
+0
+𝑏
+6𝑏
+𝑎
+
+0
+0
+0
+0
+0
+0
+𝑏
+7𝑏
+
+--- PAGE 44 ---
+Move-Ahead: Stationary Distribution
+With 𝑎 = 0.3, 𝑏 = 0.1,
+0.67
+0.22
+0.07
+0.02
+,
+𝜋 =
+0.01
+0.01
+0.00
+0.00
+
+--- PAGE 45 ---
+Conditional Cache Miss Probabilities (for Page
+A)
+Cache Size
+
+LRU
+
+Move-Ahead
+
+0
+
+1.00
+
+1.00
+
+1
+
+0.70
+
+0.33
+
+2
+
+0.47
+
+0.11
+
+3
+
+0.28
+
+0.04
+
+4
+
+0.17
+
+0.02
+
+5
+
+0.09
+
+0.01
+
+6
+
+0.04
+
+0.00
+
+7
+
+0.01
+
+0.00
+
+8
+
+0.00
+
+0.00

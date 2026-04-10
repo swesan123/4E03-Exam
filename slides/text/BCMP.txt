@@ -1,0 +1,320 @@
+source_pdf: BCMP.pdf
+source_path: slides/BCMP.pdf
+pages: 4
+format_version: 1
+
+--- PAGE 1 ---
+BCMP networks
+There are N nodes and R classes (or types) of job. For each class, we
+must specify routing probabilities through the network (these can be class
+dependent). A class can either be open (jobs enter from outside and eventually
+leave) or closed (jobs never leave). As discussed in class, the nodes are allowed
+to be one of four types:
+1. FCFS Here, jobs are served in a first come, first served order. Multiple
+classes may visit a node, but in this case the service time distributions
+must be the same (and exponentially distributed) for all classes. The
+service rates may be load-dependent.
+2. PS Here jobs are served using processor sharing, with each waiting job
+getting an equal share of capacity. Jobs of different classes may have
+different service requirements and the service rates (for each class) may
+depend on the queue length at the node. The service distributions must
+be so-called Coxian type (essentially a combination of exponential distributions), but only the expected value needs to be determined.
+3. IS or delay Here an infinite number of servers is available, or equivalently,
+each job is served by “their own” server. Jobs of different classes may
+have different service requirements and the service rates (for each class)
+may depend on the queue length at the node. The service distributions
+must be so-called Coxian type (essentially a combination of exponential
+distributions), but only the expected value needs to be determined.
+4. LCFS-PR Here jobs are served on a last come first serve basis, with preemption (also, work done on preempted jobs is not lost). Further restrictions are the same as in the previous two cases.
+At this point, let me indicate that the results below depend only on the
+mean service times. This is why I have not discussed Coxian distributions. It
+will suffice at this point to note that we can approximate most distributions
+by a Coxian distribution and thus when the nodes are of the last 3 types, there
+is no practical limitation on the service time distributions.
+Upon leaving node i, a job of class r goes to node j and becomes a job of
+class s with probability Pi,r;j,s . A job will leave the network with probability
+Pi,r;0 . Of course, there can only be arrivals from outside of the system for
+classes that are open. In this case, there are two possibilities which are allowed.
+The first possibility is that there is a single Poisson process with rate λ(k)
+where k is the total population in the network. Upon arrival to the system, a
+job goes to node i as a class r job with probability P0;i,r .
+The second possibility is that each routing chain has its own arrival stream,
+with a rate that depends only on the population of that chain (which we will
+give by λc (kc ), with c ∈ C, where C is the set of routing chains and kc is
+
+--- PAGE 2 ---
+the population in routing chain c. For each stream, with probability P0;i,c an
+arrival joins node i.
+For each routing chain c, we want to write an equation for the net arrival
+rate to node i of class r jobs. This can be written as
+λi,r = λ∗i,r +
+
+X
+
+λj,s Pj,s;i,r .
+
+(j,s)
+
+Here, λ∗i,r is the arrival rate of jobs from outside of the system. For closed
+networks it is 0; for open networks it equals λr0;i,c (one arrival process) or
+λr r0;i,r (arrivals per chain/class). This equation has a very simple intuitive
+explanation. The left side is the arrival rate to (i, r), the first term on the
+right hand side is the arrival rate to (i, r) from outside, and the final term is
+the sum of the arrival rates to (i, r) from all other (node,class) pairs in the
+network. Using this equation, assuming the system is stable, one can calculate
+the throughputs for open chains λi,r , and visit ratios for closed chains Vi,r .
+Of course, it is not uncommon that for closed systems, the visit ratios are
+given directly (think of what we have done in class and that you have done in
+assignments).
+The main result is now stated (the proof is really beyond the scope of the
+course, but is not particularly difficult... if anybody is interested, just ask). We
+need a couple of definitions, to define what the state of the queueing network
+is. Let N̄i be the vector (Ni,1 , Ni,2 , . . . , Ni,R ) denote the state of node i, where
+Ni,r gives the number of class r jobs at node i. The state of the system is the
+vector N̄ = (N̄1 , N̄2 , . . . , N̄N ) and the total number of jobs in the system is K.
+BCMP Theorem The steady-state probability distribution in a BCMP
+network has the following product form:
+πn̄ =
+
+N
+Y
+1
+A(n̄) πi (n̄i ),
+G
+i=1
+
+where G is a normalizing constant (it assures that the probabilities sum to
+one), A(n̄) is a function of the external arrival processes only, and the functions
+πi (n̄i ) are the “per-node” steady-state distributions.
+The important point of this result is that there are explicit expressions for
+P
+the p functions. They are as follows (note that ni is R
+r=1 ni,r )
+When node i is of type FCFS, we have in the load-independent case
+πi (n̄i ) = ni !
+
+R
+Y
+
+1
+
+r=1 ni,r !
+
+n
+Vi,ri,r
+
+!
+
+1
+µi
+
+!ni
+
+,
+
+and in the load-dependent case
+πi (n̄i ) = ni !
+
+R
+Y
+
+1
+
+r=1 ni,r !
+
+n
+Vi,ri,r
+
+! n
+i
+Y
+
+1
+j=1 µi (j)
+
+--- PAGE 3 ---
+When node i is of type PS or LCFS-PR, we have in the load-independent case
+πi (n̄i ) = ni !
+
+R
+Y
+
+Vi,r
+µi,r
+
+1
+
+r=1 ni,r !
+
+!ni,r
+
+,
+
+and in the load-dependent case
+ni
+1
+ni,r Y
+πi (n̄i ) = ni !
+Vi,r
+.
+r=1 ni,r !
+j=1 µi,r (j)
+R
+Y
+
+1
+
+When node i is of type IS, we have in the load-independent case
+πi (n̄i ) =
+
+R
+Y
+
+1
+
+r=1 ni,r !
+
+Vi,r
+µi,r
+
+!ni,r
+
+,
+
+and in the load-dependent case
+πi (n̄i ) =
+
+R
+Y
+
+1
+
+r=1 ni,r !
+
+n
+
+Vi,ri,r
+
+ni
+Y
+
+1
+.
+j=1 µi,r (j)
+
+Finally, the term A(n̄) is determined by the arrival processes in the following manner. If all chains are closed, then A(n̄) = 1. If the arrivals deQ
+pend on the total system population, then it is equal to A(n̄) = k−1
+j=0 λ(j),
+where k is the network population. If the arrivals are per chain, then A(n̄) =
+QNC Qkc −1
+c=1 j=0 λc (j), where NC is the number of routing chains and kc is the population in routing chain c.
+At this point, all of this notation may seem a bit much, so there will be
+two examples given at this point which are special cases of the BCMP theorem
+which are of great practical interest. After that, an example will be given that
+we will spend some time on.
+Example. Single-class, load-independent open networks. Here, the
+arrival process is Poisson of constant rate λ (there is no load dependence for
+the arrivals). Also, the service rates are fixed. If the node is FCFS, PS or
+LCFSPR, there is only one server. Then
+πn̄ =
+
+N
+Y
+
+pi (ni ),
+
+i=1
+
+where
+
+
+ (1 − ρi )ρni ,
+
+πi (ni ) = 
+
+n
+
+i
+
+ρ i
+e−ρi nii ! ,
+
+FCFS, PS, LCFSPR type,
+IS type,
+
+where ρi is defined as
+ P
+λVi,r
+
+r∈Ri , µi
+ρi =  P
+λVi,r
+,
+r∈R
+i
+
+µi,r
+
+FCFS type,
+IS, PS, LCFSPR type,
+
+--- PAGE 4 ---
+where Ri is the set of classes that require service at node i. You should be
+able to verify this result yourself, it is a decent exercise to get used to all of
+the notation. Note that A(n̄) has been absorbed into the definition of ρi . This
+result should be somewhat intuitive. It says that the the system decomposes
+into M/M/1 (or M/M/∞) queues with the appropriate arrival rates.
+Example. Closed, multi-class, load-independent BCMP networks.
+A lot of computer systems examples have load-independent servers, multiple customer classes (but no class changes) and fixed populations per class.
+Here,
+N
+1 Y
+pi (n̄i ),
+πn̄ =
+G i=1
+with
+
+ ni Q
+
+R
+1
+1
+
+n
+!
+
+i
+r=1 ni,r ! Vi,r ,
+
+µi
+
+ni,r
+
+Q
+
+Vi,r
+1
+πi (n̄i ) = ni ! R
+r=1 ni,r ! µi,r
+
+
+
+
+
+Vi,r ni,r
+1
+ QR
+,
+r=1 ni,r ! µi,r
+
+Note that ni =
+
+PR
+
+r=1 ni,r .
+
+,
+
+FCFS type,
+PS, LCFSPR type,
+IS type.

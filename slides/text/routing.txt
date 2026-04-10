@@ -1,0 +1,83 @@
+source_pdf: routing.pdf
+source_path: slides/routing.pdf
+pages: 10
+format_version: 1
+
+--- PAGE 1 ---
+Routing and Load Balancing
+
+--- PAGE 2 ---
+Routing/Load Balancing
+• Fundamental problem in large-scale systems
+• Load balancer assigns incoming arrivals to backend servers
+
+--- PAGE 3 ---
+Simplest System
+• For insight purposes, assume that we have arrivals that
+follow a Poisson process with rate 𝜆, 𝑁 servers in parallel,
+and processing times at each server are exponentially
+distributed with rate 𝜇
+• Routing decisions must be made upon arrival of a job
+
+--- PAGE 4 ---
+Random Routing
+• We have already discussed that the best choice of routing
+probabilities is 1/𝑁
+• Result is 𝑁 M/M/1 queues
+• Available in many (all) commercial load balancers
+• Can we reduce the variance of interarrival times?
+
+--- PAGE 5 ---
+Round Robin
+• Assign incoming jobs to the servers in the order
+1,2,…,𝑁,1,2,…,𝑁,1,2,…
+• Arrival rate remains unchanged (𝜆/𝑁) but can show that
+interarrival time variance is minimized
+• Also available in many (all) commercial load balancers
+• Weighted round robin is typically available (can assign more
+load to some servers)
+
+--- PAGE 6 ---
+Random Routing/Round Robin
+• Both routing policies balance load in a “long term” sense,
+they get the rates correct
+• Have the desirable property that they do not need to know
+any information about backend servers
+• What if information is available, can we balance short term
+load?
+
+--- PAGE 7 ---
+Join the Shortest Queue
+• Assume that the load balancer knows the current queue
+length at all servers
+• Send an arrival to the shortest queue (break ties randomly)
+• Can show: as the system load goes to one (𝜆 approaches
+𝑁𝜇), the mean response time for JSQ approaches that of an
+M/M/𝑁 system
+• From our earlier work, know that this is the best possible
+
+--- PAGE 8 ---
+Drawbacks of JSQ
+• Huge amount of communication overhead
+• One possible remedy: “the power of two choices”, choose
+two queues at random, join the shortest of the two
+• Communication latencies, resulting in load balancer having
+outdated information
+• Load balancers do implement this (least connections)
+
+--- PAGE 9 ---
+Another Possibility
+• What if servers signal load balancer when they are idle?
+• Turns problem on its head, rather than load balancer
+determining state of servers, servers are proactive
+• An arrival is sent to an idle server, otherwise use random
+routing
+• From our work on multiserver systems, we know that the
+probability of an idle server is high
+• Reasonably approximates M/M/𝑁 system (which is optimal)
+
+--- PAGE 10 ---
+Video
+Look for “Load Balancing is Impossible” on youtube… it covers
+some of the issues that we have just discussed from a practical
+viewpoint.

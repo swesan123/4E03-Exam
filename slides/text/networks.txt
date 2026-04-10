@@ -1,0 +1,183 @@
+source_pdf: networks.pdf
+source_path: slides/networks.pdf
+pages: 13
+format_version: 1
+
+--- PAGE 1 ---
+Networks of Queues
+
+--- PAGE 2 ---
+Open Networks
+• Consider the network drawn on the board
+• Arrivals – external arrivals follow a Poisson process with rate
+𝑟! to node 𝑖 (𝑟! = 0 means no external arrivals to node 𝑖)
+• Each node has an infinite buffer and a single server,
+processing times exponentially distributed with rate 𝜇!
+• Routing: job exiting node 𝑖 goes to node 𝑗 with probability
+𝑃!"
+• Assumption: all arriving jobs eventually leave the system (do
+not confuse this with stability)
+
+--- PAGE 3 ---
+Balance Equations
+Could write the balance equations for each state. This is
+somewhat cumbersome but doable. First, let
+𝑒!̅ = 0,0, … , 0,1,0, … , 0
+be the vector of all zeros, except for a 1 in the 𝑖th position.
+Also, let
+𝑛- = (𝑛# , 𝑛$ , … , 𝑛% )
+
+--- PAGE 4 ---
+Balance Equations
+Suppose that all 𝑛! > 0:
+$
+
+$
+
+$
+
+$
+
+$
+
+! 𝑟! + 𝜇! 𝜋&% = ! 𝑟! 𝜋&'
+% )̅! + ! 𝜇! 𝑃!,+,- 𝜋&.
+% )̅! + ! ! 𝜇/ 𝑃/! 𝜋&.
+% )̅" ')̅!
+!"#
+
+!"#
+
+!"#
+
+!"# /"#
+
+In addition, there are all of the boundary states (all
+combinations of 𝑛! = 0 to take into account.
+
+--- PAGE 5 ---
+Traffic Equations
+Could try to solve the balance equations, but first, let’s write
+down equations for the arrival rate to node 𝑖 (if the system
+were stable):
+%
+
+𝜆! = 𝑟! + 5 𝑃"! 𝜆" ,
+
+𝑖 = 1,2, … , 𝑁
+
+"&#
+
+These are known as the traffic equations.
+
+--- PAGE 6 ---
+Limiting Distribution
+It turns out that we have the following solution to the balance
+equations:
+&
+
+𝜋"! = # 𝜋"# 0
+#$%
+
+"0
+
+𝜆# 𝜆#
+1−
+𝜇# 𝜇#
+• product-form solution – probabilities are a product of quantities
+at one queue only
+• dependence through traffic equations
+• similar results if 𝑐# servers at each node - 𝜋"# 0 is the
+corresponding probability for an M/M/𝑐# system
+𝜋"# 0 =
+
+--- PAGE 7 ---
+Product-Form Solution
+• suggests that queues are “independent” of each other
+• this is true for a single snapshot of the network taken at a
+single point in time
+• two snapshots taken at two (close) time instants will exhibit
+strong correlations
+
+--- PAGE 8 ---
+Example
+#
+
+#
+
+𝑁 = 3 nodes, mean processing times = 0.04 seconds, =
+'!
+'"
+#
+0.06 seconds, = 0.04 seconds. Arrivals occur from outside
+'#
+to the first node only, according to a Poisson process with rate
+𝑟# = 4 jobs per second. The routing probabilities are 𝑃## =
+0.2, 𝑃#$ = 0.4, 𝑃#( = 0.4, 𝑃$# = 1, 𝑃(# = 0.5.
+a) Find the steady-state probability that there are exactly four
+jobs at node 1, exactly three jobs at node 2, and exactly
+two jobs at node 3
+b) Find the expected number of jobs in the system.
+
+--- PAGE 9 ---
+Bottleneck Analysis
+• Bottleneck is node with largest load (consistent with Operational
+Analysis)
+• Improving the situation at the bottleneck maximizes
+performance improvement
+• Return to example – improve one processing rate by 10 percent,
+i.e., choose one of: 𝜇% = 27.5, 𝜇' = 18.34, 𝜇( = 27.5
+• Improve 𝜇( gives 𝐸 𝑁 = 5.37
+• Improve 𝜇' gives 𝐸 𝑁 = 5.26
+• Improve 𝜇% gives 𝐸 𝑁 = 4.09
+• Significant improvement if 𝜇% increased, negligible improvement
+otherwise
+
+--- PAGE 10 ---
+Closed Networks
+• 𝑀 jobs in the system – none leave, no more enter
+• 𝑟! ≡ 0, ∑%
+"&# 𝑃!" = 1
+• Here, the traffic equations are
+%
+
+𝜆! = 5 𝑃"! 𝜆"
+"&#
+
+--- PAGE 11 ---
+Solution for Closed Networks
+• Problem: there is no unique solution to this set of equations
+• Still have product-form solution, can use any valid (nonzero)
+solution to the traffic equations:
+%
+
+𝜆!
+𝜋*) = 𝐶 B
+𝜇!
+
+*$
+
+!&#
+
+• Need to calculate 𝐶 – perhaps best to see through an
+example
+
+--- PAGE 12 ---
+Closed Network Example
+𝑁 = 3 nodes, 𝑀 = 2 jobs. Single processor at each node with
+routing probabilities 𝑃## = 0.6, 𝑃$# = 0.5, 𝑃(# = 0.4, 𝑃#$ =
+0.3, 𝑃($ = 0.6, 𝑃#( = 0.1, 𝑃$( = 0.5. Processing times are
+exponentially distributed with rates 𝜇# = 0.8 per second,
+𝜇$ = 0.6 per second, and 𝜇( = 0.3 per second.
+a) What is the steady-state probability that there are two jobs
+at node 2?
+b) Determine the throughput at node 1.
+
+--- PAGE 13 ---
+BCMP Networks
+The furthest that we can push the product-form solution – see
+accompanying notes. Can make following relaxations:
+• Scheduling discipline
+• Processing time distribution
+• Load-dependent processing rates
+• Classes allowed (different routes)

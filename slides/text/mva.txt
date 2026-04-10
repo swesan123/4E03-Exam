@@ -1,0 +1,135 @@
+source_pdf: mva.pdf
+source_path: slides/mva.pdf
+pages: 8
+format_version: 1
+
+--- PAGE 1 ---
+Mean Value Analysis
+
+--- PAGE 2 ---
+Numerical Solutions for Product-Form
+Networks
+For a closed network, we know that
+!"! = #!# $# !$ ($$ ) ⋯ !% ($% )
+where
+
+(& "!
+!& $& =
+)&
+and (& is a solution to the traffic equations
+%
+
+(& = * (' +'&
+'(#
+
+--- PAGE 3 ---
+Evaluating the Normalization Constant
+There is difficulty in evaluating 𝐶, as we have
+𝑁
+
+1/𝐶 = ෍ ෑ 𝜋𝑖 (𝑛𝑖 )
+𝑛ത
+
+𝑖=1
+
+and this expression does not simplify. The sum is over
+𝑀+𝑁−1
+𝑁
+
+Possibilities. For example, for 10 nodes and 25 jobs, one gets
+34!
+= 131,128,140
+24! 10!
+
+--- PAGE 4 ---
+Motivation
+• mean response time at node !:
+" #!
+1
+1
+= + ()*+, ,-).*/ 01 20.3 4/*3*,5 0, +//!6+7)
+&! &!
+• memoryless property is crucial, otherwise need to know
+information about the elapsed time on a job in process
+
+--- PAGE 5 ---
+Arrival Theorem
+• details in text (Theorem 19.1)
+"
+
+• " #!
+is defined to be the mean response time at node !
+for a network with ) jobs
+1
+1
+"#$
+" #!
+= + " 9!
+(1)
+&! &!
+• relates a network with ) jobs present to one with () − 1)
+jobs present
+• recursive approach possible?
+"
+"#$
+• need to bridge the gap between "[#! ] and "[9!
+]
+"
+
+--- PAGE 6 ---
+Bridging the Gap
+• consider a network with ! users, each with think times with mean "
+• users submit requests to a server with # nodes
+• system throughput with $ ≤ ! jobs in the system
+&=
+
+$
+%
+" + ∑$
+*
++[]
+!"# !
+!
+
+(2)
+
+where *! is the visit ratio to node 2 in the #-node server
+• apply Little’s Law on each node
++ #! % = + -! % *! &
+
+--- PAGE 7 ---
+The MVA Algorithm
+Combine (1), (2) and (3) together to yield the MVA algorithm.
+First, set:
+%
+" 9!
+= 0,
+! = 1, … , 9
+Then, for ) = 1 … @
+1
+1
+"#$
+" #!
+= + " 9!
+,
+! = 1, … , 9
+&! &!
+)
+A ) =
+"
+'
+B + ∑!&$ D! "[#! ]
+"
+" 9! ) = " #!
+D! A,
+! = 1, … , 9
+"
+
+--- PAGE 8 ---
+Computing Visit Ratios
+• label user node to be node 0
+• let D% = 1
+'
+
+D! = E D( F(!
+(&%

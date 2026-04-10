@@ -1,0 +1,99 @@
+source_pdf: request_replication.pdf
+source_path: slides/request_replication.pdf
+pages: 11
+format_version: 1
+
+--- PAGE 1 ---
+Request Replication
+
+--- PAGE 2 ---
+Why Replication?
+
+I reduce latency
+I have already looked at one approach: JSQ
+I another option: redundancy
+I server-side variability (think of JSQ in non-exponential setting)
+
+--- PAGE 3 ---
+Replication Model
+
+I send multiple requests simultaneously, kill when one completes
+I can consider other models
+
+--- PAGE 4 ---
+Pros and Cons
+
+I data must be replicated
+I overhead of killing jobs
+I resource wastage?
+I do not need to know queue lengths (compare with JSQ)
+I has been shown to improve performance, for example Google’s
+BigTable
+
+--- PAGE 5 ---
+N model
+
+I two servers, rates µ1 and µ2
+I arrivals to node 2, rate λA
+I replicated arrivals (both nodes), rate λR
+
+--- PAGE 6 ---
+CTMC Model
+
+I what to choose for state
+I number of jobs of each class (A and R) at each queue?
+I why doesn’t this work?
+
+--- PAGE 7 ---
+Proposed State
+
+I simply keep a central queue of jobs in system, ordered with
+respect to their arrival times
+I (R, A, A, R)
+I (R, A, R, A)
+
+--- PAGE 8 ---
+Main Theorem
+The steady-state probability of being in state (cn , cn−1 , . . . , c1 ) is
+  a0 
+r 
+a1
+λA
+λR
+λA
+π(cn ,...,c1 ) = CN
+µ2
+µ1 + µ2
+µ1 + µ2
+I a0 : number of class A jobs before the first class R job
+I a1 : number of class A jobs after the first class R job
+I r : number of class R jobs
+CN =
+
+(µ2 − λA )(µ1 + µ2 − λA + λR )
+µ2 (µ1 + µ2 − λA )
+
+--- PAGE 9 ---
+Results
+
+1. Response time of class R jobs is Exp(µ1 + µ2 − λA − λR )
+2. Complete distributional results for both types
+
+--- PAGE 10 ---
+Insights
+
+Compare with two M/M/1’s, one for each class, set µ1 = µ2 and
+λA = λR
+I Class R improves E [T ] by a factor of two
+I Class A hurt by up to 50 percent (often less than that)
+I If class A becomes redundant, class R is unaffected, of course
+improvement for class A (system becomes an M/M/1)
+I Compare to JSQ: redundancy better, often for both classes
+(why?)
+
+--- PAGE 11 ---
+Final Remarks
+
+I other structures and associated insights in paper
+I current area of research interest
+I revisit server-side variability assumption

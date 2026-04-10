@@ -1,0 +1,183 @@
+source_pdf: scheduling.pdf
+source_path: slides/scheduling.pdf
+pages: 19
+format_version: 1
+
+--- PAGE 1 ---
+Scheduling and the Impact of Variability
+
+--- PAGE 2 ---
+M/G/1 Queue
+• Arrivals follow a Poisson process, rate 𝜆
+• Processing times follow a general distribution, mean 1/𝜇 and
+second moment 𝐸[𝑆 ! ]
+• Processing is FCFS
+
+--- PAGE 3 ---
+Performance - Intuition
+• Suppose that 𝐸[𝑆 ! ] is large
+• Large proportion of jobs that are smaller than 1/𝜇, small
+proportion of jobs that are significantly larger than 1/𝜇
+• Probability that the processor is busy is still 𝜌 = 𝜆/𝜇, so the
+probability that an arriving job sees a busy processor is also
+𝜌
+• More likely to see a very large job being processed
+
+--- PAGE 4 ---
+M/G/1 - Analysis
+• Derivation in book of mean response time
+• Pollaczek-Khinchin formula:
+𝜆𝐸[𝑆 ! ]
+1
+𝐸𝑇 =
++
+2(1 − 𝜌) 𝜇
+• Performance degrades proportionally with second moment
+(and hence variance)
+• When 𝜌 is close to 1, the impact of 𝜌 is still the most
+significant factor
+
+--- PAGE 5 ---
+Variability Reduction
+• Suresh and Gandhi paper
+• System designers usually focus on reducing 1/𝜇 (mean
+processing time)
+• M/G/1 queue: all other things being equal, reducing
+variability improves performance (can be quite significant)
+• However, there is often a tradeoff – reducing variability often
+increases mean processing time
+• Can tradeoff be beneficial?
+
+--- PAGE 6 ---
+• Can rewrite Pollaczek-Khinchin formula as
+𝐸𝑇
+
+= 𝜎"! 2
+
+𝜆
+1 2−𝜌
++ 2
+2 1−𝜌
+𝜇 2(1 − 𝜌)
+
+where 𝜎"! is the variance of the processing times.
+• Shows tradeoff directly
+
+--- PAGE 7 ---
+Some Numbers
+• 𝜆 = 100, 𝜇 = 150
+#
+!
+• 𝜎" = ! (exponential) yields 𝐸 𝑇
+$
+
+= 0.02
+
+• 𝜎"! = 0 and 𝐸 𝑇 = 0.02 yields 𝜇 = 131
+
+--- PAGE 8 ---
+Apache Web Server
+• OS scheduler migrates threads based on core availability,
+cache placement, memory access issues, etc.
+• Tries to reduce mean processing time
+• Can increase variability due to context switching issues
+• Change: pin threads to cores (increases mean, reduces
+variance)
+• In this case, tradeoff beneficial
+• Performance gain of 27-49%
+
+--- PAGE 9 ---
+Insights
+• Reducing variability is looking into
+• The flip side: reducing mean processing time is not always
+beneficial, if side effect is increased variability
+
+--- PAGE 10 ---
+Another Consequence
+• Various frameworks for parallel computing/data analytics
+• Hadoop, Databricks. Google BigQuery, Cloudera,
+Hortonworks Data Platform, Snowflake
+• Variance of individual processing times (response times) can
+cause issues
+• Canonical example: processing 𝑁 independent tasks on
+parallel servers
+
+--- PAGE 11 ---
+Maximum Processing Time
+• Completion time is the maximum of the processing times
+• Explicit expressions for mean, variance, etc. difficult
+• For 𝜇 = 1 and exponentially distributed processing times,
+simulations give mean completion times of 1.50 (𝑁 = 2),
+2.29 (𝑁 = 5), 2.92 (𝑁 = 10), and 5.17 (𝑁 = 100)
+• If processing times constant (not random), completion time
+is always 1, independent of 𝑁
+• Can show as variance increases, mean completion time
+increases
+
+--- PAGE 12 ---
+Practical Approaches
+• Straggler detection/mitigation
+• Also helps with issues when means are different
+
+--- PAGE 13 ---
+Scheduling
+• Can moving away from FCFS mitigate the impact of variance?
+• Processor Sharing (PS) – if there are 𝑛 jobs at the processor,
+it (virtually) splits itself into 𝑛 processors, each working at
+rate 𝜇/𝑛
+• Idealization of time slicing (let time slices go to zero, no
+switching overhead)
+• Derivation in book of mean response time
+1/𝜇
+𝐸𝑇 =
+1−𝜌
+
+--- PAGE 14 ---
+Performance of PS - Implications
+• Mean response time does not depend on variance
+• (Very much) preferred if variance large
+• If processing times less variable than an exponential
+distribution, FCFS preferred
+
+--- PAGE 15 ---
+Performance of PS - Intuition
+• If congested, large jobs can only receive a small fraction of
+processor’s capacity
+• Explains why it may perform well with high variance, but
+does not explain why performance is independent of
+variance
+
+--- PAGE 16 ---
+Preemptive LCFS
+• (Preemptive) priority is given to the most recently arrived job
+• Mean response time derived in text
+1/𝜇
+𝐸𝑇 =
+1−𝜌
+• Intuition: arriving small jobs do not get stuck behind large jobs
+• Some small jobs may be unlucky and get stuck behind an arriving
+large job, however the proportion of jobs for which this happens
+is very small
+• Not at all obvious that PS and LCFS should result in the same
+mean response time
+
+--- PAGE 17 ---
+Priority Queue
+
+--- PAGE 18 ---
+SRPT
+• Suppose that processing times known upon arrival (this is
+often a reasonable assumption
+• Give priority to job with Shortest Remaining Processing Time
+(SRPT)
+• Optimal in a strong sense – minimizes the number of jobs in
+the system at every point in time (for any realization of the
+processing times)
+• If it minimizes the number of jobs in the system at every
+point in time, also minimizes the expected number of jobs in
+the system, so minimizes the mean response time
+
+--- PAGE 19 ---
+Further Reading
+• The book has much more (Chapters 28-33)
+• Current area of research

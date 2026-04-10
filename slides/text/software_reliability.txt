@@ -1,0 +1,283 @@
+source_pdf: software_reliability.pdf
+source_path: slides/software_reliability.pdf
+pages: 13
+format_version: 1
+
+--- PAGE 1 ---
+Software Reliability Modelling
+
+--- PAGE 2 ---
+Characteristics of Software Reliability
+• Failures are primarily due to design faults
+• Repairs/fixes reduce the possibility of future failure
+
+• There is no wear-out phenomena
+• Upgrades can result in reduced failure rates
+• External environment does not affect software reliability
+• Internal environment (memory size, clock speed, etc.) can affect
+software reliability
+
+• Reliability is not time dependent (in a strict sense)
+• Depends on testing time
+• Reliability growth is observed as errors are detected and corrected
+
+--- PAGE 3 ---
+Software Reliability Growth
+• In software, we want to “fix” the problem, i.e., to have a lower
+probability of failure or having larger 𝑡! , where 𝑡! is the time between
+the (𝑖 − 1)st and 𝑖th failures.
+• Need a model for reliability change over time
+
+--- PAGE 4 ---
+Time Between Failure Model
+• Developed by Jelinski & Moranda
+• Times between failures are exponentially distributed random
+variables with density
+𝑓! 𝑥 = 𝑧! 𝑒 "#!$
+• There is a number of initial faults, 𝑁% (unknown)
+• Hazard rate for 𝑖th failure time:
+𝑧! = ∆[𝑁% − 𝑖 − 1 ]
+
+--- PAGE 5 ---
+Time Between Failure Model
+• After 𝑛 failures, the MTTF is
+1
+𝑀𝑇𝑇𝐹 =
+∆(𝑁% − 𝑛)
+• How to estimate 𝑁% and ∆ from data?
+• Maximum likelihood estimation
+(
+
+𝐿 𝑡& , 𝑡' , … , 𝑡( ; 𝑁% , ∆ = 8 ∆ 𝑁% − 𝑖 𝑒 "∆ +""! ,!
+!)&
+
+--- PAGE 6 ---
+Parameter Estimation
+max 𝐿
+∆,+"
+
+Result:
+1
+∆= (
+∑!)& 𝑁% − 𝑖 + 1 𝑡!
+(
+
+𝑛 ∑(!)& 𝑡!
+> 𝑁% − 𝑖 + 1 𝑡! = (
+∑!)&(𝑁% − 𝑖 + 1)
+!)&
+
+--- PAGE 7 ---
+Example
+• Sample data: 𝑡& = 7, 𝑡' = 11, 𝑡. = 8, 𝑡/ = 10, 𝑡0 = 15, 𝑡1 = 22,
+𝑡2 = 20, 𝑡3 = 25, 𝑡4 = 28, 𝑡&% = 35
+• Parameter values: ∆= 0.0096, 𝑁% = 11.6
+• Estimated time to next failure:
+1
+= 65.1
+0.0096(11.6 − 10)
+
+--- PAGE 8 ---
+Assumptions
+• Software has 𝑁% faults at the beginning of testing
+• The faults are independent and all will eventually cause a failure
+(given sufficiently long testing)
+• The repair process is instantaneous and perfect, i.e., the time to
+remove the fault is negligible and no new faults will be introduced
+during fault removal
+
+--- PAGE 9 ---
+Unified View
+• Cumulative number of failures follows a (non-homogeneous) Poisson
+process
+• When we first discussed the Poisson process, if we define 𝜇(𝑡) to be
+the expected number of events at time 𝑡, then 𝜇 𝑡 = 𝜆𝑡
+• Here, choose
+𝜇 𝑡 = 𝑎(1 − 𝑒 "5, )
+• 𝑎 = 𝜇(∞) is expected total number of faults
+• 𝑏 determines failure rate
+• Known as Goel-Okumoto model
+• Failure rate is
+𝑑𝜇(𝑡)
+𝜆 𝑡 =
+= 𝑎𝑏𝑒 "5,
+𝑑𝑡
+
+--- PAGE 10 ---
+Variation(s)
+• 𝜇 𝑡 = 𝑎(1 − 1 + 𝑏𝑡 𝑒 "5, )
+• S-shaped curve
+• Initial learning curve, growth, flattening as residual faults become
+more difficult to detect
+
+--- PAGE 11 ---
+Example
+• 28 weeks of failure data from a large software system development:
+
+Week
+
+Failures
+
+Week
+
+Failures
+
+Week
+
+Failures
+
+Week
+
+Failures
+
+1
+
+3
+
+8
+
+32
+
+15
+
+7
+
+22
+
+3
+
+2
+
+3
+
+9
+
+8
+
+16
+
+0
+
+23
+
+4
+
+3
+
+38
+
+10
+
+8
+
+17
+
+2
+
+24
+
+1
+
+4
+
+19
+
+11
+
+11
+
+18
+
+3
+
+25
+
+2
+
+5
+
+12
+
+12
+
+14
+
+19
+
+2
+
+26
+
+1
+
+6
+
+13
+
+13
+
+7
+
+20
+
+5
+
+27
+
+0
+
+7
+
+26
+
+14
+
+7
+
+21
+
+2
+
+28
+
+1
+
+--- PAGE 12 ---
+Model Fit
+• Determine 𝑎 and 𝑏 in G-O model
+• MLE approach
+∑6!)& 𝑛!
+𝑎=
+1 − 𝑒 "5,#
+6
+
+∑6!)& 𝑛!
+𝑛!
+> "5,
+−
+"5,
+𝑒 !$% − 𝑒 ! 1 − 𝑒 "5,#
+
+𝑡! 𝑒 "5,! − 𝑡!"& 𝑒 "5,!$% = 0
+
+!)&
+
+• Solve for 𝑏 first, then 𝑎
+• For given data, 𝑎 = 249.2, 𝑏 = 0.0999
+
+--- PAGE 13 ---
+Release Time
+• Determine 𝜏 that satisfies
+𝜆 𝑡 = 𝑎𝑏𝑒 "5, ≤ 𝜆%
+• Solve to get
+
+𝜆%
+𝜏 = − ln
+𝑎𝑏
+
+/𝑏
+
+• For our model, 𝜆% = 249.2 ∗ 0.0999 ∗ 𝑒 "%.%444,
+• Requirement is 𝜆% = 1
+• Need 𝜏 = 32.2
+• Five more weeks of testing!

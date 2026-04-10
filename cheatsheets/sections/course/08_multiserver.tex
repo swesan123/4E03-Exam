@@ -1,0 +1,6 @@
+\section*{8.\ Multiserver systems}
+\textbf{$M/M/k$.}\ Common queue;\ i.i.d.\ exp.\ servers rate $\mu$;\ $C=\lambda/\mu$;\ $\rho=\lambda/(k\mu)=C/k<1$.\\
+\textbf{Queueing prob.}\ $P_Q=P(\text{wait before service})$;\quad $p_0=\Bigl[\sum_{j=0}^{k-1}\frac{C^j}{j!}+\frac{C^k}{k!(1-\rho)}\Bigr]^{-1}$;\quad $P_Q=p_0\,\dfrac{C^k}{k!(1-\rho)}$.\\
+\textbf{Sizing.}\ Try $k=1,2,\ldots$ until $P_Q\le$ target.\\
+\textbf{Capacity rule (large $C$).}\ $k\approx C+\sqrt{C}$ for $P_Q$ $\lesssim20\%$ (slide heuristic).\\
+\textbf{Trap.}\ Identical servers for this $C$ formula.

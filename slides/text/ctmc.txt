@@ -1,0 +1,767 @@
+source_pdf: ctmc.pdf
+source_path: slides/ctmc.pdf
+pages: 53
+format_version: 1
+
+--- PAGE 1 ---
+Continuous-Time Markov Chains
+
+--- PAGE 2 ---
+From DTMCs to CTMCs
+For DTMCs, transitions only made at discrete time steps. Want
+to generalize to transitions that can happen at any time, but
+keep the state space countable.
+
+--- PAGE 3 ---
+CTMC Definition
+A Continuous-Time Markov Chain (CTMC) is a continuous-time
+stochastic process {" # , # ≥ 0} such that ∀), # ≥ 0, and
+∀*, +, ,(.),
+0 " # + ) = + " ) = *, " . = , . , 0 ≤ . ≤ )
+=0 " #+) =+ " ) =*
+= 0 " # = + " 0 = * = 0!" (#)
+The first equality is the Markov property, the second is
+stationarity.
+
+--- PAGE 4 ---
+Residence Times
+Define 4! to be the time until the CTMC leaves state *, given
+that the CTMC is currently in state *. Must have
+0 4! > # + ) 4! > ) = 0{4! > #}
+But this means that 4! is exponentially distributed.
+
+--- PAGE 5 ---
+Example
+Consider a server system with a single backup. The time to
+failure is exponentially distributed with mean 86.4 hours and
+repair times are exponentially distributed with mean 2.5
+hours. When a server is failed, a backup server is
+(instantaneously) started. This server is identical in
+failure/repair characteristics. A server can only fail when
+operating.
+
+--- PAGE 6 ---
+CTMC Model – Construction 1
+• States: 0 (server operating, other server ready); 1 (server
+operating, other server failed); 2 (both servers failed)
+!
+• Time spent in state 0: !"#( ). The next state is 1 with
+"#.%
+
+probability 1.
+!
+!
+• Time spent in state 1: !"#(
++ ). The next state is 0 with
+"#.%
+&.'
+"#.%
+probability
+, otherwise it is state 2.
+"".(
+
+!
+!
+• Time spent in state 2: !"#( + ). The next state is 1 with
+&.'
+&.'
+
+probability 1.
+• So, time spent in state '~!"#()) ), upon exit go to state * with
+probability +)*
+
+--- PAGE 7 ---
+CTMC Model – Construction 2
+• Let’s look at state 1
+• Start two clocks, with timeouts given by 6,7(
+#
+
+#
+
+$%.'
+
+) and
+
+6,7( ). Whichever times out first makes the corresponding
+(.)
+transition.
+• Summarize this information in a transition rate diagram (on
+board).
+• The two model constructions are equivalent – it should be
+intuitively obvious.
+
+--- PAGE 8 ---
+Limiting Probabilities
+• Would like to solve for
+8" = lim 0!" # ,
+*→,
+
+the limiting probability of being in state +.
+• One approach (in book) – convert to a DTMC problem and
+solve.
+• Our approach is slightly different – we know that the number
+of transitions into state 1 differs from the number of
+transitions out of state 1 by at most one.
+
+--- PAGE 9 ---
+Limiting Probabilities
+• If the number of transitions out of a state grows large as , → ∞,
+then the rate of transitions into a state is equal to the rate of
+transitions out of a state.
+• Thus,
+1
+1
+1
+2
+/!
++
+=
+/+ +
+/&
+2.5 86.4
+86.4
+2.5
+• There is nothing special about state 1, so we also get
+1
+1
+/+ =
+/!
+86.4
+2.5
+2
+1
+/& =
+/!
+2.5
+86.4
+
+--- PAGE 10 ---
+Limiting Probabilities
+As with DTMCs, no unique solution, but need 8- + 8# + 8( =
+1.
+
+--- PAGE 11 ---
+Global Balance Equations
+The set of equations developed in this manner is known as the
+“global balance equations”. The solution for this example is
+8- =
+
+1
+
+2.5
+2.5 (
+1+
++
+86.4 2 86.4 (
+2.5
+8# =
+886.4 (
+2.5
+8( =
+8(
+2 86.4
+
+--- PAGE 12 ---
+Example
+A system with fault detection is modelled as follows. When
+operating correctly, faults occur at a rate of 1 per hour, with
+fault times being exponentially distributed. With probability
+0.99, a fault is detected and recovery takes an exponentially
+distributed period of time with mean 1 second. If the fault is
+not detected, recovery takes an exponentially distributed
+period of time with mean 5 minutes. Calculate the limiting
+probability that the system is operating correctly.
+
+--- PAGE 13 ---
+M/M/1 Queue
+• single server
+• arrivals follow a Poisson process, rate C
+• processing/service times follow 6,7(D) distribution (hence
+mean 1/D)
+• infinite waiting room/buffer
+
+--- PAGE 14 ---
+CTMC Model
+• Let "(#) be the number of jobs in the system at time #
+• Global balance equations
+C8- = D8#
+C + D 8. = C8./# + D8.0# , F ≥ 1
+
+--- PAGE 15 ---
+Solving GBEs
+C
+8# = 8D
+C
+C
+8( =
++ 1 8# − 8D
+D
+C
+C (
+= 8# =
+8D
+D
+
+--- PAGE 16 ---
+Solving GBEs
+Similarly,
+
+C
+C
+81 =
++ 1 8( − 8#
+D
+D
+C 1
+=
+8D
+
+--- PAGE 17 ---
+Solving GBEs
+In general,
+C
+8. =
+D
+
+.
+
+8-
+
+--- PAGE 18 ---
+,
+
+8-
+
+C
+Q
+D
+
+.
+
+.2-
+
+1
+8- =
+1
+1−R
+where R =
+
+3
+4
+
+< 1.
+
+=1
+
+--- PAGE 19 ---
+Finally,
+
+8. = 1 − R R .
+
+The probability that the server is busy is 1 − 8- = R. For this
+reason, R is known as the utilization, or the load.
+
+--- PAGE 20 ---
+Some Numbers
+Take R = 0.1, 0.5, 0.9.
+! = #. %
+
+! = #. &
+
+! = #. '
+
+(! + (" + (# + ($
+
+.9999
+
+.9375
+
+.3439
+
+(% + (& + (' + ((
+
+1×10)%
+
+.0586
+
+.2256
+
+(* + (+ + ("! + (""
+
+1×10)*
+
+.00366
+
+.1480
+
+("# + ("$ + ⋯
+
+1×10)"#
+
+.000249
+
+.2825
+
+Main observation: things look very nonlinear in terms of R.
+
+--- PAGE 21 ---
+Expected number of jobs in system
+8 9 = 0! : 0 + 0" : 1 + 0# : 2 + ⋯
+= 5 1 − 5 + 25# 1 − 5 + 35$ 1 − 5 + ⋯
+= 1 − 5 5 1 + 25 + 35# + ⋯
+=
+= (1 − 5)5
+(1 + 5 + 5# + 5$ + 5% + ⋯
+=5
+= 1
+= 1−5 5
+=5 1 − 5
+1
+= 1−5 5
+1−5 #
+5
+=
+1−5
+
+--- PAGE 22 ---
+Mean Number in System
+• Little’s Law applies, so
+1 R
+6V =
+C1−R
+1/D
+1
+=
+=
+1−R D−C
+
+--- PAGE 23 ---
+Example
+Given an M/M/1 system, what is the minimum allowable
+processing rate such that an arrival rate of 2/9 jobs per
+minute, the mean response time is less than 9 minutes?
+
+--- PAGE 24 ---
+Example
+Arrivals occur according to a Poisson process with rate 9 per
+minute. There are two servers, each with exponentially
+distributed processing times with mean 12 seconds. With
+probability 7, an arriving job is assigned to server 1, otherwise
+it is assigned to server 2. What value of 7 minimizes the
+expected response time?
+
+--- PAGE 25 ---
+PASTA
+• In the previous example, we implicitly used PASTA – Poisson
+Arrivals See Time Averages
+• Proof in text, somewhat beyond the scope of the course
+• Continue to use this property
+
+--- PAGE 26 ---
+Balance Equations Revisited
+For the M/M/1 queue, what if we look at rates in both
+directions across a cut of the transition rate diagram?
+
+--- PAGE 27 ---
+Birth-Death Process
+• Suppose that C. is the rate out of state F, to state F + 1 and
+D. is the rate out of state F, to state F − 1.
+• This is known as a “Birth-Death Process” – the C values are
+the birth rates and the D values are the death rates.
+
+--- PAGE 28 ---
+Local Balance Equations
+C- 8- = D# 8#
+C# 8# = D( 8(
+⋮
+C. 8. = D.0# 8.0#
+
+--- PAGE 29 ---
+Local Balance Equations
+Writing 8. in terms of 8- ,
+
+So,
+
+C- C# C( ⋯ C./#
+8. =
+8D# D( ⋯ D.
+8- =
+
+1
+C!/#
+.
+,
+1 + ∑.2# ∏!2#
+D!
+
+This is the general solution for Birth-Death processes.
+
+--- PAGE 30 ---
+M/M/1/! – finite buffer system
+• arriving jobs (beyond U in system) “lost” or “blocked”
+• lost jobs do not return at a later time
+• transition rates:
+C. = C,
+D. = D,
+
+F = 0,1,2, … , U − 1
+F = 1,2,3, … , U
+
+--- PAGE 31 ---
+M/M/1/! Solution
+.
+
+Rewriting
+
+C
+8. =
+8- ,
+D
+1
+8- =
+.
+C
+5
+∑.2D
+
+0≤F≤U
+
+C
+1−
+D
+8- =
+50#
+C
+1−
+D
+Substitute 8- in first expression to get 8. .
+
+--- PAGE 32 ---
+Blocking Probabilities
+Blocking probability is the probability that the system is full,
+which is 85 here. The mean number of jobs lost per unit time
+is thus C85 . Here, for U = 5:
+6/8
+
+9,
+
+0.10
+
+9×10)'
+
+0.50
+
+0.016
+
+0.75
+
+0.072
+
+1.00
+
+0.166
+
+2.00
+
+0.508
+
+5.00
+
+0.800
+
+Note for the C⁄D = 1.00 entry, need to use L’Hopital’s rule.
+
+--- PAGE 33 ---
+Blocking Probabilities
+For C⁄D = 0.9, vary buffer size:
+:
+
+9,
+
+1
+
+0.474
+
+2
+
+0.299
+
+3
+
+0.212
+
+5
+
+0.126
+
+10
+
+0.051
+
+20
+
+0.014
+
+100
+
+2.7×10)'
+
+--- PAGE 34 ---
+M/M/∞
+Here, every job is immediately assigned its own processor (or each
+job its own server):
+,
+
+9
+/, = 8
+/+
+':
+)-! ,
+1 9
+=
+/+
+;! :
+1
+/+ =
+)
+1
+9
+1 + ∑.
+)-! '! :
+= > /0/2
+
+--- PAGE 35 ---
+M/M/∞
+In the previous slide, the final equality comes from the fact
+that
+,
+,!
+Q = _6
+*!
+!2-
+
+--- PAGE 36 ---
+M/M/∞
+The final limiting distribution is thus
+1 C
+8. =
+F! D
+
+.
+
+_ /3/4
+
+• This is a Poisson distribution with mean 6[U].
+• By Little’s Law, 6 V = 1/D.
+• Could get 6[V] by noting that there is no waiting in queue
+(6 U8 = 6 V8 = 0).
+
+--- PAGE 37 ---
+M/M/# queue
+System has ? processors in parallel and a queue for additional jobs
+,
+1 9
+/, =
+/+ ,
+;≤?
+;! :
+1
+9 ,
+/, =
+/+ ,
+;≥?
+,/3
+?! ?
+:
+/!
+3/!
+,
+3
+1 9
+1 9
+1
+/+ = 1 + C
++
+;! :
+?! :
+1−E
+,-!
+
+0
+where E = < 1.
+32
+
+--- PAGE 38 ---
+M/M/# queue
+9
+
+C
+CD
+D
+6 U8 =
+8(
+b − 1 ! bD − C
+9
+C
+D
+D
+6 V8 =
+8(
+b − 1 ! bD − C
+1
+6 V = + 6 V8
+D
+6 U = C6[V]
+
+--- PAGE 39 ---
+Erlang-C formula
+,
+
+0 c._._*Fd = Q 8.
+.29
+
+The sum evaluates to
+1 C
+b! D
+
+9
+
+1
+81−R
+
+--- PAGE 40 ---
+M/M/#/#
+Loss system, no waiting. If a job arrives that finds all servers busy, lost. For
+! ≤ #,
+!
+'
+$! = &
+$%
+()
+"#$ !
+1 '
+=
+$%
+!! )
+1
+$% =
+!
+1
+'
+1 + ∑&!#$
+!!& )
+1 '
+#! )
+$& =
+!
+1
+'
+1 + ∑&!#$
+!! )
+
+--- PAGE 41 ---
+Client/Server Model
+• Let the state be the number of jobs at the server
+• Think time of clients exponentially distributed, rate C,
+processing times exponentially distributed, rate D
+• No need to keep track of individual jobs, so does not matter
+what scheduling policy at CPU is
+
+--- PAGE 42 ---
+Client/Server Model
+.
+
+C(f − * + 1)
+8. = e
+8D
+!2#
+.
+C
+f!
+8. =
+8D
+f−F !
+1
+8- =
+.
+C
+f!
+:
+∑.2D
+f−F !
+
+--- PAGE 43 ---
+Example
+Consider the client/server model with D = 1 and C = 0.1. The
+throughput of the server is bounded above by D (you should
+convince yourself of this). What value of f (number of users)
+leads to a throughput of 90 percent of this upper bound?
+
+--- PAGE 44 ---
+Example
+An existing system consists of a single server. Requests arrive
+according to a Poisson process with rate 3 per hour. The
+processing times are exponentially distributed with mean 18
+minutes. You are asked whether it would be beneficial to add
+a second (identical) processor. The two processors would
+share a common queue. The costs are as follows: operating
+costs of 25 dollars per hour per processor and cost of delay of
+5 dollars per hour per request.
+
+--- PAGE 45 ---
+Replicating Requests – CTMC Model
+
+--- PAGE 46 ---
+Replication in Practice
+• Google: send requests to multiple servers
+• DNS queries
+• Amazon EC2
+• Distributed storage systems in general
+
+--- PAGE 47 ---
+Model
+• Two-server model
+• Arrival rate 𝜆
+• Processing rate 𝜇
+• Cancellation rate 𝜇𝑐
+
+--- PAGE 48 ---
+Policies
+• 𝜋0 : no replication (M/M/2 queue)
+• 𝜋∞ : all requests replicated (need new CTMC model)
+
+--- PAGE 49 ---
+Example Dynamics: 𝜋∞
+• See r1.pdf
+
+--- PAGE 50 ---
+State Transition Diagram: 𝜋∞
+• See r2.pdf
+
+--- PAGE 51 ---
+Global Balance Equations: 𝜋∞
+𝜆𝜋0 = 𝜇𝑐 𝜋𝑐,−1
+𝜆 + 2𝜇 𝜋𝑠,0 = 𝜆𝜋0 + 𝜇𝑐 𝜋𝑐,0
+𝜆 + 2𝜇 𝜋𝑠,𝑗 = 𝜆𝜋𝑠,𝑗−1 + 𝜇𝑐 𝜋𝑐,𝑗 𝑗 = 1,2, …
+𝜆 + 𝜇𝑐 𝜋𝑐,−1 = 2𝜇𝜋𝑠,0 + 𝜇𝜋𝑐,0
+𝜆 + 𝜇 + 𝜇𝑐 𝜋𝑐,𝑗 = 2𝜇𝜋𝑠,𝑗+1 + 𝜆𝜋𝑐,𝑗−1 + 𝜇𝜋𝑐,𝑗+1
+
+𝑗 = 0,1,2, …
+
+--- PAGE 52 ---
+Example: 𝜆 = 1, 𝜇 = 1
+• Truncate replication system at 50 jobs
+• M/M/2: E[T]=1.3333
+• 𝜇𝑐 → ∞: 𝐸 𝑇 = 1
+• 𝜇𝑐 = 10: 𝐸 𝑇 = 1.1095
+• 𝜇𝑐 = 2: 𝐸 𝑇 = 1.6875
+• 𝜇𝑐 = 1: 𝐸 𝑇 = 2.5714
+
+--- PAGE 53 ---
+Example: 𝜆 = 0.5, 𝜇 = 1
+• Truncate replication system at 50 jobs
+• M/M/2: E[T]=1.0667
+• 𝜇𝑐 → ∞: 𝐸 𝑇 = 0.6667
+• 𝜇𝑐 = 10: 𝐸 𝑇 = 0.6905
+• 𝜇𝑐 = 2: 𝐸 𝑇 = 0.8036
+• 𝜇𝑐 = 1: 𝐸 𝑇 = 0.9455

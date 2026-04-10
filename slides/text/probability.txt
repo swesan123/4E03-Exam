@@ -1,0 +1,487 @@
+source_pdf: probability.pdf
+source_path: slides/probability.pdf
+pages: 36
+format_version: 1
+
+--- PAGE 1 ---
+COMP SCI/SFWR ENG 4E03:
+Probability Review
+
+--- PAGE 2 ---
+A Crash Course in Probability
+• should see most of this material in greater depth in STATS course, if
+you have not done so already
+• will do enough here to bootstrap to start delving into performance
+models
+• Do not hesitate to ask for more details of any concepts!
+
+--- PAGE 3 ---
+Samples and Sample Space
+• Suppose that we have a data centre that has three servers (A, B, C)
+• At any (random) point in time, we look to see which servers are up
+(working) and which servers are down (failed)
+• Experiment: which servers are up, which are down?
+• Sample space (Ω): set of all possible samples/outcomes:
+Ω: { 𝑤, 𝑤, 𝑤 , 𝑤, 𝑤, 𝑓 , 𝑤, 𝑓, 𝑤 , 𝑤, 𝑓, 𝑓 , 𝑓, 𝑤, 𝑤 , 𝑓, 𝑤, 𝑓 , 𝑓, 𝑓, 𝑤 , 𝑓, 𝑓, 𝑓 }
+
+where the components indicate if A, B, C are working (w) or failed (f), respectively
+
+--- PAGE 4 ---
+Events
+• An event, E, is any subset of the sample space, Ω
+• E1 corresponds to Server A failed:
+
+𝐸1 = { 𝑓, 𝑤, 𝑤 , 𝑓, 𝑤, 𝑓 , 𝑓, 𝑓, 𝑤 , 𝑓, 𝑓, 𝑓 }
+• E2 corresponds to at least two servers failed
+• Unions and intersections of events are also events:
+𝐸1 ⋂ 𝐸2 = { 𝑓, 𝑤, 𝑓 , 𝑓, 𝑓, 𝑤 , 𝑓, 𝑓, 𝑓 }
+Interpretation?
+• Complement of an event is also an event:
+
+𝐸2𝑐 = { 𝑤, 𝑤, 𝑤 , 𝑤, 𝑤, 𝑓 , 𝑤, 𝑓, 𝑤 , 𝑓, 𝑤, 𝑤 }
+Interpretation?
+
+--- PAGE 5 ---
+Probabilities
+• 0 ≤ 𝑃 𝐸 ≤ 1: probability of event E occurring
+• Suppose that we have:
+𝑃 𝑤, 𝑤, 𝑤 = 0.8500
+𝑃{ 𝑤, 𝑤, 𝑓 } = 0.0500
+𝑃 𝑤, 𝑓, 𝑤 = 0.0600
+𝑃 𝑤, 𝑓, 𝑓 = 0.0030
+𝑃 𝑓, 𝑤, 𝑤 = 0.0300
+𝑃 𝑓, 𝑤, 𝑓 = 0.0030
+𝑃 𝑓, 𝑓, 𝑤 = 0.0030
+𝑃 𝑓, 𝑓, 𝑓 = 0.0010
+• 𝑃 𝐸1 = 0.0300 + 0.0030 + 0.0030 + 0.0010 = 0.0370
+
+• 𝑃{𝐸1 ∩ 𝐸2 } = 0.0030 + 0.0030 + 0.0010 = 0.0070
+
+--- PAGE 6 ---
+Unions
+𝑃 𝐸∪𝐹 =𝑃 𝐸 +𝑃 𝐹 −𝑃 𝐸∩𝐹
+The last term accounts for the fact that samples in both E and F have been
+counted twice in the first two terms. For example, (f,w,f), (f,f,w), and (f,f,f)
+appear in both E1 and E2.
+Theorem
+𝑃 𝐸 ∪ 𝐹 ≤ 𝑃 𝐸 + 𝑃{𝐹}
+Equality when 𝐸 ∩ 𝐹 = ∅, in other words when E and F are mutually
+exclusive.
+Example. E3 corresponding to all servers working and E4 corresponding to all
+servers failed are mutually exclusive.
+
+--- PAGE 7 ---
+Conditional Probability
+Definition. The conditional probability of event E given event F is written as
+𝑃 𝐸 𝐹 and is given by the following:
+𝑃{𝐸 ∩ 𝐹}
+𝑃 𝐸𝐹 =
+𝑃{𝐹}
+
+Note that the denominator renormalizes over the new sample space (F), and
+the numerator restricts to samples that are in E and in the new sample
+space.
+
+--- PAGE 8 ---
+Conditional Probability - Example
+We wish to compute the probability that A is failed given that exactly one
+server is failed.
+𝐹=
+𝐸=
+
+𝑓, 𝑤, 𝑤 , 𝑤, 𝑓, 𝑤 , 𝑤, 𝑤, 𝑓
+𝑓, 𝑤, 𝑤 , 𝑓, 𝑓, 𝑤 , 𝑓, 𝑤, 𝑓 , 𝑓, 𝑓, 𝑓
+
+𝑃{𝐸 ∩ 𝐹}
+0.0300
+=
+= 0.2143
+𝑃{𝐹}
+0.0300 + 0.0600 + 0.0500
+
+--- PAGE 9 ---
+Independent Events
+Events E and F are independent if
+
+𝑃 𝐸 ∩ 𝐹 = 𝑃 𝐸 𝑃{𝐹}
+The probability of E occurring is not affected by whether F occurs or not.
+Also captured in conditional probability:
+𝑃{𝐸 ∩ 𝐹} 𝑃 𝐸 𝑃{𝐹}
+𝑃 𝐸𝐹 =
+=
+= 𝑃{𝐸}
+𝑃{𝐹}
+𝑃{𝐹}
+
+--- PAGE 10 ---
+Independent Events – Example 1
+Are the events that server A is failed (E) and server B is failed (F) independent?
+
+𝐸=
+𝐹=
+
+𝑓, 𝑤, 𝑤 , 𝑓, 𝑤, 𝑓 , 𝑓, 𝑓, 𝑤 , 𝑓, 𝑓, 𝑓
+𝑤, 𝑓, 𝑤 , 𝑓, 𝑓, 𝑤 , 𝑤, 𝑓, 𝑓 , 𝑓, 𝑓, 𝑓
+
+𝑃 𝐸 ∩ 𝐹 = 0.0030 + 0.0010 = 0.0040
+𝑃 𝐸 = 0.0300 + 0.0030 + 0.0030 + 0.0010 = 0.0370
+𝑃 𝐹 = 0.0600 + 0.0030 + 0.0030 + 0.0010 = 0.0670
+Using the conditional probability test,
+
+𝑃{𝐸 ∩ 𝐹} 0.0040
+=
+= 0.0597 ≠ 𝑃{𝐸}
+𝑃{𝐹}
+0.0670
+so events E and F are not independent
+
+--- PAGE 11 ---
+Independent Events – Example 2
+Suppose instead that we have:
+𝑃 𝑤, 𝑤, 𝑤 = 0.7866
+𝑃 𝑤, 𝑤, 𝑓 = 0.0414
+𝑃 𝑤, 𝑓, 𝑤 = 0.0684
+𝑃 𝑤, 𝑓, 𝑓 = 0.0036
+𝑃 𝑓, 𝑤, 𝑤 = 0.0874
+𝑃 𝑓, 𝑤, 𝑓 = 0.0046
+𝑃 𝑓, 𝑓, 𝑤 = 0.0076
+𝑃 𝑓, 𝑓, 𝑓 = 0.0004
+
+𝑃 𝐸 ∩ 𝐹 = 0.0076 + 0.0004 = 0.0080
+𝑃 𝐸 = 0.0874 + 0.0046 + 0.0076 + 0.0004 = 0.1000
+𝑃 𝐹 = 0.0684 + 0.0076 + 0.0036 + 0.0004 = 0.0800
+
+--- PAGE 12 ---
+Independent Events – Example 2 (cont’d)
+Using the conditional probability test,
+𝑃{𝐸 ∩ 𝐹} 0.0080
+=
+= 0.1000 = 𝑃{𝐸}
+𝑃{𝐹}
+0.0800
+so events E and F are independent
+
+--- PAGE 13 ---
+Independent Events – Example 2 (cont’d)
+Where did my numbers come from?
+• The probability that server A is working is 0.90 (the probability that it is
+failed is 0.10)
+• The probability that server B is working is 0.92 (the probability that it is
+failed is 0.08)
+• The probability that server C is working is 0.95 (the probability that it is
+failed is 0.05)
+If we assume each server’s status is independent of the others:
+
+𝑃 𝑤, 𝑤, 𝑤 = 0.90 0.92 0.95 = 0.7866
+𝑃 𝑤, 𝑤, 𝑓 = 0.90 0.92 0.05 = 0.0414
+We can continue in this manner to get the rest of the values.
+
+--- PAGE 14 ---
+Bayes Law
+Suppose that we know 𝑃{𝐹|𝐸} but we would like to know
+𝑃{𝐸|𝐹}.
+Theorem.
+𝑃 𝐸 𝐹 𝑃{𝐹}
+𝑃 𝐹𝐸 =
+𝑃{𝐸}
+
+--- PAGE 15 ---
+Bayes Law - Example
+Someone is tested for a (rare) disease. Suppose that the
+testing methods for the disease are correct 99 percent of the
+time (if one has the disease, the test is positive 99 percent of
+the time, if one does not, the test is negative 99 percent of the
+time). Suppose that the disease occurs in the general
+population at the rate of one every 10,000 people.
+What are the chances that someone testing positive actually
+has the disease?
+
+--- PAGE 16 ---
+Bayes Law - Example
+• Event A: one has the disease
+• Event B: one tests positive
+
+𝑃 𝐴 𝑃{𝐵|𝐴}
+𝑃 𝐴𝐵 =
+𝑃{𝐵}
+We have 𝑃 𝐴 = 0.0001, 𝑃 𝐵 𝐴 = 0.99, but do not have
+𝑃 𝐵 . To calculate this probability, use the Law of Total
+Probability.
+
+--- PAGE 17 ---
+Bayes Law - Example
+𝑃 𝐵 = 𝑃 𝐵 𝐴 𝑃 𝐴 + 𝑃 𝐵 𝐴𝑐 𝑃 𝐴𝑐
+= 0.99 0.0001 + (0.01)(0.9999)
+So,
+𝑃 𝐴 𝐵 = 0.0098
+
+--- PAGE 18 ---
+Random Variables
+• A random variable X (capital letters) is a real-valued function
+of the outcome of an experiment
+• Examples:
+1. The sum of the rolls of two dice
+2. Number of requests for a website by some time t
+3. The time between arrivals to a website
+4. The CPU requirement (in seconds) of an HTTP request
+
+--- PAGE 19 ---
+Random Variables
+• 1 and 2 are discrete, 3 and 4 are continuous
+• For 2, if N is the associated random variable, then we can
+define events such as “the number of arrivals by time t is less
+than or equal to five” and “the number of arrivals by time t is
+between 1 and 3”. So, we can use everything that we have
+discussed so far with respect to such events.
+
+--- PAGE 20 ---
+Distributions
+• We would like a compact way of defining the probabilities of
+events.
+• We will use the (cumulative) distribution function
+(distribution, c.d.f):
+𝐹𝑋 𝑥 = 𝑃{𝑋 ≤ 𝑥}
+• We will use F(x) if the variable is clear
+
+--- PAGE 21 ---
+Continuous Random Variables
+• for quantities that take on values on a continuum – time is
+an important one for us
+• 𝐹(𝑥) is continuous
+• Associated density function:
+𝑑𝐹𝑋 (𝑥)
+𝑓𝑋 𝑥 =
+𝑑𝑥
+𝑏
+• 𝑃 𝑎 ≤ 𝑋 ≤ 𝑏 = 𝐹𝑋 𝑏 − 𝐹𝑋 𝑎 = ‫𝑥𝑑 𝑥 𝑋𝑓 𝑎׬‬
+∞
+• ‫׬‬−∞ 𝑓𝑋 𝑥 𝑑𝑥 = 1
+
+--- PAGE 22 ---
+Discrete Random Variables
+• Probability mass function (p.m.f.) gives the probabilities that
+the random variable equals values in a discrete set (its range
+of possible values)
+𝑝𝑋 𝑖 = 𝑃{𝑋 = 𝑖}
+• 𝑃 𝑗 < 𝑋 ≤ 𝑘 = 𝐹𝑋 𝑘 − 𝐹𝑋 𝑗 = σ𝑗<𝑖≤𝑘 𝑝𝑋 (𝑖)
+• σ𝑖 𝑝𝑋 𝑖 = 1
+
+--- PAGE 23 ---
+Summary Statistics - Mean
+Expected value (or mean) is given by (discrete, continuous):
+𝐸 𝑋 = ෍ 𝑖𝑝𝑋 (𝑖)
+𝑖∞
+
+𝐸 𝑋 = න 𝑥𝑓𝑋 𝑥 𝑑𝑥
+−∞
+
+• Also sometimes called the average, but we will reserve the
+word average for another purpose (will become clear later)
+• Note that the expectation does not have to be an outcome –
+the roll of a die is a classic example, 𝐸 𝑋 = 3.5
+
+--- PAGE 24 ---
+Higher Moments
+In general, one can compute the kth moment:
+𝐸 𝑋 𝑘 = ෍ 𝑖 𝑘 𝑝𝑋 (𝑖)
+𝑖∞
+
+𝐸 𝑋 𝑘 = න 𝑥 𝑘 𝑓𝑋 𝑥 𝑑𝑥
+−∞
+
+Important for us are 𝑘 = 1 (mean), 𝑘 = 2
+
+--- PAGE 25 ---
+Variance
+An important summary statistic is the variance, which
+measures the expected deviation from the mean, i.e., how
+spread out the distribution is:
+𝑉𝑎𝑟 𝑋 = 𝜎𝑋2 = 𝐸[ 𝑋 − 𝐸 𝑋 2 ]
+Related to the variance is its square root, the standard
+deviation, 𝜎𝑋 . We will use the following fact to compute the
+variance:
+𝐸 𝑋 − 𝐸 𝑋 2 = 𝐸 𝑋 2 − 2𝐸 𝑋𝐸 𝑋 + 𝐸 𝑋 2
+= 𝐸 𝑋 2 − 2𝐸 𝑋 𝐸 𝑋 + 𝐸 𝑋 2
+= 𝐸 𝑋2 − 𝐸 𝑋 2
+So, variance can be calculated from the first and second
+moments.
+
+--- PAGE 26 ---
+Example
+Let
+𝑓 𝑥 = 𝑘𝑥 100 − 𝑥 ,
+0 ≤ 𝑥 ≤ 100
+and 0 otherwise be the density of the lifetime of a component
+(in days).
+1. Find the probability that the lifetime is between 9 and 90
+days.
+2. Find the mean lifetime.
+
+--- PAGE 27 ---
+Some Useful Distributions – Geometric
+𝑝𝑋 𝑘 = 𝑞 1 − 𝑞 𝑘−1 ,
+𝑘 = 1,2, …
+where q is the probability of success, 1-q is the probability of
+failure, and pX(k) is the probability that success first happens
+on the kth trial. Arises in applications like testing: if we do
+independent tests, how many tests must be performed before
+success.
+With a bit of work, one can show that
+1
+𝐸𝑋 =
+𝑞
+1−𝑞
+𝑉𝑎𝑟 𝑋 =
+𝑞2
+
+--- PAGE 28 ---
+Some Useful Distributions – Poisson
+The Poisson distribution has one parameter, 𝜆, and has p.m.f.
+𝑒 −𝜆 𝜆𝑘
+𝑝𝑋 𝑘 =
+,
+𝑘 = 0,1,2, …
+𝑘!
+Sums to one?
+∞
+∞
+𝑘
+𝑘
+𝜆
+𝜆
+= 𝑒 −𝜆 ෍
+= 𝑒 −𝜆 𝑒 𝜆 = 1
+෍ 𝑒 −𝜆
+𝑘!
+𝑘!
+𝑘=0
+
+𝑘=0
+
+Also,
+𝐸 𝑋 =𝜆
+𝑉𝑎𝑟 𝑋 = 𝜆
+(The last two results require a bit of work.)
+
+--- PAGE 29 ---
+Some Useful Distributions – Poisson
+Simeon Poisson (French statistician) first proposed the model,
+for things like wrongful convictions. Bortkiewicz modelled
+death by horse kicks in the Prussian army. We well see that it
+has up-to-date uses!
+
+--- PAGE 30 ---
+Some Useful Distributions – Uniform
+• The uniform distribution, denoted by 𝑈(𝑎, 𝑏), has density
+1
+𝑓 𝑥 =
+,
+𝑎≤𝑥≤𝑏
+𝑏−𝑎
+and 0 otherwise.
+• This means that the random variable is “equally likely” to
+take values anywhere between 𝑎 and 𝑏. This does not mean
+that 𝑃 𝑋 = 𝑖 = 𝑃{𝑋 = 𝑗}, although this is trivially true. It
+does mean, for example, 𝑃 0.1 ≤ 𝑋 ≤ 0.2 = 𝑃{0.3 ≤ 𝑋 ≤
+0.4} (as long as 𝑎 ≤ 0.1 and 𝑏 ≥ 0.4).
+• An important special case is 𝑈(0,1), as many built-in random
+number generators produce samples from this distribution.
+
+--- PAGE 31 ---
+Some Useful Distributions – Uniform
+𝑏
+
+2
+
+𝑏
+
+𝑥
+1 𝑥
+𝑏2 − 𝑎2
+𝑎+𝑏
+𝐸 𝑋 =න
+𝑑𝑥 =
+อ =
+=
+𝑏−𝑎 2
+2(𝑏 − 𝑎)
+2
+𝑎 𝑏−𝑎
+𝑎
+
+𝑏
+
+2
+
+𝑥
+𝑎+𝑏
+𝑉𝑎𝑟 𝑋 = න
+𝑑𝑥 −
+2
+𝑎 𝑏−𝑎
+
+2
+
+𝑏−𝑎 2
+=
+12
+
+--- PAGE 32 ---
+Some Useful Distributions – Exponential
+One parameter, “rate” 𝜆:
+𝑓𝑋 𝑥 = 𝜆𝑒 −𝜆𝑥 ,
+𝑥≥0
+and 0 otherwise.
+𝐹𝑋 𝑥 = 1 − 𝑒 −𝜆𝑥 ,
+𝑥≥0
+and 0 otherwise.
+1
+𝐸𝑋 =
+𝜆
+𝑉𝑎𝑟 𝑋 = 1/𝜆2
+We can see why the term “rate” is used for 𝜆 – think of 𝑋 as
+measuring some length of time.
+
+--- PAGE 33 ---
+Example
+Jobs arriving to a server have CPU time that is exponentially
+distributed with mean 140 msec. The CPU scheduling
+discipline is quantum-oriented so that a job not completing
+within 100 msec will be routed back to the tail of the queue of
+waiting jobs.
+Find the probability that a job has to wait for a second
+quantum.
+
+--- PAGE 34 ---
+Memoryless Property
+• Suppose that 𝑋~𝐸𝑥𝑝(𝜆)
+• Suppose that we know 𝑋 > 𝑏. What is the probability that
+𝑋 > 𝑎 + 𝑏? (This only makes sense if 𝑎 ≥ 0.)
+𝑃{ 𝑋 > 𝑎 + 𝑏 ∩ 𝑋 > 𝑏 }
+𝑃 𝑋 >𝑎+𝑏 𝑋 >𝑏 =
+𝑃{𝑋 > 𝑏}
+𝑃{𝑋 > 𝑎 + 𝑏}
+=
+𝑃{𝑋 > 𝑏}
+𝑒 −𝜆(𝑎+𝑏)
+=
+−𝜆𝑏
+𝑒
+= 𝑒 −𝜆𝑎
+which is exactly the same as 𝑃{𝑋 > 𝑎}.
+
+--- PAGE 35 ---
+Memoryless Property
+• This is known as the “memoryless” property, the future is
+independent of the past, given the present. Knowing that
+time 𝑏 has elapsed gives no information about the future.
+• Fact: the exponential distribution is the only continuous
+distribution with the memoryless property.
+• Often used to model phenomena with this property: if we
+assume memoryless, then the underlying distribution is
+exponential.
+
+--- PAGE 36 ---
+Example
+What is the probability that a job does not finish in the second
+quantum, given that it does not finish in the first quantum?
